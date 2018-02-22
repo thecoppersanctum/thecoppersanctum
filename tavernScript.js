@@ -764,7 +764,8 @@ function newBartender(){
 
 function newClientele() {
 	var clienteleDegree = tenderDegrees[Math.floor(Math.random() * tenderDegrees.length)];
-	var clientele = clienteles[Math.floor(Math.random() * (clienteles.length-(lifestyles.length/2)) + (lifestyleDecider/2))];
+	var clienteleDecider = Math.floor(Math.random() * (clienteles.length-(lifestyles.length)) + (lifestyleDecider));
+	var clientele = clienteles[clienteleDecider];
 	var isOrAre = 'are';
 	var howMany = 'some';
 	var peopleOrPerson = 'people';
@@ -776,19 +777,19 @@ function newClientele() {
 	var shadyDescription = shadyDescriptions[Math.floor(Math.random() * shadyDescriptions.length)];
 	var shadyLocation = shadyLocations[Math.floor(Math.random() * shadyLocations.length)];
 	
-	var activityOneNumber = Math.floor(Math.random() * (patronActivities.length-lifestyles.length) + lifestyleDecider);
+	var activityOneNumber = Math.floor(Math.random() * (patronActivities.length-clienteles.length/2) + clienteleDecider/2);
 	
 	var activityTwoArray = patronActivities.slice();
 	activityTwoArray.splice(activityOneNumber, 1);
-	var activityTwoNumber = Math.floor(Math.random() * (activityTwoArray.length-lifestyles.length) + lifestyleDecider);
+	var activityTwoNumber = Math.floor(Math.random() * (activityTwoArray.length-clienteles.length/2) + clienteleDecider/2);
 	
 	var activityThreeArray = activityTwoArray.slice();
 	activityThreeArray.splice(activityTwoNumber, 1);
-	var activityThreeNumber = Math.floor(Math.random() * (activityThreeArray.length-lifestyles.length) + lifestyleDecider);
+	var activityThreeNumber = Math.floor(Math.random() * (activityThreeArray.length-clienteles.length/2) + clienteleDecider/2);
 	
 	var activityFourArray = activityThreeArray.slice();
 	activityFourArray.splice(activityThreeNumber, 1);
-	var activityFourNumber = Math.floor(Math.random() * (activityFourArray.length-lifestyles.length) + lifestyleDecider);
+	var activityFourNumber = Math.floor(Math.random() * (activityFourArray.length-clienteles.length/2) + clienteleDecider/2);
 	
 	var activityOne = patronActivities[activityOneNumber];
 	var activityTwo = activityTwoArray[activityTwoNumber];
