@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="max-age=200" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Copper Sanctum's Tavern Generator</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel=icon href=favicon.ico sizes="16x16 32x32 60x60 76x76 120x120 152x152 192x192" type="image/vnd.microsoft.icon">
+</head>
+<body onload="boast()">
+
+<div id="header">
+
+<div id="versionMarker">v0.19 Alpha</div>
+
+<a href="index.html"><img src='TCS_Logo2Small.png' id="headImage"></a>
+
+</div>
+
+<div id="navigation">
+<a href="updates.html"><img src="updatesButton.jpg" id="navButton"></a><a href="taverns.html"><img src='tavernsButton.jpg' id="navButton"><a href="travelers.html"><img src='travelersButton.jpg' id="navButton"><a href="adventures.html"><img src='adventureButton.jpg' id="navButton"></a>
+</div>
+
+<div id="mainBody">
+
+<h1>Not Another Tavern Generator</h1>
+<p>Inns and taverns are an integral part of most D&D games, but why should you put the work into fleshing out a place your players might only spend a few minutes in? Not Another Tavern Generator is here to help. Just push the button and visit a procedurally generated random tavern with interesting prompts to help you create an engaging story on the fly.</p>
+
+<div id="boastBox"></div>
+
+<br><br>
+
+<button onclick="newTavern()" id="tavernButton"> Visit a Tavern </button>
+<br>
+<br>
+
+<div>
+<div id="descriptionText"><span id="titleDisplay"></span><span id="nameDisplay">Click the "Visit a Tavern" button above to begin the barcrawl!</span><span id="ownerDisplay"></span><span id="raceDisplay"></span><span id="secretDisplay"></span><span id="backstoryDisplay"></span><span id="inspirationDisplay"></span><span id="qualityDisplay"></span><span id="gimmickDisplay"></span><span id="bartenderDisplay"></span><span id="clienteleDisplay"></span><span id="foodAndDrinkHeadingArea"></span><div id="drinksDisplay" style="display:none;"><h2>Drink List</h2><span id="winesDisplay"></span><span id ="beersDisplay"></span><span id="liquorsDisplay"></span></div><div id="menuDisplay"style="display:none"><h2>Food Menu</h2><span id="startersDisplay"></span><span id="saladsDisplay"></span><span id="entreesDisplay"></span></div></div>
+<br>
+<button onclick="newName()" id="nameButton" disabled=true> That Name Doesn't Work </button><button onclick="newStory()" id="storyButton" disabled=true> Uh, the Owner Is a What? </button><button onclick="newBartender()" id="bartenderButton" disabled=true> I Want a Different Bartender </button>
+<br>
+<button onclick="newClientele()" id="clienteleButton" disabled=true> Doesn't Sound Like My Scene</button><button onclick="newDrinkList()" id="drinkButton" disabled=true> Do You Have a Wine List? </button><button onclick="newFoodMenu()" id="menuButton" disabled=true> Do You Have Any Vegan Options? </button>
+<p>Still to come: drinks, food, additional plot hooks, and more!</p>
+<p> If you spot any bugs, please let me know via Facebook or Twitter. Thanks!</p>
+</div>
+
+<div style='margin-top:100px;'></div>
+
+<p>©2018 Ian F Evans</p>
+
+<div style='margin-top:10px;'></div>
+
+<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy Me a Coffee', '#d90606', 'G2G6986S');kofiwidget2.draw();</script> 
+
+<div style='margin-top:10px;'></div>
+
+<a href="https://www.facebook.com/TheCopperSanctum/"><img src="fb-art.png" id="fbt"></a> <a href="https://twitter.com/Derixyleth"><img src="Twitter-logo2.png" id="fbt"></a>
+
+<div style='margin-top:100px;'></div>
+
+</div>
+
+<a href="http://www.dmsguild.com/browse.php?filters=45680_0_0_0_0_0&affiliate_id=1034420"><img src="http://www.dmsguild.com/images/site_resources/DMsGuild-GuildAdept-Banner.png" border="0" width="100%" alt="Guild Adept PDFs - Available exclusively @ Dungeon Masters Guild" /></a>
+
+<script src="tavernScript.js"></script>
+
+</body>
+</html>

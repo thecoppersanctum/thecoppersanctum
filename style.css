@@ -1,0 +1,147 @@
+body{
+	background-color:#eeeeee;
+}
+#mainBody {
+	font-family:serif;
+	font-size:12pt;
+	margin:auto;
+	width: 100%;
+	text-align:center;
+	position: relative;
+}
+p{
+	width:85%;
+	margin:auto;
+	margin-top:1%;
+}
+#descriptionText{
+	width:85%;
+	margin:auto;
+	margin-top:1%;
+	border: 1px solid black;
+	padding:2%;
+	background-color:white;
+}
+#drinksDisplay{
+	width:90%;
+	margin-left: 2%;
+	margin-right: 2%;
+	border: 1px solid black;
+	padding:2%;
+	background-color:#ffffdd;
+	height:24em;
+	overflow:auto;
+}
+#menuDisplay{
+	width:90%;
+	margin-left: 2%;
+	margin-right: 2%;
+	border: 1px solid black;
+	padding:2%;
+	background-color:#ffffdd;
+	vertical-align:top;
+	height:24em;
+	overflow:auto;
+}
+h1 {
+	font-variant:small-caps;
+}
+h2 {
+	font-variant:small-caps;
+}
+#header{
+	width:100%;
+	background-color:#d90606;
+	text-align:center;
+	top:0;
+	left:0;
+}
+#fbt{
+	width:75px;
+	border:0;
+}
+#headImage{
+	width:15vh;
+	border:0;
+}
+#navigation{
+	width: 100%;
+	background-color:black;
+	padding-bottom:1%;
+	padding-top:1%;
+	text-align: center;
+	position: -webkit-sticky;
+	position: sticky;
+    z-index: 100;
+	top:0;
+	left:0;
+}
+#versionMarker{
+	font-size:8pt;
+	position:absolute;
+	top:15px;
+	left:15px;
+}
+#adventureBox{
+	width:90%;
+	display:inline-block;
+	margin-bottom:1%;
+	padding:5%;
+}
+#boastBox{
+	font-family:sans-serif;
+	font-size:10pt;
+	line-height:125%;
+	display:inline-block;
+	border-top:3px solid black;
+	border-bottom:3px solid black;
+	width:85%;
+	padding:5px;
+	margin:20px;
+	background-color:#e0e5c1;
+}
+button {
+	font-family: serif;
+	font-variant: small-caps;
+	font-weight: 1000;
+	font-size: 12pt;
+	padding: 6px;
+	margin: 10px;
+}
+#wideBox{
+	height:500px;
+	display:inline-block;
+}
+#navButton{
+	width:23%;
+	border:0;
+	margin-left:1%;
+	margin-right:1%;
+}
+@media screen and (min-width: 1200px){
+	#mainBody{
+		font-size:14pt;
+		width:90%;
+	}
+	#boastBox{
+		width:35%;
+	}
+	#drinksDisplay{
+		width:40%;
+	}
+	#menuDisplay{
+		width:40%;
+	}
+	button {
+		font-size: 14pt;
+	}
+	#headImage{
+		width:150px;
+	}
+	#navButton{
+		width:200px;
+	}
+	#adventureBox{
+		width:35%;
+	}
+}
