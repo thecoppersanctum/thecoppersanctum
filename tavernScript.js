@@ -923,10 +923,10 @@ function newDrinkList(){
 		if (gimmick == 'their selection of wines imported from several far away places' && Math.floor(Math.random()*3) > 0){
 			originNumber = 4;
 		}
-		if (originNumber != 2){
-			wineName = prefixes[Math.floor(Math.random() * prefixes.length)] + ' ' + suffixes[Math.floor(Math.random() * suffixes.length)];
-		} else {
+		if (originNumber == 2){
 			wineName = tavernName + '\'s';
+		} else {
+			wineName = prefixes[Math.floor(Math.random() * prefixes.length)] + ' ' + suffixes[Math.floor(Math.random() * suffixes.length)];
 		}
 		flavorOneNumber = Math.min(Math.floor(Math.random() * (wineDescriptors.length-(drinkVariety)) + drinkQuality + originNumber),wineDescriptors.length-1);
 		flavorOne = wineDescriptors[flavorOneNumber];
