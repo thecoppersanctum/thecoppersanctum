@@ -33,7 +33,7 @@ var suffixes = [
 ]
 
 var maritalStatuses = [
-'unmarried','widowed','divorced','married'
+'n unmarried',' widowed',' divorced',' married'
 ]
 
 var ownerOneType = [
@@ -279,7 +279,7 @@ var lifestyles = [
 ]
 
 var clienteles = [
-'violent','raucous','boisterous','loud','unfriendly','obnoxious','clandestine','friendly','amicable','welcoming','secretive','subdued','peaceful','elitist','snobbish'
+'violent','raucous','boisterous','loud','rambunctious','obnoxious','unfriendly','clandestine','friendly','amicable','welcoming','secretive','subdued','peaceful','elitist','snobbish'
 ]
 
 var shadyQuests = [
@@ -327,14 +327,14 @@ var patronActivities = [
 'discussing religious or political matters',
 'playing a game of dice',
 'playing a card game',
+'sharing tales of past adventures—successes and failures',
 'playing a game of darts',
 'consumed in a philosophical conversation',
-'playing chess',
 'playing some kind of guessing game',
 'entranced by a dancer on the stage',
 'listening to a singer',
 'laughing in response to a joke',
-'sharing tales of past adventures—successes and failures',
+'playing chess',
 'dancing to music',
 'watching some performers',
 'listening to the band'
@@ -375,8 +375,8 @@ var wineDescriptors = [
 'aromatic',
 'expressive',
 'fruity',
-'complex',
 'smooth',
+'complex',
 'rich'
 ]
 
@@ -543,7 +543,7 @@ function newStory() {
 	}
 	
 	if (secondOwnerDecider < 1) {
-		document.getElementById('ownerDisplay').innerHTML = ' is owned by a ' + maritalStatus + ' ' + ownerOne;
+		document.getElementById('ownerDisplay').innerHTML = ' is owned by an' + maritalStatus + ' ' + ownerOne;
 		document.getElementById('raceDisplay').innerHTML = ' whose race is ' + raceTypes[ownerOneRaceRarity] + ' in the area. ';
 		if (ownerOneHasSecret < 2) {
 			document.getElementById('secretDisplay').innerHTML = 'The owner is an upstanding citizen with no hidden secrets or unsusual quirks. ';
@@ -764,7 +764,7 @@ function newBartender(){
 
 function newClientele() {
 	var clienteleDegree = tenderDegrees[Math.floor(Math.random() * tenderDegrees.length)];
-	var clienteleDecider = Math.floor(Math.random() * (clienteles.length-(lifestyles.length)) + (lifestyleDecider));
+	var clienteleDecider = Math.floor(Math.random() * (clienteles.length-(lifestyles.length-1)) + (lifestyleDecider));
 	var clientele = clienteles[clienteleDecider];
 	var isOrAre = 'are';
 	var howMany = 'some';
@@ -777,19 +777,19 @@ function newClientele() {
 	var shadyDescription = shadyDescriptions[Math.floor(Math.random() * shadyDescriptions.length)];
 	var shadyLocation = shadyLocations[Math.floor(Math.random() * shadyLocations.length)];
 	
-	var activityOneNumber = Math.floor(Math.random() * (patronActivities.length-clienteles.length/2) + clienteleDecider/2);
+	var activityOneNumber = Math.floor(Math.random() * (patronActivities.length-clienteles.length/2) + Math.round(clienteleDecider/2));
 	
 	var activityTwoArray = patronActivities.slice();
 	activityTwoArray.splice(activityOneNumber, 1);
-	var activityTwoNumber = Math.floor(Math.random() * (activityTwoArray.length-clienteles.length/2) + clienteleDecider/2);
+	var activityTwoNumber = Math.floor(Math.random() * (activityTwoArray.length-clienteles.length/2) + Math.round(clienteleDecider/2));
 	
 	var activityThreeArray = activityTwoArray.slice();
 	activityThreeArray.splice(activityTwoNumber, 1);
-	var activityThreeNumber = Math.floor(Math.random() * (activityThreeArray.length-clienteles.length/2) + clienteleDecider/2);
+	var activityThreeNumber = Math.floor(Math.random() * (activityThreeArray.length-clienteles.length/2) + Math.round(clienteleDecider/2));
 	
 	var activityFourArray = activityThreeArray.slice();
 	activityFourArray.splice(activityThreeNumber, 1);
-	var activityFourNumber = Math.floor(Math.random() * (activityFourArray.length-clienteles.length/2) + clienteleDecider/2);
+	var activityFourNumber = Math.floor(Math.random() * (activityFourArray.length-clienteles.length/2) + Math.round(clienteleDecider/2));
 	
 	var activityOne = patronActivities[activityOneNumber];
 	var activityTwo = activityTwoArray[activityTwoNumber];
@@ -857,9 +857,10 @@ function newClientele() {
 function newDrinkList(){
 	document.getElementById('foodAndDrinkHeadingArea').innerHTML = '<h2> The Food & Drink </h2>';
 	document.getElementById('drinksDisplay').style = 'display:inline-block';
-	var drinkVariety = lifestyleDecider*2.5;
-	var drinkVarietyModifier = lifestyles.length*2.5;
+	var drinkQuality = (lifestyleDecider)*2;
+	var drinkVariety = lifestyles.length*2;
 	var priceModifier = 1;
+	var wineName = tavernName + '\'s';
 	var wineDescription = '';
 	var redWine = false;
 	var redOrWhite = 'white';
@@ -872,32 +873,31 @@ function newDrinkList(){
 	var originNumber = 0;
 	var originModifier = 0;
 	var winePriceTotal = 0;
-	var wineOfferingCount = Math.floor(Math.random() * drinkVariety + 2);
+	var wineOfferingCount = Math.floor((Math.random() * drinkQuality) + 2);
 	var wineList = [];
 	
 	switch(gimmick){
 		case 'the quality of the drinks':
+			drinkQuality = drinkQuality + 1;
 			drinkVariety = drinkVariety + 3;
-			drinkVarietyModifier = drinkVarietyModifier + 3;
-			priceModifier = 1.25;
+			priceModifier = 1.75;
 			break;
 		case 'their selection of wines imported from several far away places':
 		case 'its extensive drink menu':
-			drinkVariety = drinkVariety + 4;
-			drinkVarietyModifier = drinkVarietyModifier + 4;
+			drinkVariety = drinkVariety - 4;
 			priceModifier = 1.5;
 			wineOfferingCount = wineOfferingCount + Math.floor(Math.random()*4);
 			originModifier = 1;
 			break;
 		case 'a fountain that flows freely with alcohol':
+			drinkQuality = drinkQuality * .75;
 			drinkVariety = drinkVariety + 5;
-			drinkVarietyModifier = drinkVarietyModifier + 5;
-			priceModifier = 1.75;
+			priceModifier = 1.25;
 			wineOfferingCount = wineOfferingCount - Math.floor(Math.random()*2);
 			break;
 		case 'the cheap booze':
+			drinkQuality = drinkQuality * .5;
 			drinkVariety = drinkVariety * .5;
-			drinkVarietyModifier = drinkVarietyModifier * .5;
 			priceModifier = .2;
 			originModifier = .8;
 	}
@@ -914,7 +914,7 @@ function newDrinkList(){
 				wineType = whiteVarieties[wineTypeNumber];
 				redOrWhite = 'white';
 		}
-		originNumber=Math.round(Math.random() * (wineOrigins.length-lifestyles.length/2) + lifestyleDecider/2);
+		originNumber=Math.round(Math.random() * (wineOrigins.length-lifestyles.length/2) + Math.round(lifestyleDecider/2));
 		if (originModifier >= 1){
 			originNumber = Math.min(wineOrigins.length-1,originNumber+originModifier);
 		} else if (originModifier > 0){
@@ -923,13 +923,16 @@ function newDrinkList(){
 		if (gimmick == 'their selection of wines imported from several far away places' && Math.floor(Math.random()*3) > 0){
 			originNumber = 4;
 		}
-		flavorOneNumber = Math.min(Math.floor(Math.random() * (wineDescriptors.length-(drinkVarietyModifier+wineOrigins.length)) + drinkVariety + originNumber),wineDescriptors.length-1);
+		if (originNumber != 2){
+			wineName = prefixes[Math.floor(Math.random() * prefixes.length)] + ' ' + suffixes[Math.floor(Math.random() * suffixes.length)];
+		}
+		flavorOneNumber = Math.min(Math.floor(Math.random() * (wineDescriptors.length-(drinkVariety)) + drinkQuality + originNumber),wineDescriptors.length-1);
 		flavorOne = wineDescriptors[flavorOneNumber];
 		var descriptorTwoArray  = wineDescriptors.slice();
 		descriptorTwoArray.splice(flavorOneNumber,1);
-		flavorTwoNumber = Math.min(Math.floor(Math.random() * (descriptorTwoArray.length-(drinkVarietyModifier+wineOrigins.length)) + drinkVariety + originNumber),descriptorTwoArray.length-1);
+		flavorTwoNumber = Math.min(Math.floor(Math.random() * (descriptorTwoArray.length-(drinkVariety+wineOrigins.length)) + drinkQuality + originNumber),descriptorTwoArray.length-1);
 		flavorTwo = descriptorTwoArray[flavorTwoNumber];
-		winePriceTotal = priceModifier * ((flavorOneNumber + flavorTwoNumber)/2 + drinkVariety + wineOfferingCount + ((originNumber+1) * (originNumber+1) * (originNumber+1)));
+		winePriceTotal = priceModifier * ((flavorOneNumber + flavorTwoNumber)/2 + drinkQuality + wineOfferingCount + ((originNumber+1) * (originNumber+1) * (originNumber+1)));
 		if (winePriceTotal>=95){
 			winePrice = Math.round(winePriceTotal/100) + 'gp/bottle';
 		} else if (winePriceTotal>=10){
@@ -938,7 +941,7 @@ function newDrinkList(){
 			winePrice = Math.round(winePriceTotal) + 'cp/bottle';
 		}
 		
-		wineDescription = '<p><strong><i>' + prefixes[Math.floor(Math.random() * prefixes.length)] + ' ' + suffixes[Math.floor(Math.random() * suffixes.length)] + ' ' + wineType + '</strong></i> <br> A' + wineOrigins[originNumber] + ' ' + redOrWhite + ' wine ' + bouquetPhrases[Math.floor(Math.random()*bouquetPhrases.length)] + flavorOne + ' and ' + flavorTwo + '<br>' + winePrice +'</p>';
+		wineDescription = '<p><strong><i>' + wineName + ' ' + wineType + '</strong></i> <br> A' + wineOrigins[originNumber] + ' ' + redOrWhite + ' wine ' + bouquetPhrases[Math.floor(Math.random()*bouquetPhrases.length)] + flavorOne + ' and ' + flavorTwo + '<br>' + winePrice +'</p>';
 		wineList.splice(wineList.length,1,wineDescription);
 	}
 	var wineListToString = wineList.join("<br>");
