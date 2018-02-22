@@ -925,6 +925,8 @@ function newDrinkList(){
 		}
 		if (originNumber != 2){
 			wineName = prefixes[Math.floor(Math.random() * prefixes.length)] + ' ' + suffixes[Math.floor(Math.random() * suffixes.length)];
+		} else {
+			wineName = tavernName + '\'s';
 		}
 		flavorOneNumber = Math.min(Math.floor(Math.random() * (wineDescriptors.length-(drinkVariety)) + drinkQuality + originNumber),wineDescriptors.length-1);
 		flavorOne = wineDescriptors[flavorOneNumber];
