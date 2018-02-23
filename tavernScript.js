@@ -652,6 +652,7 @@ function newName(){
 	if (allRan == 1){
 		document.getElementById('nameDisplay2').innerHTML = tavernName;
 		document.getElementById('nameDisplay3').innerHTML = tavernName;
+		document.getElementById('nameDisplay4').innerHTML = tavernName;
 	}
 	document.getElementById('titleDisplay').innerHTML =  '<h1><button onclick="newName()" class="innerBtn">' + tavernName + '</button></h1><h2><button onclick="newStory()" class="innerBtn"> The Tavern\'s Tale </button></h2>';
 }
@@ -1108,7 +1109,7 @@ function newRooms(){
 		case 5:
 			roomCost = Math.round((30 + Math.floor(Math.random()*(40+roomCostModifier)))/10) + ' gp.';
 	}
-	document.getElementById('roomsDisplay').innerHTML = '<h2><button onclick="newRooms()" class = "innerBtn"> The Accomodations </button></h2> The rooms for rent at <span id="nameDisplay2">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost;
+	document.getElementById('roomsDisplay').innerHTML = '<h2><button onclick="newRooms()" class = "innerBtn"> The Accomodations </button></h2> The rooms for rent at <span id="nameDisplay4">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost;
 }
 function newFoodAndDrink(){
 	document.getElementById('foodAndDrinkHeadingArea').innerHTML = '<h2><button onclick="newFoodAndDrink()" class="innerBtn"> The Food & Drink </button></h2>';
