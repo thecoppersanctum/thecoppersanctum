@@ -1,9 +1,10 @@
 body{
 	background-color:#eeeeee;
+	font-size:75%;
 }
 #mainBody {
 	font-family:serif;
-	font-size:12pt;
+	font-size:1.4em;
 	margin:auto;
 	width: 100%;
 	text-align:center;
@@ -14,6 +15,9 @@ p{
 	margin:auto;
 	margin-top:1%;
 }
+sup{
+	font-size:.5em;
+}
 #descriptionText{
 	width:85%;
 	margin:auto;
@@ -21,6 +25,8 @@ p{
 	border: 1px solid black;
 	padding:2%;
 	background-color:white;
+	height:1.4em;
+	overflow:auto;
 }
 #drinksDisplay{
 	width:90%;
@@ -29,19 +35,17 @@ p{
 	border: 1px solid black;
 	padding:2%;
 	background-color:#ffffdd;
-	height:24em;
-	overflow:auto;
+	vertical-align:top;
 }
-#menuDisplay{
+#foodDisplay{
 	width:90%;
 	margin-left: 2%;
 	margin-right: 2%;
+	margin-top:2%;
 	border: 1px solid black;
 	padding:2%;
 	background-color:#ffffdd;
 	vertical-align:top;
-	height:24em;
-	overflow:auto;
 }
 h1 {
 	font-variant:small-caps;
@@ -77,7 +81,7 @@ h2 {
 	left:0;
 }
 #versionMarker{
-	font-size:8pt;
+	font-size:.75em;
 	position:absolute;
 	top:15px;
 	left:15px;
@@ -90,7 +94,7 @@ h2 {
 }
 #boastBox{
 	font-family:sans-serif;
-	font-size:10pt;
+	font-size:.8em;
 	line-height:125%;
 	display:inline-block;
 	border-top:3px solid black;
@@ -104,7 +108,7 @@ button {
 	font-family: serif;
 	font-variant: small-caps;
 	font-weight: 1000;
-	font-size: 12pt;
+	font-size: 1.1em;
 	padding: 6px;
 	margin: 10px;
 }
@@ -120,7 +124,7 @@ button {
 }
 @media screen and (min-width: 1200px){
 	#mainBody{
-		font-size:14pt;
+		font-size:1.6em;
 		width:90%;
 	}
 	#boastBox{
@@ -129,11 +133,12 @@ button {
 	#drinksDisplay{
 		width:40%;
 	}
-	#menuDisplay{
+	#foodDisplay{
 		width:40%;
+		margin-top:0;
 	}
 	button {
-		font-size: 14pt;
+		font-size: 1.2em;
 	}
 	#headImage{
 		width:150px;

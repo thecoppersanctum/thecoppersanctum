@@ -1,0 +1,19 @@
+body{
+	font-family:serif;
+	font-size:12pt;
+	margin:auto;
+	width: 95%;
+}
+#centeredDiv{
+	text-align:center;
+}
+#drinksDisplay{
+	width:100%;
+	display:inline-block;
+	float: none !important;
+}
+#foodDisplay{
+	width:100%;
+	display:inline-block;
+	float: none !important;
+}
