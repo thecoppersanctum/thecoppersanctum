@@ -102,7 +102,7 @@ h2 {
 	margin:20px;
 	background-color:#e0e5c1;
 }
-button {
+.outerBtn{
 	font-family: serif;
 	font-variant: small-caps;
 	font-weight: 1000;
@@ -110,6 +110,16 @@ button {
 	padding: 6px;
 	margin: 10px;
 }
+.innerBtn{
+	font-family:serif;
+	font-variant:small-caps;
+	font-weight: 1000;
+	border: none;
+	background-color:inherit;
+	font-size:inherit;
+	display:inline-block;
+}
+.innerBtn:hover {background:#eee;}
 #wideBox{
 	height:500px;
 	display:inline-block;

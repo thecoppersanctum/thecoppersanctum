@@ -7,7 +7,7 @@ var clickCount = 0;
 var prefixes = [
 'Red','Orange','Yellow','Green','Blue','Purple','Violet','White','Black','Grey','Brown','Teal','Turquoise','Indigo','Marroon','Puce','Lavender','Fuchsia','Pink','Crimson','Mauve',
 'Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Gilded','Hammered','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Wicked','Winged',
-'Angry','Brave','Cowardly','Drunken','Fevered','Flirty','Happy','Hungry','Lonely','Lucky','Rested','Restless','Rogue','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise',
+'Angry','Brave','Cowardly','Drunken','Fevered','Flirty','Happy','Hungry','Impatient','Lonely','Lucky','Nervous','Rested','Restless','Rogue','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise',
 'Babbling','Charging','Crying','Dancing','Fighting','Flaming','Flying','Laughing','Raging','Screaming','Sleeping','Smiling','Stumbling','Struggling',
 'Bear and','Bell and','Blade and','Block and','Book and','Boot and','Bull and','Cat and','Dog and','Fish and','Goat and','Hawk and','Hook and','Horse and','Moose and','Mug and','Rose and','Staff and','Stick and','Tooth and','Wand and','Wolf and',
 'Bronze','Carnelian','Chalk','Cloth','Copper','Crystal','Diamond','Electrum','Emerald','Glass','Gold','Golden','Jade','Metal','Platinum','Ruby','Sapphire','Silk','Silver','Steel','Velvet','Wooden',
@@ -52,7 +52,7 @@ var tenderRaces = [
 ]
 
 var tenderDispositions = [
-'surly','affable','approachable','friendly','curmudgeonly','stubborn','light-hearted','flirtatious','jovial','soft-spoken','loud','obnoxious','boastful','lazy','energetic','ostentatious','reserved','flamboyant','devious','humorless','humorous','quiet'
+'humorous','flamboyant','approachable','flirtatious','jovial','friendly','loud','light-hearted','energetic','ostentatious','surly','affable','approachable','friendly','curmudgeonly','stubborn','soft-spoken','obnoxious','boastful','lazy','reserved','devious','humorless','quiet'
 ]
 
 var tenderLooks = [
@@ -63,7 +63,7 @@ var tenderPhysiques = [
 'overweight','skinny','underweight','obese','stocky','muscular','scrawny','average','athletic','fit','curvy','blocky','svelte','willowy','meaty','chubby','chunky','in shape','big-boned']
 
 var tenderDegrees = [
-'a bit','a little','absolutely','acutely','almost','astonishingly','awfully','certainly','considerably','conspicuously','decidedly','disturbingly','eminently','excessively','extremely','impressively','incredibly','kind of','not quite','notably','noticeably','particularly','positively','powerfully','pretty','profoundly','quite','rather','remarkably','sort of','surprisingly','terribly','truly','uncommonly','unsettlingly','unusually','very','wonderfully','','','','','','','','','','','','','','','','','','',''
+'unmistably','somewhat','absolutely','acutely','almost','astonishingly','awfully','certainly','considerably','conspicuously','decidedly','disturbingly','eminently','excessively','extremely','impressively','incredibly','kind of','not quite','notably','noticeably','particularly','positively','powerfully','pretty','profoundly','quite','rather','remarkably','sort of','surprisingly','terribly','truly','uncommonly','unsettlingly','unusually','very','wonderfully','','','','','','','','','','','','','','','','','','',''
 ]
 
 var tenderSkinColors = [
@@ -146,6 +146,7 @@ var ownerSecrets = [
 'secretly worships an evil deity',
 'secretly runs an underground fight club in the basement of the tavern',
 'suffers from an old injury',
+'has a fear of spiders',
 'is secretly a vampire who feeds on the patrons of the inn during the night',
 'keeps a collection of stolen trinkets from previous guests',
 'has a rare medical condition',
@@ -168,6 +169,7 @@ var ownerJointSecret = [
 'secretly worship an evil deity',
 'play a part in the operation of a secret underground fight club run out of the basement of the tavern',
 'have problems that stem from old injuries',
+'are deathly afraid of spiders',
 'are secretly vampires who feed on the patrons of the inn during the night',
 'steal small items and trinkets from the tavern patrons to add to their collections',
 'suffer from a rare medical condition',
@@ -203,7 +205,9 @@ var singleBackgrounds = [
 'lived a life of seclusion far away from civilization',
 'grew up in the wilds as part of a tribe of hunter-gatherers',
 'served as a soldier in service to the nation',
-'grew up on the streets, alone and poor'
+'grew up on the streets, alone and poor',
+'tried to earn a living as an artist',
+'tried to make money as a writer'
 ]
 
 var jointBackgrounds = [
@@ -228,7 +232,9 @@ var jointBackgrounds = [
 'lived together in the woods, far away from the city',
 'grew up together in the same tribe in the wilds',
 'served together in the same army',
-'grew up together on the streets, fighting over scraps'
+'grew up together on the streets, fighting over scraps',
+'were starving artists',
+'wrote a book together'
 ]
 
 var inspirations = [
@@ -281,7 +287,7 @@ var lifestyles = [
 ]
 
 var clienteles = [
-'violent','raucous','boisterous','loud','rambunctious','obnoxious','unfriendly','clandestine','friendly','amicable','welcoming','secretive','subdued','peaceful','elitist','snobbish'
+'violent','raucous','boisterous','loud','rambunctious','obnoxious','unfriendly','rude','clandestine','friendly','amicable','welcoming','secretive','subdued','peaceful','elitist','snobbish'
 ]
 
 var shadyQuests = [
@@ -313,7 +319,8 @@ var shadyDescriptions = [
 ' nervous',
 ' deceptively calm',
 ' tough',
-' dark',
+' depressed',
+' upset',
 'n imposing'
 ]
 
@@ -327,6 +334,7 @@ var patronActivities = [
 'participating in a drinking contest',
 'arguing over how to split the bill',
 'discussing religious or political matters',
+'singing a drinking song',
 'playing a game of dice',
 'playing a card game',
 'sharing tales of past adventures—successes and failures',
@@ -340,6 +348,31 @@ var patronActivities = [
 'dancing to music',
 'watching some performers',
 'listening to the band'
+]
+
+var roomSizes = [
+'tiny',
+'cramped',
+'small',
+'average sized',
+'comfortably sized',
+'spacious',
+'large',
+'huge'
+]
+
+var roomConditions = [
+'disgusting',
+'filthy',
+'dirty',
+'dingy',
+'hygenic',
+'taken care of',
+'clean',
+'spotless',
+'well-cleaned',
+'immaculate',
+'pristine'
 ]
 
 var wineDescriptors = [
@@ -537,9 +570,13 @@ var inspiration = 'nothing';
 var gimmick = 'nothing';
 var lifestyle = 'decent';
 var lifestyleDecider = 0;
-
+var drinkQuality = (lifestyleDecider)*2;
+var drinkVariety = lifestyles.length*2;
+var priceModifier = 1;
+var wineOfferingCount = Math.floor((Math.random() * lifestyleDecider) + 2);
+var beerOfferingCount = Math.round(Math.random() * lifestyleDecider + 3);
+var theyNeverListen = 0;
 var allRan = 0;
-var nameUpdater = '';
 
 function boast(){
 	document.getElementById('boastBox').innerHTML = 'With ' + numberWithCommas((prefixes.length * prefixes.length * suffixes.length) + (prefixes.length * suffixes.length)) + ' possible tavern names, over ' + numberWithCommas(maritalStatuses.length * ownerOneType.length * heSheThey.length * ownerTwoNeutral.length * inspirations.length * gimmicks.length * (ownerSecrets.length+1) * (singleBackgrounds.length+1) * raceTypes.length * lifestyles.length) + ' story combinations, over ' + numberWithCommas(tenderGenders.length * tenderRaces.length * tenderDispositions.length * tenderLooks.length * tenderDegrees.length * tenderSkinColors.length * tenderHairColors.length * tenderHairStyles.length) + ' possible bartenders, over ' + numberWithCommas(clienteles.length * shadyQuests.length * shadyLocations.length * shadyDescriptions.length * patronActivities.length * patronActivities.length * patronActivities.length * tenderDegrees.length) + ' different clientele descriptions, and a whole lot of alcohol!';
@@ -581,7 +618,6 @@ const numberWithCommas = (x) => {
 
 function newTavern(){
 	document.getElementById('descriptionText').style = 'height:30em;overflow:auto;';
-	document.getElementById('titleDisplay').innerHTML = '<h2>The Tavern</h2>';
 	document.getElementById('tavernButton').innerHTML = buttonSayings[clickCount];
 	clickCount++;
 	if(clickCount >= buttonSayings.length){
@@ -591,15 +627,10 @@ function newTavern(){
 	newStory();
 	newBartender();
 	newClientele();
-	newDrinkList();
-	newFoodMenu();
-	document.getElementById("nameButton").disabled = false;
-	document.getElementById("storyButton").disabled = false;
-	document.getElementById("bartenderButton").disabled = false;
-	document.getElementById("clienteleButton").disabled = false;
-	document.getElementById("drinkButton").disabled = false;
-	document.getElementById("menuButton").disabled = false;
+	newRooms();
+	newFoodAndDrink();
 	document.getElementById("saveOrPrintButton").disabled = false;
+	document.getElementById("instructions").style = 'display:inline;font-size:.8em';
 }
 
 function newName(){
@@ -622,6 +653,7 @@ function newName(){
 		document.getElementById('nameDisplay2').innerHTML = tavernName;
 		document.getElementById('nameDisplay3').innerHTML = tavernName;
 	}
+	document.getElementById('titleDisplay').innerHTML =  '<h1><button onclick="newName()" class="innerBtn">' + tavernName + '</button></h1><h2><button onclick="newStory()" class="innerBtn"> The Tavern\'s Tale </button></h2>';
 }
 
 function newStory() {
@@ -768,7 +800,7 @@ function newStory() {
 		} else if (ownerTwoHasOtherBackground < 1) {
 			document.getElementById('backstoryDisplay').innerHTML = 'Before owning the tavern, one of the owners worked there under the previous owner, while the other ' + singleBackgrounds[ownerOneBackgroundNumber] + '. ';
 		} else if (ownerOneBackgroundNumber == ownerTwoBackgroundNumber) {
-			document.getElementById('backstoryDisplay').innerHTML = 'Before the owned the tavern, both owners ' + jointBackground[ownerOneBackgroundNumber] + '. ';
+			document.getElementById('backstoryDisplay').innerHTML = 'Before the owned the tavern, both owners ' + jointBackgrounds[ownerOneBackgroundNumber] + '. ';
 		} else {
 			document.getElementById('backstoryDisplay').innerHTML = 'Before owning the tavern, one of the owners ' + singleBackgrounds[ownerOneBackgroundNumber] + ', while the other ' + singleBackgrounds[ownerTwoBackgroundNumber] + '. ';
 		}
@@ -798,6 +830,7 @@ function newBartender(){
 	var tenderSkinAndHair = ' words';
 	var tenderColor = tenderSkinColors[Math.floor(Math.random() * tenderSkinColors.length)];
 	var tenderOther = 'decorated';
+	var tenderDispositionNumber = Math.floor(Math.random() * tenderDispositions.length);
 	var tenderHairColor = tenderHairColors[Math.floor(Math.random() * tenderHairColors.length)];
 	var tenderHairStyle = tenderHairStyles[Math.floor(Math.random() * tenderHairStyles.length)];
 	var degree1 = tenderDegrees[Math.floor(Math.random() * tenderDegrees.length)];
@@ -807,6 +840,10 @@ function newBartender(){
 	}
 	var degree3 = tenderDegrees[Math.floor(Math.random() * tenderDegrees.length)];
 	var tenderPhysique = tenderPhysiques[Math.floor(Math.random() * tenderPhysiques.length)];
+	var tenderText = 'Ain\'t nobody at the bar!';
+	if(gimmick == 'the hilarious bartender'){
+		tenderDispositionNumber = Math.floor(Math.random()*11);
+	}
 	
 	switch (lifestyle){
 		case 'squalid':
@@ -818,7 +855,7 @@ function newBartender(){
 					addedS = '';
 					isOrAre = 'are';
 				}
-				if (bartenderDecider<3){
+				if (bartenderDecider<5){
 					reasonForOwnerTendingBar = 'because ' + ownerOneheshethey + ' can\'t afford to hire another person to do the job. ';
 				} else if (bartenderDecider<8){
 					reasonForOwnerTendingBar = 'to maintain the illusion of the tavern being of ' + lifestyle + ' quality. ';
@@ -846,9 +883,9 @@ function newBartender(){
 	
 	if (ownerTendsBar == true){
 		if (secondOwnerDecider < 1){
-			document.getElementById('bartenderDisplay').innerHTML = '<h2>The Bartender</h2> The owner of <span id="nameDisplay2">' + tavernName + '</span> tends the bar ' + reasonForOwnerTendingBar + ownerOneHisHerTheir + ' disposition is generally described as ' + degree1 + ' ' + tenderDispositions[Math.floor(Math.random() * tenderDispositions.length)] + '. ' + ownerOneHeSheThey + ' ' + isOrAre + ' ' + degree2 + ' ' + tenderLooks[Math.floor(Math.random() * tenderLooks.length)] + ' with ' + tenderColor + ' skin and ' + tenderHairColor + ' hair in a ' + tenderHairStyle + ' style. Physically, ' + ownerOneheshethey + ' ' + isOrAre + ' ' + degree3 + ' ' + tenderPhysique + '.';
+			tenderText = 'The owner of <span id="nameDisplay2">' + tavernName + '</span> tends the bar ' + reasonForOwnerTendingBar + ownerOneHisHerTheir + ' disposition is generally described as ' + degree1 + ' ' + tenderDispositions[tenderDispositionNumber] + '. ' + ownerOneHeSheThey + ' ' + isOrAre + ' ' + degree2 + ' ' + tenderLooks[Math.floor(Math.random() * tenderLooks.length)] + ' with ' + tenderColor + ' skin and ' + tenderHairColor + ' hair in a ' + tenderHairStyle + ' style. Physically, ' + ownerOneheshethey + ' ' + isOrAre + ' ' + degree3 + ' ' + tenderPhysique + '.';
 		} else {
-			document.getElementById('bartenderDisplay').innerHTML = '<h2>The Bartender</h2> One of the owners of <span id="nameDisplay2">' + tavernName + '</span> tends the bar ' + reasonForOwnerTendingBar + ownerOneHisHerTheir + ' disposition is generally described as ' + degree1 + ' ' + tenderDispositions[Math.floor(Math.random() * tenderDispositions.length)] + '. ' + ownerOneHeSheThey + ' ' + isOrAre + ' ' + degree2 + ' ' + tenderLooks[Math.floor(Math.random() * tenderLooks.length)] + ' with ' + tenderColor + ' skin and ' + tenderHairColor + ' hair in a ' + tenderHairStyle + ' style. Physically, ' + ownerOneheshethey + ' ' + isOrAre + ' ' + degree3 + ' ' + tenderPhysique + '.';
+			tenderText = 'One of the owners of <span id="nameDisplay2">' + tavernName + '</span> tends the bar ' + reasonForOwnerTendingBar + ownerOneHisHerTheir + ' disposition is generally described as ' + degree1 + ' ' + tenderDispositions[tenderDispositionNumber] + '. ' + ownerOneHeSheThey + ' ' + isOrAre + ' ' + degree2 + ' ' + tenderLooks[Math.floor(Math.random() * tenderLooks.length)] + ' with ' + tenderColor + ' skin and ' + tenderHairColor + ' hair in a ' + tenderHairStyle + ' style. Physically, ' + ownerOneheshethey + ' ' + isOrAre + ' ' + degree3 + ' ' + tenderPhysique + '.';
 		}
 	} else {
 		if (tenderGenderDecider > 5) {
@@ -894,9 +931,9 @@ function newBartender(){
 			case 'half-elf':
 				tenderSkinAndHair = ' skin is ' + tenderColor + ', and ' + tenderheshethey + ' ' + hasorhave + ' ' + tenderHairColor + ' hair, kept in a ' + tenderHairStyle + ' style.';		
 		}
-		
-		document.getElementById('bartenderDisplay').innerHTML = '<h2>The Bartender</h2> The bartender at <span id="nameDisplay2">' + tavernName + '</span> is a' + tenderAge + ' ' + tenderGenders[tenderGender] + ' ' + tenderRace + ' who is ' + degree1 + ' ' + tenderLooks[Math.floor(Math.random() * tenderLooks.length)] + '. ' + tenderHeSheThey + ' ' + isOrAre + ' often ' + degree2 + ' ' + tenderDispositions[Math.floor(Math.random() * tenderDispositions.length)] + ' in disposition. ' + tenderHisHerTheir + tenderSkinAndHair + ' Physically, ' + tenderheshethey + ' ' + isOrAre + ' ' + degree3 + ' ' + tenderPhysique + '.';
+		tenderText = 'The bartender at <span id="nameDisplay2">' + tavernName + '</span> is a' + tenderAge + ' ' + tenderGenders[tenderGender] + ' ' + tenderRace + ' who is ' + degree1 + ' ' + tenderLooks[Math.floor(Math.random() * tenderLooks.length)] + '. ' + tenderHeSheThey + ' ' + isOrAre + ' often ' + degree2 + ' ' + tenderDispositions[tenderDispositionNumber] + ' in disposition. ' + tenderHisHerTheir + tenderSkinAndHair + ' Physically, ' + tenderheshethey + ' ' + isOrAre + ' ' + degree3 + ' ' + tenderPhysique + '.';
 	}
+	document.getElementById('bartenderDisplay').innerHTML = '<h2><button onclick="newBartender()" class="innerBtn"> The Bartender </button></h2>' + tenderText;
 }
 
 function newClientele() {
@@ -988,54 +1025,103 @@ function newClientele() {
 		}
 	}
 	
-	document.getElementById('clienteleDisplay').innerHTML = '<h2>The Clientele</h2> On a typical night, the clientele at <span id="nameDisplay3">' + tavernName + '</span> can be described as ' + clienteleDegree + ' ' + clientele + '. On this occasion, there ' + isOrAre + ' ' + howMany + ' other ' + peopleOrPerson + ' currently in the tavern. ' + patronsAreDoing + '. ' + shadyText;
+	document.getElementById('clienteleDisplay').innerHTML = '<h2><button onclick="newClientele()" class="innerBtn"> The Clientele </button></h2> On a typical night, the clientele at <span id="nameDisplay3">' + tavernName + '</span> can be described as ' + clienteleDegree + ' ' + clientele + '. On this occasion, there ' + isOrAre + ' ' + howMany + ' other ' + peopleOrPerson + ' currently in the tavern. ' + patronsAreDoing + '. ' + shadyText;
 }
-
+function newRooms(){
+	var roomDegree1 = tenderDegrees[Math.floor(Math.random() * tenderDegrees.length)];
+	var roomSizeNumber = Math.floor(Math.random() * roomSizes.length);
+	var roomSize = roomSizes[roomSizeNumber];
+	var roomDegree2 = tenderDegrees[Math.floor(Math.random() * tenderDegrees.length)];
+	var roomHygeineNumber = Math.floor(Math.random() * (roomConditions.length-lifestyles.length))+lifestyleDecider;
+	var roomHygeine = roomConditions[roomHygeineNumber];
+	var numberOfRooms = Math.floor(Math.random() * lifestyleDecider) + Math.floor(Math.random() * 3) + 1;
+	var roomCostModifier = Math.floor((roomSizeNumber + roomHygeineNumber)/2);
+	isOrAre = 'are';
+	addedS = 's';
+	switch (numberOfRooms){
+		case 1:
+			numberOfRooms = 'one';
+			isOrAre = 'is';
+			addedS = '';
+			break;
+		case 2:
+			numberOfRooms = 'two';
+			break;
+		case 3:
+			numberOfRooms = 'three';
+			break;
+		case 4:
+			numberOfRooms = 'four';
+			break;
+		case 5:
+			numberOfRooms = 'five';
+			break;
+		case 6:
+			numberOfRooms = 'six';
+			break;
+		case 7:
+			numberOfRooms = 'seven';
+	}
+	switch (lifestyleDecider){
+		case 0:
+			roomCost = (1 + Math.floor(Math.random()*5) + roomCostModifier) + 'cp.';
+			break;
+		case 1:
+			roomCost = (5 + Math.floor(Math.random()*5) + roomCostModifier);
+			if (roomCost>10){
+				roomCost = '1sp and ' + (roomCost-10) + 'cp.';
+			} else if (roomCost == 10){
+				roomCost = '1sp.'
+			} else {
+				roomCost = roomCost + 'cp.';
+			}
+			break;
+		case 2:
+			roomCost = (1 + Math.floor(Math.random()*4) + roomCostModifier) + 'sp.';
+			break;
+		case 3:
+			roomCost = (3 + Math.floor(Math.random()*8) + roomCostModifier);
+			if (roomCost>10){
+				roomCost = '1gp and ' + (roomCost-10) + 'sp.';
+			} else if(roomCost == 10){
+				roomCost = '1gp.'
+			} else {
+				roomCost = roomCost + 'sp.';
+			}
+			break;
+		case 4:
+			roomCost = (5 + Math.floor(Math.random()*21) + roomCostModifier);
+			if (roomCost >= 30){
+				roomCost = '3gp.';
+			} else if (roomCost > 20) {
+				roomCost = '2gp and ' + (roomCost-20) + 'sp.';
+			} else if (roomCost == 20) {
+				roomCost = '2gp.';
+			} else if (roomCost >10) {
+				roomCost = '1gp and ' + (roomCost-10) + 'sp.';
+			} else if (roomCost == 10) {
+				roomCost = '1gp.';
+			} else {
+				roomCost = roomCost + 'sp.';
+			}
+			break;
+		case 5:
+			roomCost = Math.round((30 + Math.floor(Math.random()*(40+roomCostModifier)))/10) + ' gp.';
+	}
+	document.getElementById('roomsDisplay').innerHTML = '<h2><button onclick="newRooms()" class = "innerBtn"> The Accomodations </button></h2> The rooms for rent at <span id="nameDisplay2">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost;
+}
+function newFoodAndDrink(){
+	document.getElementById('foodAndDrinkHeadingArea').innerHTML = '<h2><button onclick="newFoodAndDrink()" class="innerBtn"> The Food & Drink </button></h2>';
+	newDrinkList();
+	newFoodMenu();
+}
 function newDrinkList(){
-	document.getElementById('foodAndDrinkHeadingArea').innerHTML = '<h2> The Food & Drink </h2>';
 	document.getElementById('drinksDisplay').style = 'display:inline-block';
-	var drinkQuality = (lifestyleDecider)*2;
-	var drinkVariety = lifestyles.length*2;
-	var priceModifier = 1;
-	nameUpdatesNeeded = 0;
-	
-	var beerName ='';
-	var beerDescription = '';
-	var beerOriginNumber = 0;
-	var beerOriginModifier = 0;
-	var beerTypeNumber = 0;
-	var beerType = '';
-	var beerFlavorNumber = 0;
-	var beerFlavor = 'hoppy';
-	var beerHasNote = 0;
-	var beerNoteNumber = 0;
-	var beerNote = 'delicious';
-	var beerFinishNumber = 0;
-	var beerFinish = 'wonderful';
-	var beerColorNumber = 0;
-	var beerColor = 'amber';
-	var beerABV = 5.7;
-	var beerPriceTotal = 0;
-	var beerPrice = '';
-	var beerOfferingCount = Math.round(Math.random() * lifestyleDecider + 3);
-	var beerList = [];
-	
-	var wineName = '';
-	var wineDescription = '';
-	var redWine = false;
-	var redOrWhite = 'white';
-	var wineType = '';
-	var wineTypeNumber = 0;
-	var flavorOneNumber = 0;
-	var flavorOne = 'yucky';
-	var flavorTwoNumber = 1;
-	var flavorTwo = 'headachey';
-	var wineOriginNumber = 0;
-	var wineOriginModifier = 0;
-	var winePriceTotal = 0;
-	var winePrice = '';
-	var wineOfferingCount = Math.floor((Math.random() * lifestyleDecider) + 2);
-	var wineList = [];
+	document.getElementById('drinkTitle').innerHTML = '<h2><button onclick="newDrinkList()" class="innerBtn"> Beverages </button></h2>';
+	drinkQuality = (lifestyleDecider)*2;
+	drinkVariety = lifestyles.length*2;
+	wineOfferingCount = Math.floor((Math.random() * lifestyleDecider) + 2);
+	beerOfferingCount = Math.round(Math.random() * lifestyleDecider + 3);
 	
 	switch(gimmick){
 		case 'the quality of the drinks':
@@ -1067,6 +1153,29 @@ function newDrinkList(){
 			priceModifier = .2;
 			wineOriginModifier = .8;
 	}
+	
+	newWines();
+	newBeers();
+	newLiquors();
+}
+
+function newWines(){
+	var wineName = '';
+	var wineDescription = '';
+	var redWine = false;
+	var redOrWhite = 'white';
+	var wineType = '';
+	var wineTypeNumber = 0;
+	var flavorOneNumber = 0;
+	var flavorOne = 'yucky';
+	var flavorTwoNumber = 1;
+	var flavorTwo = 'headachey';
+	var wineOriginNumber = 0;
+	var wineOriginModifier = 0;
+	var winePriceTotal = 0;
+	var winePrice = '';
+	var wineList = [];
+	document.getElementById('winesDisplay').innerHTML = '<h3><button onclick="newWines()" class="innerBtn"> Wine List </button></h3>' + 'got to here' + wineOfferingCount;
 	
 	for (var i=0;i<wineOfferingCount;i++){ 
 		redWine = Math.floor(Math.random() * 2);
@@ -1114,6 +1223,30 @@ function newDrinkList(){
 		wineDescription = '<p><strong><i>' + wineName + ' ' + wineType + '</strong></i><br> A' + wineOrigins[wineOriginNumber] + ' ' + redOrWhite + ' wine ' + bouquetPhrases[Math.floor(Math.random()*bouquetPhrases.length)] + flavorOne + ' and ' + flavorTwo + '.<br>' + winePrice +'</p>';
 		wineList.splice(wineList.length,1,wineDescription);
 	}
+	var wineListToString = wineList.join(" ");
+	document.getElementById('winesDisplay').innerHTML = '<h3><button onclick="newWines()" class="innerBtn"> Wine List </button></h3>' + wineListToString;	
+}
+
+function newBeers(){
+	var beerName ='';
+	var beerDescription = '';
+	var beerOriginNumber = 0;
+	var beerOriginModifier = 0;
+	var beerTypeNumber = 0;
+	var beerType = '';
+	var beerFlavorNumber = 0;
+	var beerFlavor = 'hoppy';
+	var beerHasNote = 0;
+	var beerNoteNumber = 0;
+	var beerNote = 'delicious';
+	var beerFinishNumber = 0;
+	var beerFinish = 'wonderful';
+	var beerColorNumber = 0;
+	var beerColor = 'amber';
+	var beerABV = 5.7;
+	var beerPriceTotal = 0;
+	var beerPrice = '';
+	var beerList = [];
 	
 	for (var j=0;j<beerOfferingCount;j++){
 		beerTypeNumber = Math.floor(Math.random() * beerVarieties.length);
@@ -1151,22 +1284,51 @@ function newDrinkList(){
 			beerPrice = Math.round(beerPriceTotal) + 'cp/gallon';
 		}
 		
-		beerDescription = '<p><strong><i>' + beerName + ' ' + beerTypeCaps + '</strong></i><br> A' + beerOrigins[beerOriginNumber] + ' ' + beerType + ' with a' + beerColor + ' color. It has a' + beerFlavor + ' flavor' + beerNote + ' and a ' + beerFinish + ' finish. ' + beerABV + '% ABV<br>' + beerPrice +'</p>';
+		beerDescription = '<p><strong><i>' + beerName + ' ' + beerTypeCaps + '</strong></i><br>' +beerABV + '% ABV<br>A' + beerOrigins[beerOriginNumber] + ' ' + beerType + ' with a' + beerColor + ' color. It has a' + beerFlavor + ' flavor' + beerNote + ' and a ' + beerFinish + ' finish.<br>' + beerPrice +'</p>';
 		beerList.splice(beerList.length,1,beerDescription);
 	}
 	
 	var beerListToString = beerList.join(" ");
-	var wineListToString = wineList.join(" ");
-	document.getElementById('winesDisplay').innerHTML = '<h3> Wines </h3>' + wineListToString;
-	document.getElementById('beersDisplay').innerHTML = '<h3> Lagers & Ales </h3>' + beerListToString;
-	document.getElementById('liquorsDisplay').innerHTML = '<h3> Liquors </h3> Hard stuff coming soon.';
+	document.getElementById('beersDisplay').innerHTML = '<h3><button onclick="newBeers()" class="innerBtn"> Lagers & Ales </button></h3>' + beerListToString;
+}
+
+function newLiquors(){
+	document.getElementById('liquorsDisplay').innerHTML = '<h3><button onclick="theyNeverListen++;newLiquors()" class="innerBtn"> Liquors </button></h3> Hard stuff coming soon.';
+	if (theyNeverListen >0){
+		document.getElementById('liquorsDisplay').innerHTML = '<h3><button onclick="" class="innerBtn"> Liquors </button></h3>You had to click it to see, didn\'t you?';
+		theyNeverListen = 0;
+	}
 }
 
 function newFoodMenu(){
 	document.getElementById('foodDisplay').style = 'display:inline-block';
-	document.getElementById('startersDisplay').innerHTML = '<h3> Starters </h3> Food Coming Soon';
-	document.getElementById('saladsDisplay').innerHTML = '<h3> Salads </h3> I said, Food is Coming Soon';
-	document.getElementById('entreesDisplay').innerHTML = '<h3> Entrees </h3> There\'s still no food, come back later.';
-	
+	document.getElementById('foodTitle').innerHTML = '<h2><button onclick="newFoodMenu()" class="innerBtn"> Food Menu </button></h2>';
+	newStarters();
+	newSalads();
+	newEntrees();	
 	allRan = 1;
+}
+
+function newStarters(){
+	document.getElementById('startersDisplay').innerHTML = '<h3><button onclick="theyNeverListen++;newStarters()" class="innerBtn"> Starters </button></h3> Food Coming Soon';
+	if (theyNeverListen >0){
+		document.getElementById('startersDisplay').innerHTML = '<h3><button onclick="" class="innerBtn"> Starters </button></h3>Don\'t do that.';
+		theyNeverListen = 0;
+	}
+}
+
+function newSalads(){
+	document.getElementById('saladsDisplay').innerHTML = '<h3><button onclick="theyNeverListen++;newSalads()" class="innerBtn"> Salads </button></h3> I said, Food is Coming Soon';
+	if (theyNeverListen >0){
+		document.getElementById('saladsDisplay').innerHTML = '<h3><button onclick="" class="innerBtn"> Salads </button></h3>Clicking isn\'t going to magically make a salad.';
+		theyNeverListen = 0;
+	}
+}
+
+function newEntrees(){
+	document.getElementById('entreesDisplay').innerHTML = '<h3><button onclick="theyNeverListen++;newEntrees()" class="innerBtn"> Entrees </button></h3> There\'s still no food, come back later.';
+	if (theyNeverListen >0){
+		document.getElementById('entreesDisplay').innerHTML = '<h3><button onclick="" class="innerBtn"> Entrees </button></h3>Did you click all the other ones too?';
+		theyNeverListen = 0;
+	}
 }
