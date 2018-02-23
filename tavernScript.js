@@ -542,7 +542,7 @@ var allRan = 0;
 var nameUpdater = '';
 
 function boast(){
-	document.getElementById('boastBox').innerHTML = 'With ' + numberWithCommas((prefixes.length * prefixes.length * suffixes.length) + (prefixes.length * suffixes.length)) + ' possible tavern names, over ' + numberWithCommas(maritalStatuses.length * ownerOneType.length * heSheThey.length * ownerTwoNeutral.length * inspirations.length * gimmicks.length * (ownerSecrets.length+1) * (singleBackgrounds.length+1) * raceTypes.length * lifestyles.length) + ' story combinations, over ' + numberWithCommas(tenderGenders.length * tenderRaces.length * tenderDispositions.length * tenderLooks.length * tenderDegrees.length * tenderSkinColors.length * tenderHairColors.length * tenderHairStyles.length) + ' possible bartenders, and over ' + numberWithCommas(clienteles.length * shadyQuests.length * shadyLocations.length * shadyDescriptions.length * patronActivities.length * patronActivities.length * patronActivities.length * tenderDegrees.length) + ' different clientele descriptions!';
+	document.getElementById('boastBox').innerHTML = 'With ' + numberWithCommas((prefixes.length * prefixes.length * suffixes.length) + (prefixes.length * suffixes.length)) + ' possible tavern names, over ' + numberWithCommas(maritalStatuses.length * ownerOneType.length * heSheThey.length * ownerTwoNeutral.length * inspirations.length * gimmicks.length * (ownerSecrets.length+1) * (singleBackgrounds.length+1) * raceTypes.length * lifestyles.length) + ' story combinations, over ' + numberWithCommas(tenderGenders.length * tenderRaces.length * tenderDispositions.length * tenderLooks.length * tenderDegrees.length * tenderSkinColors.length * tenderHairColors.length * tenderHairStyles.length) + ' possible bartenders, over ' + numberWithCommas(clienteles.length * shadyQuests.length * shadyLocations.length * shadyDescriptions.length * patronActivities.length * patronActivities.length * patronActivities.length * tenderDegrees.length) + ' different clientele descriptions, and a whole lot of alcohol!';
 }
 
 function saveOrPrint(){
@@ -580,7 +580,7 @@ const numberWithCommas = (x) => {
 }
 
 function newTavern(){
-	document.getElementById('descriptionText').style = 'height:36em';
+	document.getElementById('descriptionText').style = 'height:30em;overflow:auto;';
 	document.getElementById('titleDisplay').innerHTML = '<h2>The Tavern</h2>';
 	document.getElementById('tavernButton').innerHTML = buttonSayings[clickCount];
 	clickCount++;
@@ -1085,6 +1085,8 @@ function newDrinkList(){
 			wineOriginNumber = Math.min(wineOrigins.length-1,wineOriginNumber+wineOriginModifier);
 		} else if (wineOriginModifier > 0){
 			wineOriginNumber = Math.floor(wineOriginNumber * wineOriginModifier);
+		} else {
+			wineOriginNumber = Math.min(wineOrigins.length-1,wineOriginNumber);
 		}
 		if (gimmick == 'their selection of wines imported from several far away places' && Math.floor(Math.random()*3) > 0){
 			wineOriginNumber = 4;
