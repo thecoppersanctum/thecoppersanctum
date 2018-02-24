@@ -307,7 +307,7 @@ var shadyQuests = [
 'Their family was murdered by bandits/goblins/kobolds or some CR-appropriate threat, and they need help getting their revenge.',
 'Their child/parent/spouse has gone missing without any signs of dissatisfaction or foul play. They need help figuring out what happened.',
 'They were cursed by a hag many years ago to always be approached by random people in taverns and quite frankly they\'re getting sick of it.',
-'They are suffering from a strange illness, hence why they were situated in an aread away from other people. They are highly contagious.',
+'They are suffering from a strange illness, hence why they were situated in an area away from other people. They are highly contagious.',
 'They just like to be left alone to their drink.'
 ]
 
@@ -1208,6 +1208,8 @@ function newWines(){
 	var wineOriginModifier = 0;
 	var winePriceTotal = 0;
 	var winePrice = '';
+	var glassPriceTotal = 0;
+	var glassPrice = '';
 	var wineList = [];
 	
 	for (var i=0;i<wineOfferingCount;i++){ 
@@ -1245,15 +1247,25 @@ function newWines(){
 		flavorTwoNumber = Math.min(Math.floor(Math.random() * (descriptorTwoArray.length-(drinkVariety+wineOrigins.length)) + drinkQuality + wineOriginNumber),descriptorTwoArray.length-1);
 		flavorTwo = descriptorTwoArray[flavorTwoNumber];
 		winePriceTotal = priceModifier * ((flavorOneNumber + flavorTwoNumber)/2 + drinkQuality + wineOfferingCount + ((wineOriginNumber+1) * (wineOriginNumber+1) * (wineOriginNumber+1)));
-		if (winePriceTotal>=95){
+		glassPriceTotal = winePriceTotal/3;
+		
+		if (glassPriceTotal >= 100){
+			glassPrice = Math.floor(glassPriceTotal/100) + 'gp/glass';
+		} else if (glassPriceTotal >= 10){
+			glassPrice = Math.floor(glassPriceTotal/10) + 'sp/glass';
+		} else {
+			winePrice = Math.floor(glassPriceTotal) + 'cp/glass';
+		}
+		
+		if (winePriceTotal >= 95){
 			winePrice = Math.round(winePriceTotal/100) + 'gp/bottle';
-		} else if (winePriceTotal>=10){
+		} else if (winePriceTotal >= 10){
 			winePrice = Math.round(winePriceTotal/10) + 'sp/bottle';
 		} else {
 			winePrice = Math.round(winePriceTotal) + 'cp/bottle';
 		}
 		
-		wineDescription = '<p><strong><i>' + wineName + ' ' + wineType + '</strong></i><br> A' + wineOrigins[wineOriginNumber] + ' ' + redOrWhite + ' wine ' + bouquetPhrases[Math.floor(Math.random()*bouquetPhrases.length)] + flavorOne + ' and ' + flavorTwo + '.<br>' + winePrice +'</p>';
+		wineDescription = '<p><strong><i>' + wineName + ' ' + wineType + '</strong></i><br> A' + wineOrigins[wineOriginNumber] + ' ' + redOrWhite + ' wine ' + bouquetPhrases[Math.floor(Math.random()*bouquetPhrases.length)] + flavorOne + ' and ' + flavorTwo + '.<br>' + winePrice + ' ' + glassPrice + '</p>';
 		wineList.splice(wineList.length,1,wineDescription);
 	}
 	var wineListToString = wineList.join(" ");
@@ -1280,6 +1292,8 @@ function newBeers(){
 	var beerABV = 5.7;
 	var beerPriceTotal = 0;
 	var beerPrice = '';
+	var pintPriceTotal = 0;
+	var pintPrice = '';
 	var beerList = [];
 	
 	for (var j=0;j<beerOfferingCount;j++){
@@ -1310,15 +1324,21 @@ function newBeers(){
 		beerFinish = beerFinishes[beerFinishNumber];
 		beerHasNote = Math.floor(Math.random() * 2);
 		beerABV = (Math.round(((drinkQuality + beerTypeNumber/2 + beerOriginNumber + beerColorNumber/2 + Math.floor(Math.random() * 3 + 11))/5.5 + beerOriginNumber/2) * 100))/100;
-		beerPriceTotal = priceModifier * 1.5 * ((beerFlavorNumber + (4*beerHasNote*((beerNoteNumber+1)/4)) + beerFinishNumber)/(2+beerHasNote/2) + drinkQuality + beerOfferingCount + beerOriginNumber + beerABV);
+		beerPriceTotal = priceModifier * 2 * ((beerFlavorNumber + (4*beerHasNote*((beerNoteNumber+1)/4)) + beerFinishNumber)/(2+beerHasNote/2) + drinkQuality + beerOfferingCount + beerOriginNumber + beerABV);
+		pintPriceTotal = beerPriceTotal/5;
+		if (pintPriceTotal >= 10){
+			pintPrice = Math.floor(pintPriceTotal/10) + 'sp/pint';
+		} else {
+			pintPrice = Math.floor(pintPriceTotal) + 'cp/pint';
+		}
 		
-		if (beerPriceTotal>=10){
-			beerPrice = Math.round(beerPriceTotal/10) + 'sp/gallon';
+		if (beerPriceTotal >= 10){
+			beerPrice = Math.floor(beerPriceTotal/10) + 'sp/gallon';
 		} else {
 			beerPrice = Math.round(beerPriceTotal) + 'cp/gallon';
 		}
 		
-		beerDescription = '<p><strong><i>' + beerName + ' ' + beerTypeCaps + '</strong></i><br>' +beerABV + '% ABV<br>A' + beerOrigins[beerOriginNumber] + ' ' + beerType + ' with a' + beerColor + ' color. It has a' + beerFlavor + ' flavor' + beerNote + ' and a ' + beerFinish + ' finish.<br>' + beerPrice +'</p>';
+		beerDescription = '<p><strong><i>' + beerName + ' ' + beerTypeCaps + '</strong></i><br>' +beerABV + '% ABV<br>A' + beerOrigins[beerOriginNumber] + ' ' + beerType + ' with a' + beerColor + ' color. It has a' + beerFlavor + ' flavor' + beerNote + ' and a ' + beerFinish + ' finish.<br>' + beerPrice + ' ' + pintPrice +'</p>';
 		beerList.splice(beerList.length,1,beerDescription);
 	}
 	
