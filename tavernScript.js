@@ -6,9 +6,11 @@ var clickCount = 0;
 
 var prefixes = [
 'Red','Orange','Yellow','Green','Blue','Purple','Violet','White','Black','Grey','Brown','Teal','Turquoise','Indigo','Marroon','Puce','Lavender','Fuchsia','Pink','Crimson','Mauve',
-'Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Gilded','Hammered','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Wicked','Winged',
+'Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Frightening','Gilded','Hammered','Horrific','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Wicked','Winged',
 'Angry','Brave','Cowardly','Drunken','Fevered','Flirty','Happy','Hungry','Impatient','Lonely','Lucky','Nervous','Rested','Restless','Rogue','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise',
-'Babbling','Charging','Crying','Dancing','Fighting','Flaming','Flying','Laughing','Raging','Screaming','Sleeping','Smiling','Stumbling','Struggling',
+'Babbling','Charging','Charming','Crying','Dancing','Fighting','Flying','Laughing','Raging','Screaming','Sleeping','Smiling','Stumbling','Stunning','Struggling',
+'Flaming','Icy','Acidic','Psychic','Electric','Necrotic','Radiant','Forceful','Poisonous','Concussive','Piercing','Slashing','Bludgeoning',
+'Blind','Charmed','Deaf','Frightened','Grappled','Incapacitated','Invisible','Paralyzed','Petrified','Exhausted','Poisoned','Prone','Restrained','Stunned','Unconscious',
 'Bear and','Bell and','Blade and','Block and','Book and','Boot and','Bull and','Cat and','Dog and','Fish and','Goat and','Hawk and','Hook and','Horse and','Moose and','Mug and','Rose and','Staff and','Stick and','Tooth and','Wand and','Wolf and',
 'Bronze','Carnelian','Chalk','Cloth','Copper','Crystal','Diamond','Electrum','Emerald','Glass','Gold','Golden','Jade','Metal','Platinum','Ruby','Sapphire','Silk','Silver','Steel','Velvet','Wooden',
 'Abyssal','Arcane','Celestial','Demonic','Devilish','Draconic','Dragon\'s','Fiendish','Holy','Infernal','Monstrous','Pious','Unholy','Vampiric','Zombified',
@@ -95,7 +97,7 @@ var tenderHairColors = [
 ]
 
 var tenderHairStyles = [
-'close-cut','long, wavy','shoulder length','short, messy','ponytailed','slicked-back','mohawk','curly','clean, short','long, straight'
+'close-cut','long, wavy','shoulder length','short, messy','ponytail','slicked-back','mohawk','curly','clean, short','long, straight','braided','drawn-up','long and loose','tight bun','top-knot','short, spiky','long, tangled',
 ]
 
 var heSheThey = [
@@ -151,6 +153,7 @@ var ownerSecrets = [
 'keeps a collection of stolen trinkets from previous guests',
 'has a rare medical condition',
 'suffers from mental illness',
+'is extremely racist/classist/sexist',
 'is in hiding here due to being wanted for murder in a neighboring community',
 'is actually a doppelganger',
 'dabbles in dark magic',
@@ -174,6 +177,7 @@ var ownerJointSecret = [
 'steal small items and trinkets from the tavern patrons to add to their collections',
 'suffer from a rare medical condition',
 'suffer from a mental illness',
+'are extremely racist/classist/sexist',
 'are hiding out here due to being wanted for murder in a neighboring community',
 'are really doppelgangers',
 'are practitioners of the dark arts',
@@ -299,13 +303,16 @@ var shadyQuests = [
 'They are on the run from the law for a crime they didn\'t commit and they need help clearing their name.',
 'They recently lost their home in a fire and are trying to find the arsonist responsible.',
 'They lost their prize-winning pet, and need help recovering it from a dangerous location.',
-'They know of a dragon who is currently away from its hoard, but they don\'t know how long the dragon will be gone for.',
+'They know of a dragon who is currently away from its hoard, but they don\'t know for how long the dragon will be gone.',
 'Their family was murdered by bandits/goblins/kobolds or some CR-appropriate threat, and they need help getting their revenge.',
-'Their child/parent/spouse has gone missing without any signs of dissatisfaction or foul play. They need help figuring out what happened.'
+'Their child/parent/spouse has gone missing without any signs of dissatisfaction or foul play. They need help figuring out what happened.',
+'They were cursed by a hag many years ago to always be approached by random people in taverns and quite frankly they\'re getting sick of it.',
+'They are suffering from a strange illness, hence why they were situated in an aread away from other people. They are highly contagious.',
+'They just like to be left alone to their drink.'
 ]
 
 var shadyLocations = [
-'Seated near the bar,',
+'Seated alone near the bar,',
 'At a table almost hidden in shadow,',
 'Sitting at a secluded table,',
 'Leaning against the far wall,',
@@ -579,8 +586,21 @@ var theyNeverListen = 0;
 var allRan = 0;
 
 function boast(){
-	document.getElementById('boastBox').innerHTML = 'With ' + numberWithCommas((prefixes.length * prefixes.length * suffixes.length) + (prefixes.length * suffixes.length)) + ' possible tavern names, over ' + numberWithCommas(maritalStatuses.length * ownerOneType.length * heSheThey.length * ownerTwoNeutral.length * inspirations.length * gimmicks.length * (ownerSecrets.length+1) * (singleBackgrounds.length+1) * raceTypes.length * lifestyles.length) + ' story combinations, over ' + numberWithCommas(tenderGenders.length * tenderRaces.length * tenderDispositions.length * tenderLooks.length * tenderDegrees.length * tenderSkinColors.length * tenderHairColors.length * tenderHairStyles.length) + ' possible bartenders, over ' + numberWithCommas(clienteles.length * shadyQuests.length * shadyLocations.length * shadyDescriptions.length * patronActivities.length * patronActivities.length * patronActivities.length * tenderDegrees.length) + ' different clientele descriptions, and a whole lot of alcohol!';
+	document.getElementById('boastBox').innerHTML = 'With ' + numberWithCommas((prefixes.length * prefixes.length * suffixes.length) + (prefixes.length * suffixes.length)) + ' possible tavern names, over ' + numberToRounded(maritalStatuses.length * ownerOneType.length * heSheThey.length * ownerTwoNeutral.length * inspirations.length * gimmicks.length * (ownerSecrets.length+1) * (singleBackgrounds.length+1) * raceTypes.length * lifestyles.length) + ' story combinations, over ' + numberToRounded(tenderGenders.length * tenderRaces.length * tenderDispositions.length * tenderLooks.length * tenderDegrees.length * tenderSkinColors.length * tenderHairColors.length * tenderHairStyles.length) + ' possible bartenders, over ' + numberToRounded(clienteles.length * shadyQuests.length * shadyLocations.length * shadyDescriptions.length * patronActivities.length * patronActivities.length * patronActivities.length * tenderDegrees.length) + ' different clientele descriptions, and a whole lot of alcohol!';
 }
+
+var numberWithCommas = (x) => {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+var numberToRounded = (x) => {
+	if (x > 1000000000){
+		return Math.floor(x/100000000)/10 + ' billion';
+	} else if (x > 1000000){
+		return Math.floor(x/100000)/10 + ' million';
+	}
+}
+
 
 function saveOrPrint(){
 	var printWindow = window.open('','PRINT','height=800,width=1000');
@@ -589,6 +609,7 @@ function saveOrPrint(){
 	printWindow.document.write('<link rel="stylesheet" type="text/css" media="print" href="print.css">');
 	printWindow.document.write('</head><body>');
 	printWindow.document.write('<h1>' + tavernName + '</h1>');
+	printWindow.document.write('<h2> The Tavern\'s Tale </h2>');
 	printWindow.document.write(document.getElementById('nameDisplay').innerHTML);
 	printWindow.document.write(document.getElementById('ownerDisplay').innerHTML);
 	printWindow.document.write(document.getElementById('raceDisplay').innerHTML);
@@ -597,10 +618,24 @@ function saveOrPrint(){
 	printWindow.document.write(document.getElementById('inspirationDisplay').innerHTML);
 	printWindow.document.write(document.getElementById('qualityDisplay').innerHTML);
 	printWindow.document.write(document.getElementById('gimmickDisplay').innerHTML);
+	printWindow.document.write('<h2> The Bartender </h2>');
 	printWindow.document.write(document.getElementById('bartenderDisplay').innerHTML);
+	printWindow.document.write('<h2> The Clientele </h2>');
 	printWindow.document.write(document.getElementById('clienteleDisplay').innerHTML);
-	printWindow.document.write(document.getElementById('drinksDisplay').innerHTML);
-	printWindow.document.write(document.getElementById('foodDisplay').innerHTML);
+	printWindow.document.write('<h2> The Accomodations </h2>');
+	printWindow.document.write(document.getElementById('roomsDisplay').innerHTML);
+	printWindow.document.write('<h2> The Food & Drink </h2><h3> Beverages </h3><h3>Wines</h3>');
+	printWindow.document.write(document.getElementById('winesDisplay').innerHTML);
+	printWindow.document.write('<h3> Lagers & Ales </h3>');
+	printWindow.document.write(document.getElementById('beersDisplay').innerHTML);
+	printWindow.document.write('<h3> Liquors </h3>');
+	printWindow.document.write(document.getElementById('liquorsDisplay').innerHTML);
+	printWindow.document.write('<h2> Food Menu </h2> <h3> Starters </h3>');
+	printWindow.document.write(document.getElementById('startersDisplay').innerHTML);
+	printWindow.document.write('<h3> Salads </h3>');
+	printWindow.document.write(document.getElementById('saladsDisplay').innerHTML);
+	printWindow.document.write('<h3> Entrees </h3>');
+	printWindow.document.write(document.getElementById('entreesDisplay').innerHTML);
 	printWindow.document.write('<p> Created with Not Another Tavern Generator from The Copper Sanctum <br>©2018 Ian F Evans</p>');
 	printWindow.document.write('</body></html>');
 	
@@ -611,13 +646,8 @@ function saveOrPrint(){
 	printWindow.close();
 }
 
-
-const numberWithCommas = (x) => {
-	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 function newTavern(){
-	document.getElementById('descriptionText').style = 'height:30em;overflow:auto;';
+	document.getElementById('descriptionText').style = 'height:65vh;overflow:auto;';
 	document.getElementById('tavernButton').innerHTML = buttonSayings[clickCount];
 	clickCount++;
 	if(clickCount >= buttonSayings.length){
@@ -934,7 +964,8 @@ function newBartender(){
 		}
 		tenderText = 'The bartender at <span id="nameDisplay2">' + tavernName + '</span> is a' + tenderAge + ' ' + tenderGenders[tenderGender] + ' ' + tenderRace + ' who is ' + degree1 + ' ' + tenderLooks[Math.floor(Math.random() * tenderLooks.length)] + '. ' + tenderHeSheThey + ' ' + isOrAre + ' often ' + degree2 + ' ' + tenderDispositions[tenderDispositionNumber] + ' in disposition. ' + tenderHisHerTheir + tenderSkinAndHair + ' Physically, ' + tenderheshethey + ' ' + isOrAre + ' ' + degree3 + ' ' + tenderPhysique + '.';
 	}
-	document.getElementById('bartenderDisplay').innerHTML = '<h2><button onclick="newBartender()" class="innerBtn"> The Bartender </button></h2>' + tenderText;
+	document.getElementById('bartenderHeading').innerHTML = '<h2><button onclick="newBartender()" class="innerBtn"> The Bartender </button></h2>';
+	document.getElementById('bartenderDisplay').innerHTML = tenderText;
 }
 
 function newClientele() {
@@ -1026,7 +1057,8 @@ function newClientele() {
 		}
 	}
 	
-	document.getElementById('clienteleDisplay').innerHTML = '<h2><button onclick="newClientele()" class="innerBtn"> The Clientele </button></h2> On a typical night, the clientele at <span id="nameDisplay3">' + tavernName + '</span> can be described as ' + clienteleDegree + ' ' + clientele + '. On this occasion, there ' + isOrAre + ' ' + howMany + ' other ' + peopleOrPerson + ' currently in the tavern. ' + patronsAreDoing + '. ' + shadyText;
+	document.getElementById('clienteleHeading').innerHTML = '<h2><button onclick="newClientele()" class="innerBtn"> The Clientele </button></h2>';
+	document.getElementById('clienteleDisplay').innerHTML = 'On a typical night, the clientele at <span id="nameDisplay3">' + tavernName + '</span> can be described as ' + clienteleDegree + ' ' + clientele + '. On this occasion, there ' + isOrAre + ' ' + howMany + ' other ' + peopleOrPerson + ' currently in the tavern. ' + patronsAreDoing + '. ' + shadyText;
 }
 function newRooms(){
 	var roomDegree1 = tenderDegrees[Math.floor(Math.random() * tenderDegrees.length)];
@@ -1109,7 +1141,8 @@ function newRooms(){
 		case 5:
 			roomCost = Math.round((30 + Math.floor(Math.random()*(40+roomCostModifier)))/10) + ' gp.';
 	}
-	document.getElementById('roomsDisplay').innerHTML = '<h2><button onclick="newRooms()" class = "innerBtn"> The Accomodations </button></h2> The rooms for rent at <span id="nameDisplay4">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost;
+	document.getElementById('roomsHeading').innerHTML = '<h2><button onclick="newRooms()" class = "innerBtn"> The Accomodations </button></h2>';
+	document.getElementById('roomsDisplay').innerHTML = 'The rooms for rent at <span id="nameDisplay4">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost;
 }
 function newFoodAndDrink(){
 	document.getElementById('foodAndDrinkHeadingArea').innerHTML = '<h2><button onclick="newFoodAndDrink()" class="innerBtn"> The Food & Drink </button></h2>';
@@ -1176,7 +1209,6 @@ function newWines(){
 	var winePriceTotal = 0;
 	var winePrice = '';
 	var wineList = [];
-	document.getElementById('winesDisplay').innerHTML = '<h3><button onclick="newWines()" class="innerBtn"> Wine List </button></h3>' + 'got to here' + wineOfferingCount;
 	
 	for (var i=0;i<wineOfferingCount;i++){ 
 		redWine = Math.floor(Math.random() * 2);
@@ -1202,7 +1234,7 @@ function newWines(){
 			wineOriginNumber = 4;
 		}
 		if (wineOriginNumber == 2){
-			wineName = 'The House\'s';
+			wineName = 'House';
 		} else {
 			wineName = prefixes[Math.floor(Math.random() * prefixes.length)] + ' ' + suffixes[Math.floor(Math.random() * suffixes.length)];
 		}
@@ -1225,7 +1257,8 @@ function newWines(){
 		wineList.splice(wineList.length,1,wineDescription);
 	}
 	var wineListToString = wineList.join(" ");
-	document.getElementById('winesDisplay').innerHTML = '<h3><button onclick="newWines()" class="innerBtn"> Wine List </button></h3>' + wineListToString;	
+	document.getElementById('wineTitle').innerHTML = '<h3><button onclick="newWines()" class="innerBtn"> Wine List </button></h3>';
+	document.getElementById('winesDisplay').innerHTML = wineListToString;	
 }
 
 function newBeers(){
@@ -1259,7 +1292,7 @@ function newBeers(){
 		
 		beerOriginNumber  = Math.floor(Math.random() * beerOrigins.length);
 		if (beerOriginNumber == 1){
-			beerName = 'The House\'s';
+			beerName = 'House';
 		} else {
 			beerName = prefixes[Math.floor(Math.random() * prefixes.length)] + ' ' + suffixes[Math.floor(Math.random() * suffixes.length)];
 		}
@@ -1276,7 +1309,7 @@ function newBeers(){
 		beerFinishNumber = Math.floor(Math.random() * beerFinishes.length);
 		beerFinish = beerFinishes[beerFinishNumber];
 		beerHasNote = Math.floor(Math.random() * 2);
-		beerABV = (Math.round(((drinkQuality + beerTypeNumber + beerOriginNumber + beerColorNumber + Math.floor(Math.random() * 3 + 11))/3.6) * 100))/100;
+		beerABV = (Math.round(((drinkQuality + beerTypeNumber/2 + beerOriginNumber + beerColorNumber/2 + Math.floor(Math.random() * 3 + 11))/5.5 + beerOriginNumber/2) * 100))/100;
 		beerPriceTotal = priceModifier * 1.5 * ((beerFlavorNumber + (4*beerHasNote*((beerNoteNumber+1)/4)) + beerFinishNumber)/(2+beerHasNote/2) + drinkQuality + beerOfferingCount + beerOriginNumber + beerABV);
 		
 		if (beerPriceTotal>=10){
@@ -1290,13 +1323,15 @@ function newBeers(){
 	}
 	
 	var beerListToString = beerList.join(" ");
-	document.getElementById('beersDisplay').innerHTML = '<h3><button onclick="newBeers()" class="innerBtn"> Lagers & Ales </button></h3>' + beerListToString;
+	document.getElementById('beerTitle').innerHTML = '<h3><button onclick="newBeers()" class="innerBtn"> Lagers & Ales </button></h3>';
+	document.getElementById('beersDisplay').innerHTML = beerListToString;
 }
 
 function newLiquors(){
-	document.getElementById('liquorsDisplay').innerHTML = '<h3><button onclick="theyNeverListen++;newLiquors()" class="innerBtn"> Liquors </button></h3> Hard stuff coming soon.';
+	document.getElementById('liquorTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newLiquors()" class="innerBtn"> Liquors </button></h3>';
+	document.getElementById('liquorsDisplay').innerHTML = 'Hard stuff coming soon.';
 	if (theyNeverListen >0){
-		document.getElementById('liquorsDisplay').innerHTML = '<h3><button onclick="" class="innerBtn"> Liquors </button></h3>You had to click it to see, didn\'t you?';
+		document.getElementById('liquorsDisplay').innerHTML = 'You had to click it to see, didn\'t you?';
 		theyNeverListen = 0;
 	}
 }
@@ -1311,25 +1346,28 @@ function newFoodMenu(){
 }
 
 function newStarters(){
-	document.getElementById('startersDisplay').innerHTML = '<h3><button onclick="theyNeverListen++;newStarters()" class="innerBtn"> Starters </button></h3> Food Coming Soon';
+	document.getElementById('starterTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newStarters()" class="innerBtn"> Starters </button></h3>';
+	document.getElementById('startersDisplay').innerHTML = 'Food Coming Soon';
 	if (theyNeverListen >0){
-		document.getElementById('startersDisplay').innerHTML = '<h3><button onclick="" class="innerBtn"> Starters </button></h3>Don\'t do that.';
+		document.getElementById('startersDisplay').innerHTML = 'Don\'t do that.';
 		theyNeverListen = 0;
 	}
 }
 
 function newSalads(){
-	document.getElementById('saladsDisplay').innerHTML = '<h3><button onclick="theyNeverListen++;newSalads()" class="innerBtn"> Salads </button></h3> I said, Food is Coming Soon';
+	document.getElementById('saladTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newSalads()" class="innerBtn"> Salads </button></h3>';
+	document.getElementById('saladsDisplay').innerHTML = 'I said, Food is Coming Soon';
 	if (theyNeverListen >0){
-		document.getElementById('saladsDisplay').innerHTML = '<h3><button onclick="" class="innerBtn"> Salads </button></h3>Clicking isn\'t going to magically make a salad.';
+		document.getElementById('saladsDisplay').innerHTML = 'Clicking isn\'t going to magically make a salad.';
 		theyNeverListen = 0;
 	}
 }
 
 function newEntrees(){
-	document.getElementById('entreesDisplay').innerHTML = '<h3><button onclick="theyNeverListen++;newEntrees()" class="innerBtn"> Entrees </button></h3> There\'s still no food, come back later.';
+	document.getElementById('entreeTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newEntrees()" class="innerBtn"> Entrees </button></h3>';
+	document.getElementById('entreesDisplay').innerHTML = 'There\'s still no food, come back later.';
 	if (theyNeverListen >0){
-		document.getElementById('entreesDisplay').innerHTML = '<h3><button onclick="" class="innerBtn"> Entrees </button></h3>Did you click all the other ones too?';
+		document.getElementById('entreesDisplay').innerHTML = 'Did you click all the other ones too?';
 		theyNeverListen = 0;
 	}
 }
