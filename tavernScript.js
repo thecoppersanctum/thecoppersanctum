@@ -62,7 +62,7 @@ var tenderLooks = [
 ]
 
 var tenderPhysiques = [
-'overweight','skinny','underweight','obese','stocky','muscular','scrawny','average','athletic','fit','curvy','blocky','svelte','willowy','meaty','chubby','chunky','in shape','big-boned']
+'overweight','skinny','underweight','obese','stocky','muscular','scrawny','average','athletic','fit','curvy','blocky','svelte','willowy','meaty','chubby','chunky','in shape','big-boned','tall','short']
 
 var tenderDegrees = [
 'unmistably','somewhat','absolutely','acutely','almost','astonishingly','awfully','certainly','considerably','conspicuously','decidedly','disturbingly','eminently','excessively','extremely','impressively','incredibly','kind of','not quite','notably','noticeably','particularly','positively','powerfully','pretty','profoundly','quite','rather','remarkably','sort of','surprisingly','terribly','truly','uncommonly','unsettlingly','unusually','very','wonderfully','','','','','','','','','','','','','','','','','','',''
@@ -622,7 +622,7 @@ function saveOrPrint(){
 	printWindow.document.write(document.getElementById('bartenderDisplay').innerHTML);
 	printWindow.document.write('<h2> The Clientele </h2>');
 	printWindow.document.write(document.getElementById('clienteleDisplay').innerHTML);
-	printWindow.document.write('<h2> The Accomodations </h2>');
+	printWindow.document.write('<h2> The Accommodations </h2>');
 	printWindow.document.write(document.getElementById('roomsDisplay').innerHTML);
 	printWindow.document.write('<h2> The Food & Drink </h2><h3> Beverages </h3><h3>Wines</h3>');
 	printWindow.document.write(document.getElementById('winesDisplay').innerHTML);
@@ -1141,7 +1141,7 @@ function newRooms(){
 		case 5:
 			roomCost = Math.round((30 + Math.floor(Math.random()*(40+roomCostModifier)))/10) + ' gp.';
 	}
-	document.getElementById('roomsHeading').innerHTML = '<h2><button onclick="newRooms()" class = "innerBtn"> The Accomodations </button></h2>';
+	document.getElementById('roomsHeading').innerHTML = '<h2><button onclick="newRooms()" class = "innerBtn"> The Accommodations </button></h2>';
 	document.getElementById('roomsDisplay').innerHTML = 'The rooms for rent at <span id="nameDisplay4">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost;
 }
 function newFoodAndDrink(){
