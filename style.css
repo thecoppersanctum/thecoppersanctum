@@ -119,6 +119,11 @@ h2 {
 	font-size:inherit;
 	display:inline-block;
 }
+div.s{
+	line-height:90%;
+	font-size:.8em;
+	font-style:italic;
+}
 .innerBtn:hover {background:#eee;}
 #wideBox{
 	height:500px;

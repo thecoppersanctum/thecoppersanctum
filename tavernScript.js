@@ -18,6 +18,7 @@ var prefixes = [
 'Woodland','Hidden','Verdant',
 'Little','Dire','Giant','Miniature','Smallest'
 ]
+
 var suffixes = [
 'Apple','Artichoke','Carrot','Cherry','Grape','Lemon','Melon','Pear','Pomegranate',
 'Alligator','Ape','Baboon','Badger','Bat','Bear','Boar','Bull','Camel','Cat','Cow','Crab','Crocodile','Crow','Deer','Dog','Donkey','Eagle','Elephant','Elk','Fish','Frog','Goat','Hawk','Horse','Hyena','Jackal','Lion','Lizard','Mammoth','Mare','Moose','Mule','Octopus','Owl','Panther','Pony','Ram','Rat','Raven','Rhinoceros','Scorpion','Serpent','Shark','Snake','Spider','Squirrel','Stallion','Tiger','Turtle','Vulture','Weasel','Whale','Wolf',
@@ -144,19 +145,19 @@ var ownerSecrets = [
 'is secretly involved in local organized crime',
 'is a cannibal who preys on the lonely travelers passing through the inn',
 'used to perform in the circus and doesn\'t like talking about what happened there',
+'secretly runs an underground fight club in the basement of the tavern',
+'is in hiding here due to being wanted for murder in a neighboring community',
 'is secretly cursed with lycanthropy',
 'secretly worships an evil deity',
-'secretly runs an underground fight club in the basement of the tavern',
 'suffers from an old injury',
 'has a fear of spiders',
 'is secretly a vampire who feeds on the patrons of the inn during the night',
 'keeps a collection of stolen trinkets from previous guests',
+'dabbles in dark magic',
 'has a rare medical condition',
 'suffers from mental illness',
-'is extremely racist/classist/sexist',
-'is in hiding here due to being wanted for murder in a neighboring community',
 'is actually a doppelganger',
-'dabbles in dark magic',
+'is extremely racist/classist/sexist',
 'is being mind-controlled by a powerful entity',
 'is secretly the head of the local crime syndicate',
 'is actually an ancient dragon in disguise',
@@ -168,19 +169,19 @@ var ownerJointSecret = [
 'are secretly involved in local organized crime',
 'are cannibals who prey on the lonely travelers passing through their inn',
 'used to perform in the circus, and don\'t like talking about what happened there',
+'play a part in the operation of a secret underground fight club run out of the basement of the tavern',
+'are hiding out here due to being wanted for murder in a neighboring community',
 'are secretly cursed with lycanthropy',
 'secretly worship an evil deity',
-'play a part in the operation of a secret underground fight club run out of the basement of the tavern',
 'have problems that stem from old injuries',
 'are deathly afraid of spiders',
 'are secretly vampires who feed on the patrons of the inn during the night',
 'steal small items and trinkets from the tavern patrons to add to their collections',
+'are practitioners of the dark arts',
 'suffer from a rare medical condition',
 'suffer from a mental illness',
-'are extremely racist/classist/sexist',
-'are hiding out here due to being wanted for murder in a neighboring community',
 'are really doppelgangers',
-'are practitioners of the dark arts',
+'are extremely racist/classist/sexist',
 'are under the mental command of a powerful entity',
 'are involved at the top level of organized crime in the region',
 'are actually ancient dragons in disguise',
@@ -260,6 +261,7 @@ var gimmicks = [
 'the fact that it\'s one of the only bars in town',
 'the surprisingly good quality of the food',
 'its rough-and-tumble anything goes atmosphere',
+'the cheap food',
 'the hilarious bartender',
 'the generous portions of food',
 'the quality of the drinks',
@@ -453,8 +455,18 @@ var bouquetPhrases = [
 'with flavors that are '
 ]
 
+var poisonStrength = ['mild','weak','potent','strong','virulent']
+var poisonEffect = ['blind','sicken','knock out','stun','kill']
+var poisonReason = [
+'It was intended for a different guest of the tavern.',
+'It was a random act of evil.',
+'An old enemy of the party is responsible.',
+'There was a mix-up during the bottling process.'
+]
+
 var beerVarieties = [
 'lager',
+'cider',
 'fruit ale',
 'ale',
 'pilsner',
@@ -465,6 +477,7 @@ var beerVarieties = [
 
 var beerVarietiesCapped = [
 'Lager',
+'Hard Cider',
 'Fruit Ale',
 'Ale',
 'Pilsner',
@@ -474,20 +487,20 @@ var beerVarietiesCapped = [
 ]
 
 var beerColors = [
-' light',
-' pale',
-' light amber',
-' golden',
-'n amber',
-' reddish',
-' light brown',
-' copper',
-' dark amber',
-' medium brown',
-' brown',
-' chestnut brown',
-' dark brown',
-' blackish'
+'light',
+'pale',
+'light amber',
+'golden',
+'amber',
+'reddish',
+'light brown',
+'copper-colored',
+'dark amber',
+'medium brown',
+'brown',
+'chestnut brown',
+'dark brown',
+'blackish'
 ]
 
 var beerOrigins = [
@@ -520,43 +533,203 @@ var beerDescriptors = [
 ' sweet',
 ' spicy',
 ' pleasantly bitter',
-' hoppy',
 ' complex',
-' malty',
 ' nutty',
 ' full-bodied',
 ' refreshing',
 ' fruity',
 ' robust',
-' crisp',
+' crisp'
 ]
 
 var beerNoteText = [
-' with notes of ',
-' with a hint of ',
-' with an aftertaste of ',
-' with a touch of '
+' notes of ',
+' a hint of ',
+' an aftertaste of ',
+' a touch of ',
+' a strong flavor of '
 ]
 
 var beerNotes = [
-'vanilla',
-'honey',
-'barley',
-'toffee',
-'chocolate',
-'caramel',
-'citrus',
-'malt',
-'coffee'
+'vanilla and',
+'honey and',
+'hops and',
+'barley and',
+'toffee and',
+'chocolate and',
+'caramel and',
+'citrus and',
+'malt and',
+'coffee and'
 ]
 
 var beerFinishes = [
 'sour',
 'rough',
+'bitter',
 'creamy',
+'sweet',
 'smooth',
 'pleasant',
 'rich'
+]
+
+var liquorTypes = [
+'vodka',
+'gin',
+'whiskey',
+'rum',
+'brandy',
+'vermouth'
+]
+
+var liquorTypesCapped = [
+'Vodka',
+'Gin',
+'Whiskey',
+'Rum',
+'Brandy',
+'Vermouth'
+]
+
+var liquorSources = [
+'barley',
+'corn',
+'rye',
+'wheat',
+'potato',
+'rice',
+'sorghum',
+'sugarbeet',
+'molasses',
+'sugarcane',
+'honey'
+]
+
+var brandyTypes = [
+'apple',
+'cherry',
+'peach',
+'plum',
+'apricot',
+'elderberry',
+'pear',
+'mulberry',
+'pomace',
+''
+]
+
+var liquorOrigins = [
+' bottom-shelf',
+' poorly made',
+' house-made',
+' locally produced',
+'n imported',
+' finely made'
+]
+
+var cookingMethods = [
+'Stewed',
+'Baked',
+'Deep-fried',
+'Roasted',
+'Blackened',
+'Rotisserie-cooked',
+'Pan-fried',
+'Herb-crusted',
+'Braised',
+'Pan-seared',
+'Stir-fried'
+]
+
+var meatStyles = [
+' bits of ',
+' chunks of ',
+' cubes of ',
+' strips of ',
+' ',' ',' ',' '
+]
+
+var meatOptions = [
+'mystery meat',
+'rabbit',
+'chicken',
+'fish',
+'pork',
+'lamb',
+'turkey',
+'beef',
+'frog',
+'steak',
+'duck',
+'veal',
+'squab',
+'pheasant',
+'quail'
+]
+
+var meatOptionsCapped = [
+'Mystery Meat',
+'Rabbit',
+'Chicken',
+'Fish',
+'Pork',
+'Lamb',
+'Turkey',
+'Beef',
+'Frog',
+'Steak',
+'Duck',
+'Veal',
+'Squab',
+'Pheasant',
+'Quail'
+]
+
+var sauces = [
+' in a thick gravy',
+' in a cream sauce',
+' in white sauce',
+' in red sauce',
+' with a ginger marinade',
+' in garlic sauce',
+' in a vodka sauce'
+]
+
+var presentationStyles = [
+' served over ',
+' on a bed of ',
+' served with ',
+' alongside '
+]
+
+var starches = [
+'bread',
+'mashed potatoes',
+'rice',
+'noodles',
+'pasta',
+'quinoa'
+]
+
+var nextStyles = [
+' with a serving of ',
+' and a helping of ',
+' with a side of ',
+' and '
+]
+
+var veggies = [
+'brussel sprouts',
+'greens',
+'beans',
+'spinach',
+'broccoli',
+'green beans',
+'carrots',
+'artichoke',
+'asparagus',
+'cauliflower'
 ]
 
 var doublePrefix = 0;
@@ -573,15 +746,25 @@ var ownerOnehishertheir = hishertheir[ownerOneGender];
 var ownerOnehimherthem = himherthem[ownerOneGender];
 var secondOwnerDecider = 0;
 
-var inspiration = 'nothing';
-var gimmick = 'nothing';
-var lifestyle = 'decent';
+var inspiration = '';
+var gimmick = '';
+var lifestyle = '';
 var lifestyleDecider = 0;
-var drinkQuality = (lifestyleDecider)*2;
-var drinkVariety = lifestyles.length*2;
-var priceModifier = 1;
-var wineOfferingCount = Math.floor((Math.random() * lifestyleDecider) + 2);
-var beerOfferingCount = Math.round(Math.random() * lifestyleDecider + 3);
+var drinkQuality = 0;
+var drinkVariety = 0;
+var wineOriginModifier = 0;
+var drinkPriceModifier = 1;
+var wineOfferingCount = 0;
+var beerOfferingCount = 0;
+var liquorOfferingVariety = 0;
+var liquorOfferingCount = 0;
+var eatingChallenge = 0;
+var foodQuality = 0;
+var foodQuantity = 0;
+var foodPriceModifier = 1;
+var starterOfferingCount = 0;
+var saladOfferingCount = 0;
+var entreeOfferingCount = 0;
 var theyNeverListen = 0;
 var allRan = 0;
 
@@ -600,7 +783,6 @@ var numberToRounded = (x) => {
 		return Math.floor(x/100000)/10 + ' million';
 	}
 }
-
 
 function saveOrPrint(){
 	var printWindow = window.open('','PRINT','height=800,width=1000');
@@ -712,11 +894,11 @@ function newStory() {
 	ownerOneRaceRarityDecider = Math.floor(Math.random() * 10);
 	var ownerOneRaceRarity = 1;
 	var ownerOneHasSecret = Math.floor(Math.random() * 5);
-	var ownerOneSecretNumber = Math.floor(Math.random() * (ownerSecrets.length-(lifestyles.length/2)) + (lifestyleDecider/2));
-	var ownerOneHasOtherBackground = Math.floor(Math.random() * 3);
+	var ownerOneSecretNumber = Math.floor(Math.random() * (1+ownerSecrets.length-lifestyles.length) + lifestyleDecider);
+	var ownerOneHasOtherBackground = Math.floor(Math.random() * (lifestyleDecider+2));
 	var ownerOneBackgroundNumber = Math.floor(Math.random() * singleBackgrounds.length);
 	
-	secondOwnerDecider = Math.floor(Math.random() * 4);
+	secondOwnerDecider = Math.floor(Math.random() * ((lifestyleDecider/2)+2));
 	var ownerTwoGenderDecider = Math.floor(Math.random() * 100);
 	var ownerTwoGender = 0;
 	
@@ -735,7 +917,7 @@ function newStory() {
 	var ownerTwoRaceRarityDecider = Math.floor(Math.random() * 10);
 	var ownerTwoRaceRarity = 1;
 	var ownerTwoHasSecret = Math.floor(Math.random() * 4);
-	var ownerTwoSecretNumber = Math.floor(Math.random() * (ownerSecrets.length-(lifestyles.length/2)) + (lifestyleDecider/2));
+	var ownerTwoSecretNumber = Math.floor(Math.random() * (1+ownerSecrets.length-lifestyles.length) + lifestyleDecider);
 	var ownerTwoHasOtherBackground = Math.floor(Math.random() * 3);
 	var ownerTwoBackgroundNumber = Math.floor(Math.random() * singleBackgrounds.length);
 	
@@ -1149,42 +1331,48 @@ function newFoodAndDrink(){
 	newDrinkList();
 	newFoodMenu();
 }
-function newDrinkList(){
+function newDrinkList(){	
 	document.getElementById('drinksDisplay').style = 'display:inline-block';
 	document.getElementById('drinkTitle').innerHTML = '<h2><button onclick="newDrinkList()" class="innerBtn"> Beverages </button></h2>';
 	drinkQuality = (lifestyleDecider)*2;
 	drinkVariety = lifestyles.length*2;
-	wineOfferingCount = Math.floor((Math.random() * lifestyleDecider) + 2);
-	beerOfferingCount = Math.round(Math.random() * lifestyleDecider + 3);
+	wineOfferingCount = Math.floor(Math.random() * (lifestyleDecider/2) + 3);
+	beerOfferingCount = Math.round(Math.random() * (lifestyleDecider/2) + 4);
+	liquorOfferingVariety = 4 + Math.floor(lifestyleDecider/2);
+	liquorOfferingCount = Math.round(Math.random() * (lifestyleDecider/2) + 2);
 	
 	switch(gimmick){
 		case 'the quality of the drinks':
 			drinkQuality = drinkQuality + 1;
 			drinkVariety = drinkVariety + 3;
-			priceModifier = 1.75;
+			drinkPriceModifier = 1.75;
 			break;
 		case 'its extensive drink menu':
 			drinkVariety = drinkVariety - 3;
-			priceModifier = 1.6;
-			wineOfferingCount = wineOfferingCount + Math.floor(Math.random() * 5);
-			beerOfferingCount = beerOfferingCount + Math.floor(Math.random() * 6);
+			drinkPriceModifier = 1.6;
+			liquorOfferingVariety = Math.min(liquorOfferingVariety+1,6);
+			wineOfferingCount = wineOfferingCount + Math.floor(Math.random() * 2) + 2;
+			beerOfferingCount = beerOfferingCount + Math.floor(Math.random() * 3) + 2;
+			liquorOfferingCount = liquorOfferingCount + Math.floor(Math.random() * 3) + 2;
 			break;
 		case 'their selection of wines imported from several far away places':
 			drinkVariety = drinkVariety - 4;
-			priceModifier = 1.5;
+			drinkPriceModifier = 1.5;
 			wineOfferingCount = wineOfferingCount + Math.floor(Math.random()*4);
 			wineOriginModifier = 1;
 			break;
 		case 'a fountain that flows freely with alcohol':
 			drinkQuality = drinkQuality * .75;
 			drinkVariety = drinkVariety + 5;
-			priceModifier = 1.25;
+			drinkPriceModifier = 1.25;
 			wineOfferingCount = wineOfferingCount - Math.floor(Math.random()*2);
+			liquorOfferingCount = liquorOfferingCount + Math.floow(Math.ran()*3);
 			break;
 		case 'the cheap booze':
 			drinkQuality = drinkQuality * .5;
 			drinkVariety = drinkVariety * .5;
-			priceModifier = .2;
+			liquorOfferingVariety = Math.floor(liquorOfferingVariety/1.5);
+			drinkPriceModifier = .3;
 			wineOriginModifier = .8;
 	}
 	
@@ -1205,12 +1393,12 @@ function newWines(){
 	var flavorTwoNumber = 1;
 	var flavorTwo = 'headachey';
 	var wineOriginNumber = 0;
-	var wineOriginModifier = 0;
 	var winePriceTotal = 0;
 	var winePrice = '';
 	var glassPriceTotal = 0;
 	var glassPrice = '';
 	var wineList = [];
+	var poisoned = '';
 	
 	for (var i=0;i<wineOfferingCount;i++){ 
 		redWine = Math.floor(Math.random() * 2);
@@ -1246,7 +1434,7 @@ function newWines(){
 		descriptorTwoArray.splice(flavorOneNumber,1);
 		flavorTwoNumber = Math.min(Math.floor(Math.random() * (descriptorTwoArray.length-(drinkVariety+wineOrigins.length)) + drinkQuality + wineOriginNumber),descriptorTwoArray.length-1);
 		flavorTwo = descriptorTwoArray[flavorTwoNumber];
-		winePriceTotal = priceModifier * ((flavorOneNumber + flavorTwoNumber)/2 + drinkQuality + wineOfferingCount + ((wineOriginNumber+1) * (wineOriginNumber+1) * (wineOriginNumber+1)));
+		winePriceTotal = drinkPriceModifier * 3 * ((flavorOneNumber + flavorTwoNumber)/2 + drinkQuality + wineOfferingCount + ((wineOriginNumber+1) * (wineOriginNumber+1) * (wineOriginNumber+1)));
 		glassPriceTotal = winePriceTotal/3;
 		
 		if (glassPriceTotal >= 100){
@@ -1265,19 +1453,25 @@ function newWines(){
 			winePrice = Math.round(winePriceTotal) + 'cp/bottle';
 		}
 		
-		wineDescription = '<p><strong><i>' + wineName + ' ' + wineType + '</strong></i><br> A' + wineOrigins[wineOriginNumber] + ' ' + redOrWhite + ' wine ' + bouquetPhrases[Math.floor(Math.random()*bouquetPhrases.length)] + flavorOne + ' and ' + flavorTwo + '.<br>' + winePrice + ' ' + glassPrice + '</p>';
+		switch (Math.floor(Math.random() * 20)){
+			case 0:
+				poisoned = '<br><div class="s">One bottle of this wine is contaminated with a ' + poisonStrength[Math.floor(Math.random()*poisonStrength.length)] + ' poison that could ' + poisonEffect[Math.floor(Math.random()*poisonEffect.length)] + ' anyone who drinks from it. ' + poisonReason[Math.floor(Math.random()*poisonReason.length)]+'</div>';
+				break;
+		}
+		
+		wineDescription = '<p><strong><i>' + wineName + ' ' + wineType + '</strong></i><br> A' + wineOrigins[wineOriginNumber] + ' ' + redOrWhite + ' wine ' + bouquetPhrases[Math.floor(Math.random()*bouquetPhrases.length)] + flavorOne + ' and ' + flavorTwo + '.<br>' + winePrice + ' ' + glassPrice + poisoned + '</p>';
 		wineList.splice(wineList.length,1,wineDescription);
+		poisoned = '';
 	}
 	var wineListToString = wineList.join(" ");
 	document.getElementById('wineTitle').innerHTML = '<h3><button onclick="newWines()" class="innerBtn"> Wine List </button></h3>';
-	document.getElementById('winesDisplay').innerHTML = wineListToString;	
+	document.getElementById('winesDisplay').innerHTML = wineListToString;
 }
 
 function newBeers(){
 	var beerName ='';
 	var beerDescription = '';
 	var beerOriginNumber = 0;
-	var beerOriginModifier = 0;
 	var beerTypeNumber = 0;
 	var beerType = '';
 	var beerFlavorNumber = 0;
@@ -1304,7 +1498,7 @@ function newBeers(){
 			beerType = aleTypes[Math.floor(Math.random() * aleTypes.length)] + 'ale';
 		}
 		
-		beerOriginNumber  = Math.floor(Math.random() * beerOrigins.length);
+		beerOriginNumber  = Math.floor(Math.random() * (beerOrigins.length-lifestyles.length/3) + Math.round(lifestyleDecider/3));
 		if (beerOriginNumber == 1){
 			beerName = 'House';
 		} else {
@@ -1312,10 +1506,10 @@ function newBeers(){
 		}
 		beerColorNumber = Math.floor(Math.random() * 7) + beerTypeNumber;
 		beerColor = beerColors[beerColorNumber];
-		beerFlavorNumber = Math.floor(Math.random() * beerDescriptors.length);
+		beerFlavorNumber = Math.floor(Math.random() * (beerDescriptors.length-beerOrigins.length) + beerOriginNumber);
 		beerFlavor = beerDescriptors[beerFlavorNumber];
 		beerNoteNumber = Math.floor(Math.random() * beerNotes.length);
-		if (beerHasNote == 0){
+		if (beerHasNote == 0 || beerType == 'cider'){
 			beerNote = '';
 		} else {
 			beerNote = beerNoteText[Math.floor(Math.random() * beerNoteText.length)] + beerNotes[beerNoteNumber];
@@ -1324,7 +1518,7 @@ function newBeers(){
 		beerFinish = beerFinishes[beerFinishNumber];
 		beerHasNote = Math.floor(Math.random() * 2);
 		beerABV = (Math.round(((drinkQuality + beerTypeNumber/2 + beerOriginNumber + beerColorNumber/2 + Math.floor(Math.random() * 3 + 11))/5.5 + beerOriginNumber/2) * 100))/100;
-		beerPriceTotal = priceModifier * 2 * ((beerFlavorNumber + (4*beerHasNote*((beerNoteNumber+1)/4)) + beerFinishNumber)/(2+beerHasNote/2) + drinkQuality + beerOfferingCount + beerOriginNumber + beerABV);
+		beerPriceTotal = drinkPriceModifier * 2 * ((beerFlavorNumber + (4*beerHasNote*((beerNoteNumber+1)/4)) + beerFinishNumber)/(2+beerHasNote/2) + drinkQuality + beerOfferingCount + beerOriginNumber + beerABV);
 		pintPriceTotal = beerPriceTotal/5;
 		if (pintPriceTotal >= 10){
 			pintPrice = Math.floor(pintPriceTotal/10) + 'sp/pint';
@@ -1338,7 +1532,7 @@ function newBeers(){
 			beerPrice = Math.round(beerPriceTotal) + 'cp/gallon';
 		}
 		
-		beerDescription = '<p><strong><i>' + beerName + ' ' + beerTypeCaps + '</strong></i><br>' +beerABV + '% ABV<br>A' + beerOrigins[beerOriginNumber] + ' ' + beerType + ' with a' + beerColor + ' color. It has a' + beerFlavor + ' flavor' + beerNote + ' and a ' + beerFinish + ' finish.<br>' + beerPrice + ' ' + pintPrice +'</p>';
+		beerDescription = '<p><strong><i>' + beerName + ' ' + beerTypeCaps + '</strong></i><br>' +beerABV + '% ABV<br>A' + beerOrigins[beerOriginNumber] + ' ' + beerColor + ' ' + beerType + '. Described as a' + beerFlavor + ' ' + beerType + ' with '+ beerNote + ' a ' + beerFinish + ' finish.<br>' + beerPrice + ' ' + pintPrice +'</p>';
 		beerList.splice(beerList.length,1,beerDescription);
 	}
 	
@@ -1348,26 +1542,129 @@ function newBeers(){
 }
 
 function newLiquors(){
-	document.getElementById('liquorTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newLiquors()" class="innerBtn"> Liquors </button></h3>';
-	document.getElementById('liquorsDisplay').innerHTML = 'Hard stuff coming soon.';
-	if (theyNeverListen >0){
-		document.getElementById('liquorsDisplay').innerHTML = 'You had to click it to see, didn\'t you?';
-		theyNeverListen = 0;
+	var liquorName ='';
+	var liquorDescription = '';
+	var liquorSourceNumber = 0;
+	var liquorSource = '';
+	var liquorOriginNumber = 0;
+	var liquorTypeNumber = 0;
+	var liquorType = '';
+	var liquorTypeCaps = '';
+	var liquorPriceTotal = 0;
+	var liquorPrice = '';
+	var shotPriceTotal = 0;
+	var shotPrice = '';
+	var liquorList = [];
+	
+	for (var k=0;k<liquorOfferingCount;k++){
+		liquorTypeNumber = Math.floor(Math.random() * liquorOfferingVariety);
+		liquorType = liquorTypes[liquorTypeNumber];
+		liquorTypeCaps = liquorTypesCapped[liquorTypeNumber];
+		switch (liquorType){
+			case 'vodka':
+				liquorSourceNumber = Math.floor(Math.random() * 8) + 1;
+				liquorSource = liquorSources[liquorSourceNumber];
+				break;
+			case 'whiskey':
+				liquorSourceNumber = Math.floor(Math.random() * 4);
+				liquorSource = liquorSources[liquorSourceNumber];
+				break;
+			case 'gin':
+				break;
+			case 'rum':
+				liquorSourceNumber = Math.floor(Math.random() * 3) + 8;
+				liquorSource = liquorSources[liquorSourceNumber];
+				break;
+			case 'brandy':
+				liquorSourceNumber = Math.floor(Math.random() * brandyTypes.length);
+				liquorSource = brandyTypes[liquorSourceNumber];
+				break;
+			case 'vermouth':
+				if (Math.round(Math.random()) == 1){
+					liquorSource = 'dry';
+				} else {
+					liquorSource = 'sweet';
+				}
+				
+		}
+		liquorType = liquorSource + ' ' + liquorType;
+		liquorOriginNumber  = Math.floor(Math.random() * (liquorOrigins.length-lifestyles.length/3) + Math.round(lifestyleDecider/3));
+		if (liquorOriginNumber == 2){
+			liquorName = 'House';
+		} else {
+			liquorName = prefixes[Math.floor(Math.random() * prefixes.length)] + ' ' + suffixes[Math.floor(Math.random() * suffixes.length)];
+		}
+		liquorPriceTotal = drinkPriceModifier * 5 * (liquorOriginNumber*5 + lifestyleDecider*5 + drinkQuality*3 + liquorTypeNumber + liquorOfferingVariety*3 + 30);
+		shotPriceTotal = liquorPriceTotal/6;
+		if (shotPriceTotal >= 100){
+			shotPrice = Math.floor(shotPriceTotal/100) + 'gp/shot';
+		}
+		if (shotPriceTotal >= 10){
+			shotPrice = Math.floor(shotPriceTotal/10) + 'sp/shot';
+		} else {
+			shotPrice = Math.floor(shotPriceTotal) + 'cp/shot';
+		}
+		if (liquorPriceTotal >= 100){
+			liquorPrice = Math.floor(liquorPriceTotal/100) + 'gp/bottle';
+		} else if (liquorPriceTotal >= 10){
+			liquorPrice = Math.floor(liquorPriceTotal/10) + 'sp/bottle';
+		} else {
+			liquorPrice = Math.round(liquorPriceTotal) + 'cp/bottle';
+		}
+		
+		liquorDescription = '<p><strong><i>' + liquorName + ' ' + liquorTypeCaps + '</strong></i><br> A' + liquorOrigins[liquorOriginNumber] + ' ' + liquorType + '.<br>' + liquorPrice + ' ' + shotPrice +'</p>';
+		liquorList.splice(liquorList.length,1,liquorDescription);
 	}
+	
+	var liquorListToString = liquorList.join(" ");
+	document.getElementById('liquorTitle').innerHTML = '<h3><button onclick="newLiquors()" class="innerBtn"> Liquors </button></h3>';
+	document.getElementById('liquorsDisplay').innerHTML = liquorListToString;
 }
 
 function newFoodMenu(){
 	document.getElementById('foodDisplay').style = 'display:inline-block';
 	document.getElementById('foodTitle').innerHTML = '<h2><button onclick="newFoodMenu()" class="innerBtn"> Food Menu </button></h2>';
+	eatingChallenge = 0;
+	foodQuality = 0;
+	foodQuantity = Math.floor(lifestyleDecider/2);
+	starterOfferingCount = Math.floor(Math.random() * (lifestyleDecider/2)) + 3;
+	saladOfferingCount = Math.round(Math.random() * (lifestyleDecider/2)) + 4;
+	entreeOfferingCount = Math.floor(lifestyleDecider/2) + 4;
+	
+	switch(gimmick){
+		case 'an eating challenge—if you can eat it all, you don\'t have to pay':
+			foodQuantity++;
+			foodQuantity++;
+			eatingChallenge = 1;
+			break;
+		case 'the surprisingly good quality of the food':
+			foodQuality++;
+			foodQuality++;
+			break;
+		case 'the varied cuisine prepared by a talented chef':
+			foodQuality++;
+			foodPriceModifier = 2;
+			break;
+		case 'the generous portions of food':
+			foodPriceModifier = .8;
+			foodQuality++;
+			break;
+		case 'the cheap food':
+			foodPriceModifier = .4;
+	}
+	
 	newStarters();
 	newSalads();
-	newEntrees();	
+	newEntrees();
+	
+	document.getElementById('disclaimer').innerHTML = '<p>Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may require a Constitution saving throw.</p>';
+	
 	allRan = 1;
 }
 
 function newStarters(){
 	document.getElementById('starterTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newStarters()" class="innerBtn"> Starters </button></h3>';
-	document.getElementById('startersDisplay').innerHTML = 'Food Coming Soon';
+	document.getElementById('startersDisplay').innerHTML = 'Starters are still on their way.';
 	if (theyNeverListen >0){
 		document.getElementById('startersDisplay').innerHTML = 'Don\'t do that.';
 		theyNeverListen = 0;
@@ -1376,18 +1673,90 @@ function newStarters(){
 
 function newSalads(){
 	document.getElementById('saladTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newSalads()" class="innerBtn"> Salads </button></h3>';
-	document.getElementById('saladsDisplay').innerHTML = 'I said, Food is Coming Soon';
+	document.getElementById('saladsDisplay').innerHTML = 'No salads yet.';
 	if (theyNeverListen >0){
-		document.getElementById('saladsDisplay').innerHTML = 'Clicking isn\'t going to magically make a salad.';
+		document.getElementById('saladsDisplay').innerHTML = 'Clicking isn\'t going to magically make there be salads.';
 		theyNeverListen = 0;
 	}
 }
 
 function newEntrees(){
-	document.getElementById('entreeTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newEntrees()" class="innerBtn"> Entrees </button></h3>';
-	document.getElementById('entreesDisplay').innerHTML = 'There\'s still no food, come back later.';
-	if (theyNeverListen >0){
-		document.getElementById('entreesDisplay').innerHTML = 'Did you click all the other ones too?';
-		theyNeverListen = 0;
+	var cookingMethodNumber = 0;
+	var cookingMethod = '';
+	var meatStyle = '';
+	var meatOptionNumber = 0;
+	var meatOption = '';
+	var meatOptionCapped = '';
+	var sauce = '';
+	var presentationStyle = '';
+	var starch = '';
+	var nextStyle = '';
+	var veggie = '';
+	var secondVeggie = '';
+	var entreePriceTotal = 0;
+	var entreePrice = '';
+	var entreeDescription = '';
+	var entreeList = [];
+	
+	for (var k=0;k<entreeOfferingCount;k++){
+		cookingMethodNumber = Math.floor(Math.random() * (cookingMethods.length-5)) + Math.min(lifestyleDecider + foodQuality, 5);
+		cookingMethod = cookingMethods[cookingMethodNumber];
+		meatStyle = meatStyles[Math.floor(Math.random() * meatStyles.length)];
+		meatOptionNumber = Math.floor(Math.random() * (7+lifestyleDecider)) + Math.min(Math.floor(lifestyleDecider/2) + foodQuality, 2);
+		meatOption = meatOptions[meatOptionNumber];
+		meatOptionCapped = meatOptionsCapped[meatOptionNumber];
+		presentationStyle = presentationStyles[Math.floor(Math.random() * presentationStyles.length)];
+		starch = starches[Math.floor(Math.random() * starches.length)];
+		if(lifestyleDecider>1){
+			sauce = sauces[Math.floor(Math.random() * sauces.length)];
+			nextStyle = nextStyles[Math.floor(Math.random() * nextStyles.length)];
+			veggieNumber = Math.floor(Math.random() * veggies.length);
+			veggie = veggies[veggieNumber];
+			var veggieTwoArray = veggies.slice();
+			veggieTwoArray.splice(veggieNumber,1);
+			switch (Math.floor(Math.random()*(6-lifestyleDecider))){
+				case 0:
+					secondVeggie = ' and ' + veggieTwoArray[Math.floor(Math.random() * veggieTwoArray.length)];
+			}
+		}
+		entreePriceTotal = foodPriceModifier * (Math.max(1,Math.pow(lifestyleDecider,3)) + Math.max(1,cookingMethodNumber * meatOptionNumber) + Math.max(1,foodQuality * foodQuantity));
+		switch (lifestyleDecider){
+			case 0:
+				entreePriceTotal = Math.min(5,entreePriceTotal);
+				break;
+			case 1:
+				entreePriceTotal = Math.min(8,entreePriceTotal);
+				break;
+			case 2:
+				entreePriceTotal = Math.min(50,entreePriceTotal);
+				break;
+			case 3:
+				entreePriceTotal = Math.min(80,entreePriceTotal);
+				break;
+			case 4:
+				entreePriceTotal = Math.min(140,entreePriceTotal);
+				break;
+			case 5:
+				entreePriceTotal = Math.max(200,entreePriceTotal);
+		}
+		if (eatingChallenge){entreePriceTotal = entreePriceTotal * 2};
+		if (entreePriceTotal >= 95){
+			entreePrice = Math.round(entreePriceTotal/100) + 'gp';
+		} else if (entreePriceTotal >= 9.5){
+			entreePrice = Math.round(entreePriceTotal/10) + 'sp';
+		} else {
+			entreePrice = Math.floor(entreePriceTotal) + 'cp';
+		}
+		if (eatingChallenge){
+			entreeDescription = '<p><strong><i> The ' + cookingMethod + ' ' + meatOptionCapped + ' Challenge</strong></i><br> A full pound of ' + meatOption + sauce + ' slathered on top of another pound of ' + starch + nextStyle + veggie + secondVeggie + '.<br>' + entreePrice + '</p>';
+			eatingChallenge = 0;
+		} else {
+			entreeDescription = '<p><strong><i>' + cookingMethod + ' ' + meatOptionCapped + '</strong></i><br>' + cookingMethod + meatStyle + meatOption + sauce + presentationStyle + starch + nextStyle + veggie + secondVeggie + '.<br>' + entreePrice +'</p>';
+		}
+		entreeList.splice(entreeList.length,1,entreeDescription);
 	}
+	
+	var entreeListToString = entreeList.join(" ")
+	document.getElementById('entreeTitle').innerHTML = '<h3><button onclick="newEntrees()" class="innerBtn"> Entrees </button></h3>';
+	document.getElementById('entreesDisplay').innerHTML = entreeListToString;
 }
