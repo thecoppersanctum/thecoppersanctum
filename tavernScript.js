@@ -703,6 +703,15 @@ var presentationStyles = [
 ' alongside '
 ]
 
+var piledEtc = [
+' slathered',
+' piled',
+' crammed',
+' thrown',
+' sitting',
+' '
+]
+
 var starches = [
 'bread',
 'mashed potatoes',
@@ -1698,6 +1707,11 @@ function newEntrees(){
 	var entreeDescription = '';
 	var entreeList = [];
 	
+	switch(gimmick){
+		case 'an eating challenge—if you can eat it all, you don\'t have to pay':
+			eatingChallenge = 1;
+			break;
+	}
 	for (var k=0;k<entreeOfferingCount;k++){
 		cookingMethodNumber = Math.floor(Math.random() * (cookingMethods.length-5)) + Math.min(lifestyleDecider + foodQuality, 5);
 		cookingMethod = cookingMethods[cookingMethodNumber];
@@ -1717,6 +1731,9 @@ function newEntrees(){
 			switch (Math.floor(Math.random()*(6-lifestyleDecider))){
 				case 0:
 					secondVeggie = ' and ' + veggieTwoArray[Math.floor(Math.random() * veggieTwoArray.length)];
+			}
+			if(eatingChallenge){
+				secondVeggie = ' and ' + veggieTwoArray[Math.floor(Math.random() * veggieTwoArray.length)];
 			}
 		}
 		entreePriceTotal = foodPriceModifier * (Math.max(1,Math.pow(lifestyleDecider,3)) + Math.max(1,cookingMethodNumber * meatOptionNumber) + Math.max(1,foodQuality * foodQuantity));
@@ -1748,7 +1765,7 @@ function newEntrees(){
 			entreePrice = Math.floor(entreePriceTotal) + 'cp';
 		}
 		if (eatingChallenge){
-			entreeDescription = '<p><strong><i> The ' + cookingMethod + ' ' + meatOptionCapped + ' Challenge</strong></i><br> A full pound of ' + meatOption + sauce + ' slathered on top of another pound of ' + starch + nextStyle + veggie + secondVeggie + '.<br>' + entreePrice + '</p>';
+			entreeDescription = '<p><strong><i> The ' + cookingMethod + ' ' + meatOptionCapped + ' Challenge</strong></i><br> A full pound of ' + meatOption + sauce + piledEtc[Math.floor(Math.random()*piledEtc.length)] + ' on top of another pound of ' + starch + nextStyle + veggie + secondVeggie + '.<br>' + entreePrice + '</p>';
 			eatingChallenge = 0;
 		} else {
 			entreeDescription = '<p><strong><i>' + cookingMethod + ' ' + meatOptionCapped + '</strong></i><br>' + cookingMethod + meatStyle + meatOption + sauce + presentationStyle + starch + nextStyle + veggie + secondVeggie + '.<br>' + entreePrice +'</p>';
