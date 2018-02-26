@@ -1,145 +1,34 @@
-var buttonSayings = [
-'Hit Another Bar','Check Out the Next Inn','Head to the Next Pub','Continue the Crawl','Time for Another Drink','One More!','And Another!','Maybe You\'ve Had Enough','I\'m Gonna Have to Cut You Off','Eh, One More Couldn\'t Hurt','You Feeling Okay?','Maybe Sleep It Off','Maybe Rent a Room','A New Day, a New Bar','Visit a Tavern'
-]
-
+var buttonSayings = ['Hit Another Bar','Check Out the Next Inn','Head to the Next Pub','Continue the Crawl','Time for Another Drink','One More!','And Another!','Maybe You\'ve Had Enough','I\'m Gonna Have to Cut You Off','Eh, One More Couldn\'t Hurt','You Feeling Okay?','Maybe Sleep It Off','Maybe Rent a Room','A New Day, a New Bar','Visit a Tavern']
 var clickCount = 0;
-
-var prefixes = [
-'Red','Orange','Yellow','Green','Blue','Purple','Violet','White','Black','Grey','Brown','Teal','Turquoise','Indigo','Marroon','Puce','Lavender','Fuchsia','Pink','Crimson','Mauve',
-'Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Frightening','Gilded','Hammered','Horrific','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Wicked','Winged',
-'Angry','Brave','Cowardly','Drunken','Fevered','Flirty','Happy','Hungry','Impatient','Lonely','Lucky','Nervous','Rested','Restless','Rogue','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise',
-'Babbling','Charging','Charming','Crying','Dancing','Fighting','Flying','Laughing','Raging','Screaming','Sleeping','Smiling','Stumbling','Stunning','Struggling',
-'Flaming','Icy','Acidic','Psychic','Electric','Necrotic','Radiant','Forceful','Poisonous','Concussive','Piercing','Slashing','Bludgeoning',
-'Blind','Charmed','Deaf','Frightened','Grappled','Incapacitated','Invisible','Paralyzed','Petrified','Exhausted','Poisoned','Prone','Restrained','Stunned','Unconscious',
-'Bear and','Bell and','Blade and','Block and','Book and','Boot and','Bull and','Cat and','Dog and','Fish and','Goat and','Hawk and','Hook and','Horse and','Moose and','Mug and','Rose and','Staff and','Stick and','Tooth and','Wand and','Wolf and',
-'Bronze','Carnelian','Chalk','Cloth','Copper','Crystal','Diamond','Electrum','Emerald','Glass','Gold','Golden','Jade','Metal','Platinum','Ruby','Sapphire','Silk','Silver','Steel','Velvet','Wooden',
-'Abyssal','Arcane','Celestial','Demonic','Devilish','Draconic','Dragon\'s','Fiendish','Holy','Infernal','Monstrous','Pious','Unholy','Vampiric','Zombified',
-'Meady','Hoppy','Bubbly','Sour','Sweet','Tangy','Bitter',
-'Woodland','Hidden','Verdant',
-'Little','Dire','Giant','Miniature','Smallest'
-]
-
-var suffixes = [
-'Apple','Artichoke','Carrot','Cherry','Grape','Lemon','Melon','Pear','Pomegranate',
-'Alligator','Ape','Baboon','Badger','Bat','Bear','Boar','Bull','Camel','Cat','Cow','Crab','Crocodile','Crow','Deer','Dog','Donkey','Eagle','Elephant','Elk','Fish','Frog','Goat','Hawk','Horse','Hyena','Jackal','Lion','Lizard','Mammoth','Mare','Moose','Mule','Octopus','Owl','Panther','Pony','Ram','Rat','Raven','Rhinoceros','Scorpion','Serpent','Shark','Snake','Spider','Squirrel','Stallion','Tiger','Turtle','Vulture','Weasel','Whale','Wolf',
-'Boot','Coat','Cloak','Gauntlet','Glove','Jacket','Robe',
-'Rest','Beacon','Slumber','Respite','Reprieve',
-'Circle','Cube','Hex','Polyhedral','Sphere','Square','Triangle',
-'Abacus','Anvil','Barrel','Basket','Bell','Blanket','Boat','Book','Bottle','Bucket','Candle','Cart','Chain','Chest','Coin','Crowbar','Crown','Crystal','Cup','Door','Edge','Flask','Glass','Hammer','Hoard','Hourglass','Jug','Ladder','Lamp','Lantern','Line','Lock','Map','Mug','Nail','Orb','Pen','Pitcher','Plate','Pot','Pouch','Ring','Rope','Sack','Scroll','Ship','Shovel','Sledge','Spellbook','Tackle','Tankard','Tent','Tome','Torch','Totem','Trap','Wagon','Whistle',
-'Forest','Grove','Pit','Sanctuary','Sanctum','Sea',
-'Barbarian','Bard','Cleric','Druid','Fighter','King','Mage','Monk','Mystic','Paladin','Ranger','Rogue','Queen','Sailor','Sorcerer','Warlock','Warrior','Wizard',
-'Clover','Oak','Rose','Tree','Birch','Maple','Beech',
-'Arrow','Axe','Battleaxe','Blade','Blowgun','Bolt','Bow','Club','Crossbow','Dagger','Dart','Flail','Glaive','Halberd','Handaxe','Javelin','Lance','Mace','Maul','Morningstar','Net','Pick','Pike','Quiver','Rapier','Scimitar','Sickle','Sling','Spear','Staff','Sword','Trident','Wand','Warhammer','Whip',
-'Heart','Claw','Fist','Foot','Head','Maw','Mouth','Tail','Tooth','Eye',
-'Drum','Dulcimer','Flute','Lute','Lyre','Horn','Shawm','Trombone','Trumpet',
-'Aboleth','Angel','Ankheg','Archon','Balor','Banshee','Basilisk','Behir','Bugbear','Bulette','Centaur','Chimera','Cloaker','Cockatrice','Couatl','Cyclops','Demon','Devil','Doppelganger','Dragon','Drider','Dryad','Duergar','Drow','Dwarf','Elemental','Elf','Ettercap','Ettin','Fiend','Fungus','Gargoyle','Genie','Ghost','Ghoul','Giant','Gnoll','Gnome','Goblin','Goliath','Golem','Gorgon','Grick','Griffon','Hag','Halfling','Harpy','Hound','Hippogriff','Hobgoblin','Homunculus','Human','Hydra','Imp','Jelly','Kobold','Kraken','Lamia','Lich','Lizardfolk','Lycanthrope','Magmin','Manticore','Medusa','Mephit','Mermaid','Mimic','Minotaur','Mummy','Naga','Nightmare','Ogre','Ooze','Orc','Otyugh','Owlbear','Pegasus','Pseudodragon','Pixie','Pudding','Rakshasa','Remorhaz','Revenant','Roc','Rust Monster','Sahuagin','Salamander','Satyr','Shadow','Specter','Sphinx','Sprite','Stirge','Succubus','Incubus','Tarrasque','Tiefling','Treant','Troll','Unicorn','Vampire','Werewolf','Wight','Will-o\'-Wisp','Worm','Wraith','Wyvern','Wyrm','Zombie'
-]
-
-var maritalStatuses = [
-'n unmarried',' widowed',' divorced',' married'
-]
-
-var ownerOneType = [
-'man','woman','androgynous person','nonbinary person'
-]
-
-var tenderAges = [
-' nearly adult',' young',' young adult','n adult',' weathered',' young-looking',' mature',' middle-aged','n older','n elderly']
-
-var tenderGenders = [
-'male','female','androgynous','nonbinary'
-]
-
-var tenderRaces = [
-'dwarf','elf','halfling','human','dragonborn','gnome','half-elf','half-orc','tiefling'
-]
-
-var tenderDispositions = [
-'humorous','flamboyant','approachable','flirtatious','jovial','friendly','loud','light-hearted','energetic','ostentatious','surly','affable','approachable','friendly','curmudgeonly','stubborn','soft-spoken','obnoxious','boastful','lazy','reserved','devious','humorless','quiet'
-]
-
-var tenderLooks = [
-'ugly','attractive','average looking'
-]
-
-var tenderPhysiques = [
-'overweight','skinny','underweight','obese','stocky','muscular','scrawny','average','athletic','fit','curvy','blocky','svelte','willowy','meaty','chubby','chunky','in shape','big-boned','tall','short']
-
-var tenderDegrees = [
-'unmistably','somewhat','absolutely','acutely','almost','astonishingly','awfully','certainly','considerably','conspicuously','decidedly','disturbingly','eminently','excessively','extremely','impressively','incredibly','kind of','not quite','notably','noticeably','particularly','positively','powerfully','pretty','profoundly','quite','rather','remarkably','sort of','surprisingly','terribly','truly','uncommonly','unsettlingly','unusually','very','wonderfully','','','','','','','','','','','','','','','','','','',''
-]
-
-var tenderSkinColors = [
-'pale','tan','bronzed','mid-toned','dark','brown','coppery','light','sun-kissed','freckled'
-]
-
-var dragonBornColors = [
-'black','blue','brass','bronze','copper','gold','green','red','silver','white'
-]
-
-var tieflingColors = [
-'red','cobalt blue','light blue','crimson','lavender','light red','pinkish','dark red','purplish','dark blue','vibrant red'
-]
-
-var tieflingHorns = [
-'goat-like','large, curved','small, pointed','spiraled','bull-like','short, blunt','long, thin'
-]
-
-var horcColors = [
-'greenish','greyish','light green','brownish','deep green','mottled green','light grey','tan'
-]
-
-var horcTusks = [
-'pronounced','subdued','barely noticeable','large','small','uneven','broken','cracked','yellowed','sharpened','dulled'
-]
-
-var tenderHairColors = [
-'light','dark','bright','shiny','black','red','brown','blond','grey','white','blue','purple','green','pink','turquoise','amber','chestnut','light brown','dark brown'
-]
-
-var tenderHairStyles = [
-'close-cut','long, wavy','shoulder length','short, messy','ponytail','slicked-back','mohawk','curly','clean, short','long, straight','braided','drawn-up','long and loose','tight bun','top-knot','short, spiky','long, tangled',
-]
-
-var heSheThey = [
-'He','She','They','They'
-]
-
-var heshethey = [
-'he','she','they','they'
-]
-
-var hisHerTheir = [
-'His','Her','Their','Their'
-]
-
-var hishertheir = [
-'his','her','their','their'
-]
-
-var himherthem = [
-'him','her','them','them']
-
-var ownerTwoMale = [
-'son','brother','grandson','boyfriend','male business partner','male friend'
-]
-
-var ownerTwoFemale = [
-'daughter','sister','granddaughter','girlfriend','female business partner','female friend'
-]
-
-var ownerTwoNeutral = [
-'androgynous child','androgynous sibling','androgynous grandchild','androgynous lover','androgynous business partner','androgynous friend'
-]
-
-var ownerTwoNonbinary = [
-'nonbinary child','nonbinary sibling','nonbinary grandchild','nonbinary lover','nonbinary business partner','nonbinary friend'
-]
-
-var raceTypes = [
-'exotic','common','uncommon','distrusted'
-]
-
+var prefixes = ['Red','Orange','Yellow','Green','Blue','Purple','Violet','White','Black','Grey','Brown','Teal','Turquoise','Indigo','Marroon','Puce','Lavender','Fuchsia','Pink','Crimson','Mauve','Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Frightening','Gilded','Hammered','Horrific','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Wicked','Winged','Angry','Brave','Cowardly','Drunken','Fevered','Flirty','Happy','Hungry','Impatient','Lonely','Lucky','Nervous','Rested','Restless','Rogue','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise','Babbling','Charging','Charming','Crying','Dancing','Fighting','Flying','Laughing','Raging','Screaming','Sleeping','Smiling','Stumbling','Stunning','Struggling','Flaming','Icy','Acidic','Psychic','Electric','Necrotic','Radiant','Forceful','Poisonous','Concussive','Piercing','Slashing','Bludgeoning','Blind','Charmed','Deaf','Frightened','Grappled','Incapacitated','Invisible','Paralyzed','Petrified','Exhausted','Poisoned','Prone','Restrained','Stunned','Unconscious','Bear and','Bell and','Blade and','Block and','Book and','Boot and','Bull and','Cat and','Dog and','Fish and','Goat and','Hawk and','Hook and','Horse and','Moose and','Mug and','Rose and','Staff and','Stick and','Tooth and','Wand and','Wolf and','Bronze','Carnelian','Chalk','Cloth','Copper','Crystal','Diamond','Electrum','Emerald','Glass','Gold','Golden','Jade','Metal','Platinum','Ruby','Sapphire','Silk','Silver','Steel','Velvet','Wooden','Abyssal','Arcane','Celestial','Demonic','Devilish','Draconic','Dragon\'s','Fiendish','Holy','Infernal','Monstrous','Pious','Unholy','Vampiric','Zombified','Meady','Hoppy','Bubbly','Sour','Sweet','Tangy','Bitter','Woodland','Hidden','Verdant','Little','Dire','Giant','Miniature','Smallest']
+var suffixes = ['Apple','Artichoke','Carrot','Cherry','Grape','Lemon','Melon','Pear','Pomegranate','Alligator','Ape','Baboon','Badger','Bat','Bear','Boar','Bull','Camel','Cat','Cow','Crab','Crocodile','Crow','Deer','Dog','Donkey','Eagle','Elephant','Elk','Fish','Frog','Goat','Hawk','Horse','Hyena','Jackal','Lion','Lizard','Mammoth','Mare','Moose','Mule','Octopus','Owl','Panther','Pony','Ram','Rat','Raven','Rhinoceros','Scorpion','Serpent','Shark','Snake','Spider','Squirrel','Stallion','Tiger','Turtle','Vulture','Weasel','Whale','Wolf','Boot','Coat','Cloak','Gauntlet','Glove','Jacket','Robe','Rest','Beacon','Slumber','Respite','Reprieve','Circle','Cube','Hex','Polyhedral','Sphere','Square','Triangle','Abacus','Anvil','Barrel','Basket','Bell','Blanket','Boat','Book','Bottle','Bucket','Candle','Cart','Chain','Chest','Coin','Crowbar','Crown','Crystal','Cup','Door','Edge','Flask','Glass','Hammer','Hoard','Hourglass','Jug','Ladder','Lamp','Lantern','Line','Lock','Map','Mug','Nail','Orb','Pen','Pitcher','Plate','Pot','Pouch','Ring','Rope','Sack','Scroll','Ship','Shovel','Sledge','Spellbook','Tackle','Tankard','Tent','Tome','Torch','Totem','Trap','Wagon','Whistle','Forest','Grove','Pit','Sanctuary','Sanctum','Sea','Barbarian','Bard','Cleric','Druid','Fighter','King','Mage','Monk','Mystic','Paladin','Ranger','Rogue','Queen','Sailor','Sorcerer','Warlock','Warrior','Wizard','Clover','Oak','Rose','Tree','Birch','Maple','Beech','Arrow','Axe','Battleaxe','Blade','Blowgun','Bolt','Bow','Club','Crossbow','Dagger','Dart','Flail','Glaive','Halberd','Handaxe','Javelin','Lance','Mace','Maul','Morningstar','Net','Pick','Pike','Quiver','Rapier','Scimitar','Sickle','Sling','Spear','Staff','Sword','Trident','Wand','Warhammer','Whip','Heart','Claw','Fist','Foot','Head','Maw','Mouth','Tail','Tooth','Eye','Drum','Dulcimer','Flute','Lute','Lyre','Horn','Shawm','Trombone','Trumpet','Aboleth','Angel','Ankheg','Archon','Balor','Banshee','Basilisk','Behir','Bugbear','Bulette','Centaur','Chimera','Cloaker','Cockatrice','Couatl','Cyclops','Demon','Devil','Doppelganger','Dragon','Drider','Dryad','Duergar','Drow','Dwarf','Elemental','Elf','Ettercap','Ettin','Fiend','Fungus','Gargoyle','Genie','Ghost','Ghoul','Giant','Gnoll','Gnome','Goblin','Goliath','Golem','Gorgon','Grick','Griffon','Hag','Halfling','Harpy','Hound','Hippogriff','Hobgoblin','Homunculus','Human','Hydra','Imp','Jelly','Kobold','Kraken','Lamia','Lich','Lizardfolk','Lycanthrope','Magmin','Manticore','Medusa','Mephit','Mermaid','Mimic','Minotaur','Mummy','Naga','Nightmare','Ogre','Ooze','Orc','Otyugh','Owlbear','Pegasus','Pseudodragon','Pixie','Pudding','Rakshasa','Remorhaz','Revenant','Roc','Rust Monster','Sahuagin','Salamander','Satyr','Shadow','Specter','Sphinx','Sprite','Stirge','Succubus','Incubus','Tarrasque','Tiefling','Treant','Troll','Unicorn','Vampire','Werewolf','Wight','Will-o\'-Wisp','Worm','Wraith','Wyvern','Wyrm','Zombie']
+var maritalStatuses = ['n unmarried',' widowed',' divorced',' married']
+var ownerOneType = ['man','woman','androgynous person','nonbinary person']
+var tenderAges = [' nearly adult',' young',' young adult','n adult',' weathered',' young-looking',' mature',' middle-aged','n older','n elderly']
+var tenderGenders = ['male','female','androgynous','nonbinary']
+var tenderRaces = ['dwarf','elf','halfling','human','dragonborn','gnome','half-elf','half-orc','tiefling']
+var tenderDispositions = ['humorous','flamboyant','approachable','flirtatious','jovial','friendly','loud','light-hearted','energetic','ostentatious','surly','affable','approachable','friendly','curmudgeonly','stubborn','soft-spoken','obnoxious','boastful','lazy','reserved','devious','humorless','quiet']
+var tenderLooks = ['ugly','attractive','average looking']
+var tenderPhysiques = ['overweight','skinny','underweight','obese','stocky','muscular','scrawny','average','athletic','fit','curvy','blocky','svelte','willowy','meaty','chubby','chunky','in shape','big-boned','tall','short']
+var tenderDegrees = ['unmistably','somewhat','absolutely','acutely','almost','astonishingly','awfully','certainly','considerably','conspicuously','decidedly','disturbingly','eminently','excessively','extremely','impressively','incredibly','kind of','not quite','notably','noticeably','particularly','positively','powerfully','pretty','profoundly','quite','rather','remarkably','sort of','surprisingly','terribly','truly','uncommonly','unsettlingly','unusually','very','wonderfully','','','','','','','','','','','','','','','','','']
+var tenderSkinColors = ['pale','tan','bronzed','mid-toned','dark','brown','coppery','light','sun-kissed','freckled']
+var dragonBornColors = ['black','blue','brass','bronze','copper','gold','green','red','silver','white']
+var tieflingColors = ['red','cobalt blue','light blue','crimson','lavender','light red','pinkish','dark red','purplish','dark blue','vibrant red']
+var tieflingHorns = ['goat-like','large, curved','small, pointed','spiraled','bull-like','short, blunt','long, thin']
+var horcColors = ['greenish','greyish','light green','brownish','deep green','mottled green','light grey','tan']
+var horcTusks = ['pronounced','subdued','barely noticeable','large','small','uneven','broken','cracked','yellowed','sharpened','dull']
+var tenderHairColors = ['light','dark','bright','shiny','black','red','brown','blond','grey','white','blue','purple','green','pink','turquoise','amber','chestnut','light brown','dark brown']
+var tenderHairStyles = ['close-cut','long, wavy','shoulder length','short, messy','ponytail','slicked-back','mohawk','curly','clean, short','long, straight','braided','drawn-up','long and loose','tight bun','top-knot','short, spiky','long, tangled',]
+var heSheThey = ['He','She','They','They']
+var heshethey = ['he','she','they','they']
+var hisHerTheir = ['His','Her','Their','Their']
+var hishertheir = ['his','her','their','their']
+var himherthem = ['him','her','them','them']
+var ownerTwoMale = ['son','brother','grandson','boyfriend','male business partner','male friend']
+var ownerTwoFemale = ['daughter','sister','granddaughter','girlfriend','female business partner','female friend']
+var ownerTwoNeutral = ['androgynous child','androgynous sibling','androgynous grandchild','androgynous lover','androgynous business partner','androgynous friend']
+var ownerTwoNonbinary = ['nonbinary child','nonbinary sibling','nonbinary grandchild','nonbinary lover','nonbinary business partner','nonbinary friend']
+var raceTypes = ['common','uncommon','exotic','distrusted']
 var ownerSecrets = [
 'is openly involved in criminal activities',
 'is secretly involved in local organized crime',
@@ -163,7 +52,6 @@ var ownerSecrets = [
 'is actually an ancient dragon in disguise',
 'is secretly a powerful archfey'
 ]
-
 var ownerJointSecret = [
 'are openly involved in criminal activities',
 'are secretly involved in local organized crime',
@@ -187,7 +75,6 @@ var ownerJointSecret = [
 'are actually ancient dragons in disguise',
 'are secretly powerful archfey'
 ]
-
 var singleBackgrounds = [
 'led a life of adventure',
 'fought as a gladiator in a famous arena',
@@ -214,7 +101,6 @@ var singleBackgrounds = [
 'tried to earn a living as an artist',
 'tried to make money as a writer'
 ]
-
 var jointBackgrounds = [
 'adventured together',
 'fought as gladiators in a famous arena',
@@ -241,17 +127,7 @@ var jointBackgrounds = [
 'were starving artists',
 'wrote a book together'
 ]
-
-var inspirations = [
-'an attempt at humor or irony',
-'a local legend',
-'a story from the owner\'s past',
-'an inside joke',
-'free association. It was the first thing the owner thought of when asked for a name',
-'the owner\'s nickname',
-'a misinterpretation of another famous tavern\'s name'
-]
-
+var inspirations = ['an attempt at humor or irony','a local legend','a story from the owner\'s past','an inside joke','free association. It was the first thing the owner thought of when asked for a name','the owner\'s nickname','a misinterpretation of another famous tavern\'s name']
 var gimmicks = [
 'nothing. This isn\'t a very popular tavern',
 'its comfortable seating',
@@ -287,15 +163,8 @@ var gimmicks = [
 'an enchanted bandstand that plays music at all times',
 'the owner\'s exotic pet'
 ]
-
-var lifestyles = [
-'squalid','poor','modest','comfortable','wealthy','aristocratic'
-]
-
-var clienteles = [
-'violent','raucous','boisterous','loud','rambunctious','obnoxious','unfriendly','rude','clandestine','friendly','amicable','welcoming','secretive','subdued','peaceful','elitist','snobbish'
-]
-
+var lifestyles = ['squalid','poor','modest','comfortable','wealthy','aristocratic']
+var clienteles = ['violent','raucous','boisterous','loud','rambunctious','obnoxious','rude','unfriendly','friendly','amicable','welcoming','secretive','subdued','clandestine','peaceful','elitist','snobbish']
 var shadyQuests = [
 'They are running a scam to trick adventurers out of their hard-earned treasure.',
 'They are looking for a group to help recover an artifact.',
@@ -312,434 +181,54 @@ var shadyQuests = [
 'They are suffering from a strange illness, hence why they were situated in an area away from other people. They are highly contagious.',
 'They just like to be left alone to their drink.'
 ]
-
-var shadyLocations = [
-'Seated alone near the bar,',
-'At a table almost hidden in shadow,',
-'Sitting at a secluded table,',
-'Leaning against the far wall,',
-'Nearly hidden in the corner,'
-]
-
-var shadyDescriptions = [
-' jittery',
-' paranoid',
-'n anxious',
-' nervous',
-' deceptively calm',
-' tough',
-' depressed',
-' upset',
-'n imposing'
-]
-
-var patronActivities = [
-'trying to start a fight',
-'throwing things at another table',
-'harrassing the waitstaff',
-'arguing with the bartender',
-'engaged in a heated debate',
-'drinking heavily',
-'participating in a drinking contest',
-'arguing over how to split the bill',
-'discussing religious or political matters',
-'singing a drinking song',
-'playing a game of dice',
-'playing a card game',
-'sharing tales of past adventures—successes and failures',
-'playing a game of darts',
-'consumed in a philosophical conversation',
-'playing some kind of guessing game',
-'entranced by a dancer on the stage',
-'listening to a singer',
-'laughing in response to a joke',
-'playing chess',
-'dancing to music',
-'watching some performers',
-'listening to the band'
-]
-
-var roomSizes = [
-'tiny',
-'cramped',
-'small',
-'average sized',
-'comfortably sized',
-'spacious',
-'large',
-'huge'
-]
-
-var roomConditions = [
-'disgusting',
-'filthy',
-'dirty',
-'dingy',
-'hygenic',
-'taken care of',
-'clean',
-'spotless',
-'well-cleaned',
-'immaculate',
-'pristine'
-]
-
-var wineDescriptors = [
-'astringent',
-'musty',
-'vinegary',
-'sour',
-'cloying',
-'corked',
-'tart',
-'dirty',
-'raisiny',
-'rough',
-'bitter',
-'flat',
-'smokey',
-'leathery',
-'green',
-'lean',
-'dry',
-'full',
-'powerful',
-'earthy',
-'sweet',
-'oaky',
-'mellow',
-'spicy',
-'herbaceous',
-'deep',
-'toasty',
-'vibrant',
-'crisp',
-'soft',
-'buttery',
-'aromatic',
-'expressive',
-'fruity',
-'smooth',
-'complex',
-'rich'
-]
-
-var whiteVarieties = [
-'Reisling',
-'Gewürztraminer',
-'Chardonnay',
-'Sauvignon Blanc'
-]
-
-var redVarieties = [
-'Shiraz',
-'Merlot',
-'Cabernet Sauvignon',
-'Pinot Noir'
-]
-
-var wineOrigins = [
-' bottom-shelf',
-' poorly made',
-' house-made',
-' locally produced',
-'n imported',
-' finely made',
-' famous vintage of'
-]
-
-var bouquetPhrases = [
-'with a bouquet that is ',
-'with a taste that is ',
-'that is described as ',
-'with flavors that are '
-]
-
+var shadyLocations = ['Seated alone near the bar,','At a table almost hidden in shadow,','Sitting at a secluded table,','Leaning against the far wall,','Nearly hidden in the corner,']
+var shadyDescriptions = [' jittery',' paranoid','n anxious',' nervous',' deceptively calm',' tough',' depressed',' upset','n imposing']
+var patronActivities = ['trying to start a fight','throwing things at another table','harrassing the waitstaff','arguing with the bartender','engaged in a heated debate','drinking heavily','participating in a drinking contest','arguing over how to split the bill','discussing religious or political matters','singing a drinking song','playing a game of dice','playing a card game','sharing tales of past adventures—successes and failures','playing a game of darts','consumed in a philosophical conversation','playing some kind of guessing game','entranced by a dancer on the stage','listening to a singer','laughing in response to a joke','playing chess','dancing/swaying to music','watching some performers','listening to the band']
+var roomSizes = ['tiny','cramped','small','average sized','comfortably sized','spacious','large','huge']
+var roomConditions = ['disgusting','filthy','dirty','dingy','hygenic','taken care of','clean','spotless','well-cleaned','immaculate','pristine']
+var wineDescriptors = ['astringent','musty','vinegary','sour','cloying','corked','tart','dirty','raisiny','rough','bitter','flat','smokey','leathery','green','lean','dry','full','powerful','earthy','sweet','oaky','mellow','spicy','herbaceous','deep','toasty','vibrant','crisp','soft','buttery','aromatic','expressive','fruity','smooth','complex','rich']
+var whiteVarieties = ['Reisling','Gewürztraminer','Chardonnay','Sauvignon Blanc']
+var redVarieties = ['Shiraz','Merlot','Cabernet Sauvignon','Pinot Noir']
+var wineOrigins = [' bottom-shelf',' poorly made',' house-made',' locally produced','n imported',' finely made',' famous vintage of']
+var bouquetPhrases = ['with a bouquet that is ','with a taste that is ','that is described as ','with flavors that are ']
 var poisonStrength = ['mild','weak','potent','strong','virulent']
 var poisonEffect = ['blind','sicken','knock out','stun','kill']
-var poisonReason = [
-'It was intended for a different guest of the tavern.',
-'It was a random act of evil.',
-'An old enemy of the party is responsible.',
-'There was a mix-up during the bottling process.'
-]
+var poisonReason = ['It was intended for a different guest of the tavern.','It was a random act of evil.','An old enemy of the party is responsible.','There was a mix-up during the bottling process.']
+var beerVarieties = ['lager','cider','fruit ale','ale','pilsner','malt','porter','stout']
+var beerVarietiesCapped = ['Lager','Hard Cider','Fruit Ale','Ale','Pilsner','Malt','Porter','Stout']
+var beerColors = ['light','pale','light amber','golden','amber','reddish','light brown','copper-colored','dark amber','medium brown','brown','chestnut brown','dark brown','blackish']
+var beerOrigins = [' poorly brewed',' house-brewed',' microbrewed',' locally brewed','n imported',' masterfully brewed']
+var aleTypes = ['','blonde ','brown ','cream ','dark ','golden ','honey ','light ','red ']
+var beerDescriptors = ['n astringent',' bitter',' dry',' sour',' mild',' sweet',' spicy',' pleasantly bitter',' complex',' nutty',' full-bodied',' refreshing',' fruity',' robust',' crisp','rich']
+var beerNoteText = [' notes of ',' a hint of ',' an aftertaste of ',' a touch of ',' a strong flavor of ']
+var beerNotes = ['vanilla and','honey and','hops and','barley and','toffee and','chocolate and','caramel and','citrus and','malt and','coffee and']
+var beerFinishes = ['sour','rough','bitter','creamy','sweet','smooth','pleasant','rich']
+var liquorTypes = ['vodka','gin','whiskey','rum','brandy','vermouth']
+var liquorTypesCapped = ['Vodka','Gin','Whiskey','Rum','Brandy','Vermouth']
+var liquorSources = ['barley','corn','rye','wheat','potato','rice','sorghum','sugarbeet','molasses','sugarcane','honey']
+var brandyTypes = ['apple','cherry','peach','plum','apricot','elderberry','pear','mulberry','pomace','']
+var liquorOrigins = [' bottom-shelf',' poorly made',' house-made',' locally produced','n imported',' finely made']
+var cookingMethods = ['Stewed','Baked','Deep-fried','Roasted','Blackened','Rotisserie-cooked','Pan-fried','Herb-crusted','Braised','Pan-seared','Stir-fried']
+var meatStyles = [' bits of ',' chunks of ',' cubes of ',' strips of ',' ',' ',' ',' ']
+var meatOptions = ['mystery meat','rabbit','chicken','fish','pork','lamb','turkey','beef','frog','steak','duck','veal','squab','pheasant','quail']
+var meatOptionsCapped = ['Mystery Meat','Rabbit','Chicken','Fish','Pork','Lamb','Turkey','Beef','Frog','Steak','Duck','Veal','Squab','Pheasant','Quail']
+var sauces = [' in a thick gravy',' in a cream sauce',' in white sauce',' in red sauce',' with a ginger marinade',' in garlic sauce',' in a vodka sauce']
+var presentationStyles = [' served over ',' on a bed of ',' served with ',' alongside ']
+var piledEtc = [' slathered',' piled',' crammed',' thrown',' sitting',' ']
+var starches = ['bread','mashed potatoes','rice','noodles','pasta','quinoa']
+var nextStyles = [' with a serving of ',' and a helping of ',' with a side of ',' and ']
+var veggies = ['brussel sprouts','greens','beans','spinach','broccoli','green beans','carrots','artichoke','asparagus','cauliflower']
 
-var beerVarieties = [
-'lager',
-'cider',
-'fruit ale',
-'ale',
-'pilsner',
-'malt',
-'porter',
-'stout'
-]
-
-var beerVarietiesCapped = [
-'Lager',
-'Hard Cider',
-'Fruit Ale',
-'Ale',
-'Pilsner',
-'Malt',
-'Porter',
-'Stout'
-]
-
-var beerColors = [
-'light',
-'pale',
-'light amber',
-'golden',
-'amber',
-'reddish',
-'light brown',
-'copper-colored',
-'dark amber',
-'medium brown',
-'brown',
-'chestnut brown',
-'dark brown',
-'blackish'
-]
-
-var beerOrigins = [
-' poorly brewed',
-' house-brewed',
-' microbrewed',
-' locally brewed',
-'n imported',
-' masterfully brewed'
-]
-
-var aleTypes = [
-'',
-'blonde ',
-'brown ',
-'cream ',
-'dark ',
-'golden ',
-'honey ',
-'light ',
-'red '
-]
-
-var beerDescriptors = [
-'n astringent',
-' bitter',
-' dry',
-' sour',
-' mild',
-' sweet',
-' spicy',
-' pleasantly bitter',
-' complex',
-' nutty',
-' full-bodied',
-' refreshing',
-' fruity',
-' robust',
-' crisp'
-]
-
-var beerNoteText = [
-' notes of ',
-' a hint of ',
-' an aftertaste of ',
-' a touch of ',
-' a strong flavor of '
-]
-
-var beerNotes = [
-'vanilla and',
-'honey and',
-'hops and',
-'barley and',
-'toffee and',
-'chocolate and',
-'caramel and',
-'citrus and',
-'malt and',
-'coffee and'
-]
-
-var beerFinishes = [
-'sour',
-'rough',
-'bitter',
-'creamy',
-'sweet',
-'smooth',
-'pleasant',
-'rich'
-]
-
-var liquorTypes = [
-'vodka',
-'gin',
-'whiskey',
-'rum',
-'brandy',
-'vermouth'
-]
-
-var liquorTypesCapped = [
-'Vodka',
-'Gin',
-'Whiskey',
-'Rum',
-'Brandy',
-'Vermouth'
-]
-
-var liquorSources = [
-'barley',
-'corn',
-'rye',
-'wheat',
-'potato',
-'rice',
-'sorghum',
-'sugarbeet',
-'molasses',
-'sugarcane',
-'honey'
-]
-
-var brandyTypes = [
-'apple',
-'cherry',
-'peach',
-'plum',
-'apricot',
-'elderberry',
-'pear',
-'mulberry',
-'pomace',
-''
-]
-
-var liquorOrigins = [
-' bottom-shelf',
-' poorly made',
-' house-made',
-' locally produced',
-'n imported',
-' finely made'
-]
-
-var cookingMethods = [
-'Stewed',
-'Baked',
-'Deep-fried',
-'Roasted',
-'Blackened',
-'Rotisserie-cooked',
-'Pan-fried',
-'Herb-crusted',
-'Braised',
-'Pan-seared',
-'Stir-fried'
-]
-
-var meatStyles = [
-' bits of ',
-' chunks of ',
-' cubes of ',
-' strips of ',
-' ',' ',' ',' '
-]
-
-var meatOptions = [
-'mystery meat',
-'rabbit',
-'chicken',
-'fish',
-'pork',
-'lamb',
-'turkey',
-'beef',
-'frog',
-'steak',
-'duck',
-'veal',
-'squab',
-'pheasant',
-'quail'
-]
-
-var meatOptionsCapped = [
-'Mystery Meat',
-'Rabbit',
-'Chicken',
-'Fish',
-'Pork',
-'Lamb',
-'Turkey',
-'Beef',
-'Frog',
-'Steak',
-'Duck',
-'Veal',
-'Squab',
-'Pheasant',
-'Quail'
-]
-
-var sauces = [
-' in a thick gravy',
-' in a cream sauce',
-' in white sauce',
-' in red sauce',
-' with a ginger marinade',
-' in garlic sauce',
-' in a vodka sauce'
-]
-
-var presentationStyles = [
-' served over ',
-' on a bed of ',
-' served with ',
-' alongside '
-]
-
-var piledEtc = [
-' slathered',
-' piled',
-' crammed',
-' thrown',
-' sitting',
-' '
-]
-
-var starches = [
-'bread',
-'mashed potatoes',
-'rice',
-'noodles',
-'pasta',
-'quinoa'
-]
-
-var nextStyles = [
-' with a serving of ',
-' and a helping of ',
-' with a side of ',
-' and '
-]
-
-var veggies = [
-'brussel sprouts',
-'greens',
-'beans',
-'spinach',
-'broccoli',
-'green beans',
-'carrots',
-'artichoke',
-'asparagus',
-'cauliflower'
-]
+var lifestyleIsSet = false;
+var chosenLifestyle = 0;
+var ownerIsSet = false;
+var chosenOwner = 0;
+var bartenderIsSet = false;
+var chosenBartender = 0;
+var atmosphereIsSet = false;
+var chosenAtmosphere = 0;
+var menuIsSet = false;
+var chosenMenu = 0;
 
 var doublePrefix = 0;
 var randomPrefix1 = '';
@@ -837,6 +326,31 @@ function saveOrPrint(){
 	printWindow.close();
 }
 
+function setLifestyle(x){
+	lifestyleIsSet = true;
+	chosenLifestyle = x;
+}
+
+function setOwner(x){
+	ownerIsSet = true;
+	chosenOwner = x;
+}
+
+function setTenderRace(x){
+	bartenderIsSet = true;
+	chosenBartender = x;
+}
+
+function setAtmosphere(x){
+	atmosphereIsSet = true;
+	chosenAtmosphere = x;
+}
+
+function setMenu(x){
+	menuIsSet = true;
+	chosenMenu = x;
+}
+
 function newTavern(){
 	document.getElementById('descriptionText').style = 'height:65vh;overflow:auto;';
 	document.getElementById('tavernButton').innerHTML = buttonSayings[clickCount];
@@ -879,7 +393,16 @@ function newName(){
 }
 
 function newStory() {
-	lifestyleDecider = Math.floor(Math.random() * lifestyles.length);
+	if(lifestyleIsSet){
+		if(chosenLifestyle<6){
+			lifestyleDecider = chosenLifestyle;
+		} else {
+			lifestyleDecider = Math.floor(Math.random() * lifestyles.length);
+		}
+	} else {
+		lifestyleDecider = Math.floor(Math.random() * lifestyles.length);
+	}
+	
 	lifestyle = lifestyles[lifestyleDecider];
 	var maritalStatus = maritalStatuses[Math.floor(Math.random() * maritalStatuses.length)];
 	var ownerOneGenderDecider = Math.floor(Math.random() * 100);
@@ -934,13 +457,16 @@ function newStory() {
 	gimmick = gimmicks[Math.floor(Math.random() * (gimmicks.length-lifestyles.length*2) + lifestyleDecider*2)];
 	
 	if (ownerOneRaceRarityDecider < 1) {
-		ownerOneRaceRarity = 0;
-	} else if (ownerOneRaceRarityDecider < 7) {
-		ownerOneRaceRarity = 1;
-	} else if (ownerOneRaceRarityDecider < 9) {
 		ownerOneRaceRarity = 2;
+	} else if (ownerOneRaceRarityDecider < 7) {
+		ownerOneRaceRarity = 0;
+	} else if (ownerOneRaceRarityDecider < 9) {
+		ownerOneRaceRarity = 1;
 	} else {
 		ownerOneRaceRarity = 3;
+	}
+	if(ownerIsSet && chosenOwner < 4){
+		ownerOneRaceRarity = chosenOwner;
 	}
 	
 	if (secondOwnerDecider < 1) {
@@ -1067,40 +593,45 @@ function newBartender(){
 		tenderDispositionNumber = Math.floor(Math.random()*11);
 	}
 	
-	switch (lifestyle){
-		case 'squalid':
-		case 'poor':
-			if (bartenderDecider == 10){
-				ownerTendsBar = false;
-			} else {
-				if (ownerOneheshethey == 'they'){
-					addedS = '';
-					isOrAre = 'are';
-				}
-				if (bartenderDecider<5){
-					reasonForOwnerTendingBar = 'because ' + ownerOneheshethey + ' can\'t afford to hire another person to do the job. ';
-				} else if (bartenderDecider<8){
-					reasonForOwnerTendingBar = 'to maintain the illusion of the tavern being of ' + lifestyle + ' quality. ';
+	if(bartenderIsSet && chosenBartender < 9){
+		tenderRace = tenderRaces[chosenBartender];
+		ownerTendsBar = false;
+	} else {
+		switch (lifestyle){
+			case 'squalid':
+			case 'poor':
+				if (bartenderDecider == 10){
+					ownerTendsBar = false;
 				} else {
+					if (ownerOneheshethey == 'they'){
+						addedS = '';
+						isOrAre = 'are';
+					}
+					if (bartenderDecider<5){
+						reasonForOwnerTendingBar = 'because ' + ownerOneheshethey + ' can\'t afford to hire another person to do the job. ';
+					} else if (bartenderDecider<8){
+						reasonForOwnerTendingBar = 'to maintain the illusion of the tavern being of ' + lifestyle + ' quality. ';
+					} else {
+						reasonForOwnerTendingBar = 'because ' + ownerOneheshethey + ' enjoy' + addedS + ' doing the job ' + ownerOnehimherthem + 'self. ';
+					}
+				}
+				break;
+			case 'modest':
+			case 'comfortable':
+				if (bartenderDecider < 8){
+					ownerTendsBar = false;
+				} else {
+					if (ownerOneheshethey == 'they'){
+						addedS = '';
+						isOrAre = 'are';
+					}
 					reasonForOwnerTendingBar = 'because ' + ownerOneheshethey + ' enjoy' + addedS + ' doing the job ' + ownerOnehimherthem + 'self. ';
 				}
-			}
-			break;
-		case 'modest':
-		case 'comfortable':
-			if (bartenderDecider < 8){
+				break;
+			case 'wealthy':
+			case 'aristocratic':
 				ownerTendsBar = false;
-			} else {
-				if (ownerOneheshethey == 'they'){
-					addedS = '';
-					isOrAre = 'are';
-				}
-				reasonForOwnerTendingBar = 'because ' + ownerOneheshethey + ' enjoy' + addedS + ' doing the job ' + ownerOnehimherthem + 'self. ';
-			}
-			break;
-		case 'wealthy':
-		case 'aristocratic':
-			ownerTendsBar = false;
+		}
 	}
 	
 	if (ownerTendsBar == true){
@@ -1162,6 +693,27 @@ function newBartender(){
 function newClientele() {
 	var clienteleDegree = tenderDegrees[Math.floor(Math.random() * tenderDegrees.length)];
 	var clienteleDecider = Math.floor(Math.random() * (clienteles.length-(lifestyles.length-1)) + (lifestyleDecider));
+	if(atmosphereIsSet){
+		switch(chosenAtmosphere){
+			case 0:
+				clienteleDecider = Math.floor(Math.random() * 3) + 11;
+				break;
+			case 1:
+				clienteleDecider = Math.floor(Math.random() * 3) + 14;
+				break;
+			case 2:
+				clienteleDecider = Math.floor(Math.random() * 2) + 9;
+				break;
+			case 3:
+				clienteleDecider = Math.floor(Math.random() * 2) + 7;
+				break;
+			case 4:
+				clienteleDecider = Math.floor(Math.random() * 7);
+				break;
+			case 5:
+				clienteleDecider = Math.floor(Math.random() * (clienteles.length-(lifestyles.length-1)) + (lifestyleDecider));
+		}
+	}
 	var clientele = clienteles[clienteleDecider];
 	var isOrAre = 'are';
 	var howMany = 'some';
@@ -1345,10 +897,15 @@ function newDrinkList(){
 	document.getElementById('drinkTitle').innerHTML = '<h2><button onclick="newDrinkList()" class="innerBtn"> Beverages </button></h2>';
 	drinkQuality = (lifestyleDecider)*2;
 	drinkVariety = lifestyles.length*2;
-	wineOfferingCount = Math.floor(Math.random() * (lifestyleDecider/2) + 3);
+	wineOfferingCount = Math.floor(Math.random() * (lifestyleDecider/2) + 4);
 	beerOfferingCount = Math.round(Math.random() * (lifestyleDecider/2) + 4);
 	liquorOfferingVariety = 4 + Math.floor(lifestyleDecider/2);
-	liquorOfferingCount = Math.round(Math.random() * (lifestyleDecider/2) + 2);
+	liquorOfferingCount = Math.round(Math.random() * (lifestyleDecider/2) + 4);
+	if(menuIsSet && chosenMenu < 5){
+		wineOfferingCount = Math.max(wineOfferingCount + (chosenMenu-2)*2,1);
+		beerOfferingCount = Math.max(beerOfferingCount + (chosenMenu-2)*2,1);
+		liquorOfferingCount = Math.max(liquorOfferingCount + (chosenMenu-2)*2,1);
+	}
 	
 	switch(gimmick){
 		case 'the quality of the drinks':
@@ -1579,6 +1136,7 @@ function newLiquors(){
 				liquorSource = liquorSources[liquorSourceNumber];
 				break;
 			case 'gin':
+				liquorSource = '';
 				break;
 			case 'rum':
 				liquorSourceNumber = Math.floor(Math.random() * 3) + 8;
@@ -1636,9 +1194,14 @@ function newFoodMenu(){
 	eatingChallenge = 0;
 	foodQuality = 0;
 	foodQuantity = Math.floor(lifestyleDecider/2);
-	starterOfferingCount = Math.floor(Math.random() * (lifestyleDecider/2)) + 3;
+	starterOfferingCount = Math.floor(Math.random() * (lifestyleDecider/2)) + 4;
 	saladOfferingCount = Math.round(Math.random() * (lifestyleDecider/2)) + 4;
 	entreeOfferingCount = Math.floor(lifestyleDecider/2) + 4;
+	if(menuIsSet && chosenMenu < 5){
+		starterOfferingCount = Math.max(starterOfferingCount + (chosenMenu-2)*2,1);
+		saladOfferingCount = Math.max(saladOfferingCount + (chosenMenu-2)*2,1);
+		entreeOfferingCount = Math.max(entreeOfferingCount + (chosenMenu-2)*2,1);
+	}
 	
 	switch(gimmick){
 		case 'an eating challenge—if you can eat it all, you don\'t have to pay':
@@ -1659,7 +1222,7 @@ function newFoodMenu(){
 			foodQuality++;
 			break;
 		case 'the cheap food':
-			foodPriceModifier = .4;
+			foodPriceModifier = .2;
 	}
 	
 	newStarters();
