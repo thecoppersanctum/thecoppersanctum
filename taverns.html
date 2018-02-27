@@ -14,7 +14,7 @@
 
 <div id="header">
 
-<div id="versionMarker">v0.24 Alpha</div>
+<div id="versionMarker">v0.241 Alpha</div>
 
 <a href="index.html"><img src='TCS_Logo2Small.png' id="headImage"></a>
 
@@ -33,72 +33,58 @@
 <br><br>
 
 <button onclick="newTavern()" id="tavernButton" class="outerBtn"> Visit a Tavern </button>
-<p id="instructions" style="display:none"><br>Hit the Tavern's name to rename it, and hit any of the subheadings to redo that section</p>
+<p id="instructions" style="display:none"><br>Hit the Tavern's name to rename it, and hit any of the subheadings to regenerate just that section</p>
 <div>
-<div id="descriptionText"><span id="titleDisplay"></span><span id="nameDisplay"><button onclick="newTavern()" class="innerBtn" style="font-variant:normal;font-weight:1">Click this text or the "Visit a Tavern" button above to begin the barcrawl!</button></span><span id="ownerDisplay"></span><span id="raceDisplay"></span><span id="secretDisplay"></span><span id="backstoryDisplay"></span><span id="inspirationDisplay"></span><span id="qualityDisplay"></span><span id="gimmickDisplay"></span><span id="bartenderHeading"></span><span id="bartenderDisplay"></span><span id="clienteleHeading"></span><span id="clienteleDisplay"></span><span id="roomsHeading"></span><span id="roomsDisplay"></span><span id="foodAndDrinkHeadingArea"></span><div id="menusDisplay"><div id="drinksDisplay" style="display:none;"><span id="drinkTitle"></span><span id="wineTitle"></span><span id="winesDisplay"></span><span id="beerTitle"></span><span id ="beersDisplay"></span><span id="liquorTitle"></span><span id="liquorsDisplay"></span></div><div id="foodDisplay"style="display:none"><span id="foodTitle"></span><span id="starterTitle"></span><span id="startersDisplay"></span><span id="saladTitle"></span><span id="saladsDisplay"></span><span id="entreeTitle"></span><span id="entreesDisplay"></span><div id="disclaimer" class="s"></div></div></div></div>
-<button onclick="saveOrPrint()" class="outerBtn"id="saveOrPrintButton" disabled=true> Save or Print this Tavern </button>
+<div id="descriptionText"><span id="titleDisplay"></span><span id="nameDisplay"></span><span id="ownerDisplay"></span><span id="raceDisplay"></span><span id="secretDisplay"></span><span id="backstoryDisplay"></span><span id="inspirationDisplay"></span><span id="qualityDisplay"></span><span id="gimmickDisplay"></span><span id="bartenderHeading"></span><span id="bartenderDisplay"></span><span id="clienteleHeading"></span><span id="clienteleDisplay"></span><span id="roomsHeading"></span><span id="roomsDisplay"></span><span id="foodAndDrinkHeadingArea"></span><div id="menusDisplay"><div id="drinksDisplay" style="display:none;"><span id="drinkTitle"></span><span id="wineTitle"></span><span id="winesDisplay"></span><span id="beerTitle"></span><span id ="beersDisplay"></span><span id="liquorTitle"></span><span id="liquorsDisplay"></span></div><div id="foodDisplay"style="display:none"><span id="foodTitle"></span><span id="starterTitle"></span><span id="startersDisplay"></span><span id="saladTitle"></span><span id="saladsDisplay"></span><span id="entreeTitle"></span><span id="entreesDisplay"></span><div id="disclaimer"></div></div></div><button onclick="newTavern()" class="innerBtn" id="innerTavernBtn" style="font-variant:normal;font-weight:1">Click this text or the "Visit a Tavern" button above to begin the barcrawl!</button></div>
+<button onclick="saveOrPrint()" class="outerBtn"id="saveOrPrintButton" disabled=true> Save or Print this Tavern* </button>
 <div id="decisionsArea">
 <div class="decisions">
 <dl>
-<dt>Tavern Quality:
-<dd><input type="radio" name="lifestyle" value="0" onclick="setLifestyle(0)"> Squalid
-<dd><input type="radio" name="lifestyle" value="1" onclick="setLifestyle(1)"> Poor
-<dd><input type="radio" name="lifestyle" value="2" onclick="setLifestyle(2)"> Modest
-<dd><input type="radio" name="lifestyle" value="3" onclick="setLifestyle(3)"> Comfortable
-<dd><input type="radio" name="lifestyle" value="4" onclick="setLifestyle(4)"> Wealthy
-<dd><input type="radio" name="lifestyle" value="5" onclick="setLifestyle(5)"> Aristocratic
-<dd><input type="radio" name="lifestyle" value="6" onclick="setLifestyle(6)" checked="true"> Surprise Me!
+<dt>Neighborhood:
+<dd><input type="radio" name="lifestyle" value="0" onclick="setLifestyle(0)"> Lower Class
+<dd><input type="radio" name="lifestyle" value="2" onclick="setLifestyle(2)"> Middle Class
+<dd><input type="radio" name="lifestyle" value="4" onclick="setLifestyle(4)"> Upper Class
+<dd><input type="radio" name="lifestyle" value="6" onclick="setLifestyle(6)" checked="true"> Random
 </dl>
 </div>
 <div class="decisions">
 <dl>
-<dt>Owner Race Rarity:
+<dt>Owner Race:
 <dd><input type="radio" name="ownerRace" value="0" onclick="setOwner(0)"> Common
 <dd><input type="radio" name="ownerRace" value="1" onclick="setOwner(1)"> Uncommon
 <dd><input type="radio" name="ownerRace" value="2" onclick="setOwner(2)"> Exotic
 <dd><input type="radio" name="ownerRace" value="3" onclick="setOwner(3)"> Distrusted
-<dd><input type="radio" name="ownerRace" value="4" onclick="setOwner(4)" checked="true"> Surprise Me!
+<dd><input type="radio" name="ownerRace" value="4" onclick="setOwner(4)" checked="true"> Random
 </dl>
 </div>
 <div class="decisions">
 <dl>
 <dt>Bartender Race:
-<dd><input type="radio" name="bartender" value="0" onclick="setTenderRace(0)"> Dwarf
-<dd><input type="radio" name="bartender" value="1" onclick="setTenderRace(1)"> Elf
-<dd><input type="radio" name="bartender" value="2" onclick="setTenderRace(2)"> Halfling
-<dd><input type="radio" name="bartender" value="3" onclick="setTenderRace(3)"> Human
-<dd><input type="radio" name="bartender" value="4" onclick="setTenderRace(4)"> Dragonborn
-<dd><input type="radio" name="bartender" value="5" onclick="setTenderRace(5)"> Gnome
-<dd><input type="radio" name="bartender" value="6" onclick="setTenderRace(6)"> Half-Elf
-<dd><input type="radio" name="bartender" value="7" onclick="setTenderRace(7)"> Half-Orc
-<dd><input type="radio" name="bartender" value="8" onclick="setTenderRace(8)"> Tiefling
-<dd><input type="radio" name="bartender" value="9" onclick="setTenderRace(9)" checked="true"> Surprise Me!
+<dd><input type="radio" name="bartender" value="0" onclick="setTenderRace(0)"> Common
+<dd><input type="radio" name="bartender" value="4" onclick="setTenderRace(4)"> Uncommon
+<dd><input type="radio" name="bartender" value="9" onclick="setTenderRace(9)" checked="true"> Random
 </dl>
 </div>
 <div class="decisions">
 <dl>
 <dt>Atmosphere:
 <dd><input type="radio" name="atmosphere" value="0" onclick="setAtmosphere(0)"> Subdued
-<dd><input type="radio" name="atmosphere" value="1" onclick="setAtmosphere(1)"> Quiet
-<dd><input type="radio" name="atmosphere" value="2" onclick="setAtmosphere(2)"> Average
-<dd><input type="radio" name="atmosphere" value="3" onclick="setAtmosphere(3)"> Noisy
-<dd><input type="radio" name="atmosphere" value="4" onclick="setAtmosphere(4)"> Raucous
-<dd><input type="radio" name="atmosphere" value="6" onclick="setAtmosphere(5)" checked="true"> Surprise Me!
+<dd><input type="radio" name="atmosphere" value="2" onclick="setAtmosphere(1)"> Average
+<dd><input type="radio" name="atmosphere" value="4" onclick="setAtmosphere(2)"> Raucous
+<dd><input type="radio" name="atmosphere" value="6" onclick="setAtmosphere(3)" checked="true"> Random
 </dl>
 </div>
 <div class="decisions" id="oddDecision">
 <dl>
 <dt>Menu Selection:
 <dd><input type="radio" name="menuDiversity" value="0" onclick="setMenu(0)"> Sparse
-<dd><input type="radio" name="menuDiversity" value="1" onclick="setMenu(1)"> Limited
 <dd><input type="radio" name="menuDiversity" value="2" onclick="setMenu(2)"> Moderate
-<dd><input type="radio" name="menuDiversity" value="3" onclick="setMenu(3)"> Extensive
 <dd><input type="radio" name="menuDiversity" value="4" onclick="setMenu(4)"> Excessive
-<dd><input type="radio" name="menuDiversity" value="6" onclick="setMenu(5)" checked="true"> Surprise Me!
+<dd><input type="radio" name="menuDiversity" value="6" onclick="setMenu(5)" checked="true"> Random
 </dl>
 </div>
 </div>
-<br>(Saving/Printing <i>works</i>, but it claims to go unresponsive if you wait too long to click print/save on the new window, I'll figure it out eventually)
+<br><p>*Saving/Printing <i>works</i>, but it claims to go unresponsive if you wait too long to click print/save on the new window, I'll figure it out eventually</p>
 <p>Still to come: more food, additional plot hooks, and more!</p>
 <p> If you spot any bugs, please let me know via <a href="https://www.facebook.com/TheCopperSanctum/">Facebook</a>, <a href="https://twitter.com/Derixyleth">Twitter</a>, or <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/7zck68/not_another_tavern_generator_fully_fleshedout/?ref=share&ref_source=link">Reddit</a>. Thanks!</p>
 </div>

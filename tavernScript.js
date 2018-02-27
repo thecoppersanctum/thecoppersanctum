@@ -1,7 +1,7 @@
 var buttonSayings = ['Hit Another Bar','Check Out the Next Inn','Head to the Next Pub','Continue the Crawl','Time for Another Drink','One More!','And Another!','Maybe You\'ve Had Enough','I\'m Gonna Have to Cut You Off','Eh, One More Couldn\'t Hurt','You Feeling Okay?','Maybe Sleep It Off','Maybe Rent a Room','A New Day, a New Bar','Visit a Tavern']
 var clickCount = 0;
-var prefixes = ['Red','Orange','Yellow','Green','Blue','Purple','Violet','White','Black','Grey','Brown','Teal','Turquoise','Indigo','Marroon','Puce','Lavender','Fuchsia','Pink','Crimson','Mauve','Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Frightening','Gilded','Hammered','Horrific','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Wicked','Winged','Angry','Brave','Cowardly','Drunken','Fevered','Flirty','Happy','Hungry','Impatient','Lonely','Lucky','Nervous','Rested','Restless','Rogue','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise','Babbling','Charging','Charming','Crying','Dancing','Fighting','Flying','Laughing','Raging','Screaming','Sleeping','Smiling','Stumbling','Stunning','Struggling','Flaming','Icy','Acidic','Psychic','Electric','Necrotic','Radiant','Forceful','Poisonous','Concussive','Piercing','Slashing','Bludgeoning','Blind','Charmed','Deaf','Frightened','Grappled','Incapacitated','Invisible','Paralyzed','Petrified','Exhausted','Poisoned','Prone','Restrained','Stunned','Unconscious','Bear and','Bell and','Blade and','Block and','Book and','Boot and','Bull and','Cat and','Dog and','Fish and','Goat and','Hawk and','Hook and','Horse and','Moose and','Mug and','Rose and','Staff and','Stick and','Tooth and','Wand and','Wolf and','Bronze','Carnelian','Chalk','Cloth','Copper','Crystal','Diamond','Electrum','Emerald','Glass','Gold','Golden','Jade','Metal','Platinum','Ruby','Sapphire','Silk','Silver','Steel','Velvet','Wooden','Abyssal','Arcane','Celestial','Demonic','Devilish','Draconic','Dragon\'s','Fiendish','Holy','Infernal','Monstrous','Pious','Unholy','Vampiric','Zombified','Meady','Hoppy','Bubbly','Sour','Sweet','Tangy','Bitter','Woodland','Hidden','Verdant','Little','Dire','Giant','Miniature','Smallest']
-var suffixes = ['Apple','Artichoke','Carrot','Cherry','Grape','Lemon','Melon','Pear','Pomegranate','Alligator','Ape','Baboon','Badger','Bat','Bear','Boar','Bull','Camel','Cat','Cow','Crab','Crocodile','Crow','Deer','Dog','Donkey','Eagle','Elephant','Elk','Fish','Frog','Goat','Hawk','Horse','Hyena','Jackal','Lion','Lizard','Mammoth','Mare','Moose','Mule','Octopus','Owl','Panther','Pony','Ram','Rat','Raven','Rhinoceros','Scorpion','Serpent','Shark','Snake','Spider','Squirrel','Stallion','Tiger','Turtle','Vulture','Weasel','Whale','Wolf','Boot','Coat','Cloak','Gauntlet','Glove','Jacket','Robe','Rest','Beacon','Slumber','Respite','Reprieve','Circle','Cube','Hex','Polyhedral','Sphere','Square','Triangle','Abacus','Anvil','Barrel','Basket','Bell','Blanket','Boat','Book','Bottle','Bucket','Candle','Cart','Chain','Chest','Coin','Crowbar','Crown','Crystal','Cup','Door','Edge','Flask','Glass','Hammer','Hoard','Hourglass','Jug','Ladder','Lamp','Lantern','Line','Lock','Map','Mug','Nail','Orb','Pen','Pitcher','Plate','Pot','Pouch','Ring','Rope','Sack','Scroll','Ship','Shovel','Sledge','Spellbook','Tackle','Tankard','Tent','Tome','Torch','Totem','Trap','Wagon','Whistle','Forest','Grove','Pit','Sanctuary','Sanctum','Sea','Barbarian','Bard','Cleric','Druid','Fighter','King','Mage','Monk','Mystic','Paladin','Ranger','Rogue','Queen','Sailor','Sorcerer','Warlock','Warrior','Wizard','Clover','Oak','Rose','Tree','Birch','Maple','Beech','Arrow','Axe','Battleaxe','Blade','Blowgun','Bolt','Bow','Club','Crossbow','Dagger','Dart','Flail','Glaive','Halberd','Handaxe','Javelin','Lance','Mace','Maul','Morningstar','Net','Pick','Pike','Quiver','Rapier','Scimitar','Sickle','Sling','Spear','Staff','Sword','Trident','Wand','Warhammer','Whip','Heart','Claw','Fist','Foot','Head','Maw','Mouth','Tail','Tooth','Eye','Drum','Dulcimer','Flute','Lute','Lyre','Horn','Shawm','Trombone','Trumpet','Aboleth','Angel','Ankheg','Archon','Balor','Banshee','Basilisk','Behir','Bugbear','Bulette','Centaur','Chimera','Cloaker','Cockatrice','Couatl','Cyclops','Demon','Devil','Doppelganger','Dragon','Drider','Dryad','Duergar','Drow','Dwarf','Elemental','Elf','Ettercap','Ettin','Fiend','Fungus','Gargoyle','Genie','Ghost','Ghoul','Giant','Gnoll','Gnome','Goblin','Goliath','Golem','Gorgon','Grick','Griffon','Hag','Halfling','Harpy','Hound','Hippogriff','Hobgoblin','Homunculus','Human','Hydra','Imp','Jelly','Kobold','Kraken','Lamia','Lich','Lizardfolk','Lycanthrope','Magmin','Manticore','Medusa','Mephit','Mermaid','Mimic','Minotaur','Mummy','Naga','Nightmare','Ogre','Ooze','Orc','Otyugh','Owlbear','Pegasus','Pseudodragon','Pixie','Pudding','Rakshasa','Remorhaz','Revenant','Roc','Rust Monster','Sahuagin','Salamander','Satyr','Shadow','Specter','Sphinx','Sprite','Stirge','Succubus','Incubus','Tarrasque','Tiefling','Treant','Troll','Unicorn','Vampire','Werewolf','Wight','Will-o\'-Wisp','Worm','Wraith','Wyvern','Wyrm','Zombie']
+var prefixes = ['Red','Orange','Yellow','Green','Blue','Purple','Violet','White','Black','Grey','Brown','Teal','Turquoise','Indigo','Marroon','Puce','Lavender','Fuchsia','Pink','Crimson','Mauve','Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Frightening','Gilded','Hammered','Horrific','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Violent','Wicked','Winged','Angry','Anxious','Brave','Cowardly','Depressed','Drunken','Ecstatic','Energetic','Excited','Fevered','Flirty','Happy','Hungry','Impatient','Joyful','Lonely','Lucky','Nervous','Rested','Restless','Rogue','Sad','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise','Babbling','Charging','Charming','Crying','Dancing','Dueling','Fighting','Flying','Gambling','Jumping','Laughing','Leaping','Raging','Screaming','Sleeping','Smiling','Stumbling','Stunning','Struggling','Flaming','Icy','Acidic','Psychic','Electric','Necrotic','Radiant','Forceful','Poisonous','Concussive','Piercing','Slashing','Bludgeoning','Blind','Charmed','Deaf','Frightened','Grappled','Incapacitated','Invisible','Paralyzed','Petrified','Exhausted','Poisoned','Prone','Restrained','Stunned','Unconscious','Bear and','Bell and','Blade and','Block and','Book and','Boot and','Bull and','Cat and','Dog and','Fish and','Goat and','Hawk and','Hook and','Horse and','Moose and','Mug and','Rose and','Staff and','Stick and','Tooth and','Wand and','Wolf and','Bronze','Carnelian','Chalk','Cloth','Copper','Crystal','Diamond','Electrum','Emerald','Glass','Gold','Golden','Jade','Metal','Platinum','Ruby','Sapphire','Silk','Silver','Steel','Velvet','Wooden','Abyssal','Arcane','Celestial','Demonic','Devilish','Draconic','Dragon\'s','Fiendish','Holy','Infernal','Monstrous','Pious','Unholy','Vampiric','Zombified','Meady','Hoppy','Bubbly','Sour','Sweet','Tangy','Bitter','Woodland','Hidden','Overgrown','Tangled','Twisted','Gnarled','Knotted','Hollow','Verdant','Little','Dire','Giant','Miniature','Smallest','Tiny']
+var suffixes = ['Apple','Artichoke','Carrot','Cherry','Grape','Lemon','Melon','Pear','Pomegranate','Alligator','Ape','Baboon','Badger','Bat','Bear','Boar','Bull','Camel','Cardinal','Cat','Cow','Crab','Crocodile','Crow','Deer','Dog','Donkey','Dove','Eagle','Elephant','Elk','Fish','Frog','Goat','Hawk','Horse','Hyena','Jackal','Jackdaw','Jay','Lion','Lizard','Magpie','Mammoth','Mare','Moose','Mule','Octopus','Owl','Panther','Pigeon','Pony','Ram','Rat','Raven','Rhinoceros','Robin','Scorpion','Serpent','Shark','Snake','Spider','Squirrel','Stallion','Tiger','Turtle','Vulture','Weasel','Whale','Wolf','Boot','Coat','Cloak','Gauntlet','Glove','Jacket','Robe','Rest','Beacon','Slumber','Respite','Reprieve','Circle','Cube','Hex','Polyhedral','Sphere','Square','Trapezoid','Triangle','Abacus','Anvil','Barrel','Basket','Bell','Blanket','Boat','Book','Bottle','Bucket','Candle','Cart','Chain','Chest','Coin','Crowbar','Crown','Crystal','Cup','Door','Edge','Flask','Glass','Hammer','Hoard','Hourglass','Jug','Ladder','Lamp','Lantern','Line','Lock','Map','Mug','Nail','Orb','Pen','Pitcher','Plate','Pot','Pouch','Ring','Rope','Sack','Scroll','Ship','Shovel','Sledge','Spellbook','Tackle','Tankard','Tent','Tome','Torch','Totem','Trap','Wagon','Whistle','Forest','Grove','Pit','Sanctuary','Sanctum','Sea','Barbarian','Bard','Cleric','Druid','Fighter','King','Mage','Monk','Mystic','Paladin','Ranger','Rogue','Queen','Sailor','Sorcerer','Warlock','Warrior','Wizard','Clover','Ivy','Oak','Rose','Tree','Birch','Maple','Beech','Arrow','Axe','Battleaxe','Blade','Blowgun','Bolt','Bow','Club','Crossbow','Dagger','Dart','Flail','Glaive','Halberd','Handaxe','Javelin','Lance','Mace','Maul','Morningstar','Net','Pick','Pike','Quiver','Rapier','Scabbard','Scimitar','Scythe','Sickle','Sling','Spear','Staff','Sword','Trident','Wand','Warhammer','Whip','Heart','Claw','Fist','Foot','Head','Maw','Mouth','Tail','Tooth','Eye','Drum','Dulcimer','Flute','Lute','Lyre','Horn','Shawm','Trombone','Trumpet','Aboleth','Angel','Ankheg','Archon','Balor','Banshee','Basilisk','Behir','Bugbear','Bulette','Centaur','Chimera','Cloaker','Cockatrice','Couatl','Cyclops','Demon','Devil','Doppelganger','Dragon','Drider','Dryad','Duergar','Drow','Dwarf','Elemental','Elf','Ettercap','Ettin','Fiend','Fungus','Gargoyle','Genie','Ghost','Ghoul','Giant','Gnoll','Gnome','Goblin','Goliath','Golem','Gorgon','Grick','Griffon','Hag','Halfling','Harpy','Hound','Hippogriff','Hobgoblin','Homunculus','Human','Hydra','Imp','Jelly','Kobold','Kraken','Lamia','Lich','Lizardfolk','Lycanthrope','Magmin','Manticore','Medusa','Mephit','Mermaid','Mimic','Minotaur','Mummy','Naga','Nightmare','Ogre','Ooze','Orc','Otyugh','Owlbear','Pegasus','Pseudodragon','Pixie','Pudding','Rakshasa','Remorhaz','Revenant','Roc','Rust Monster','Sahuagin','Salamander','Satyr','Shadow','Specter','Sphinx','Sprite','Stirge','Succubus','Incubus','Tarrasque','Tiefling','Treant','Troll','Unicorn','Vampire','Werewolf','Wight','Will-o\'-Wisp','Worm','Wraith','Wyvern','Wyrm','Zombie']
 var maritalStatuses = ['n unmarried',' widowed',' divorced',' married']
 var ownerOneType = ['man','woman','androgynous person','nonbinary person']
 var tenderAges = [' nearly adult',' young',' young adult','n adult',' weathered',' young-looking',' mature',' middle-aged','n older','n elderly']
@@ -30,27 +30,96 @@ var ownerTwoNeutral = ['androgynous child','androgynous sibling','androgynous gr
 var ownerTwoNonbinary = ['nonbinary child','nonbinary sibling','nonbinary grandchild','nonbinary lover','nonbinary business partner','nonbinary friend']
 var raceTypes = ['common','uncommon','exotic','distrusted']
 var ownerSecrets = [
-'is openly involved in criminal activities',
-'is secretly involved in local organized crime',
-'is a cannibal who preys on the lonely travelers passing through the inn',
-'used to perform in the circus and doesn\'t like talking about what happened there',
-'secretly runs an underground fight club in the basement of the tavern',
-'is in hiding here due to being wanted for murder in a neighboring community',
-'is secretly cursed with lycanthropy',
-'secretly worships an evil deity',
-'suffers from an old injury',
-'has a fear of spiders',
-'is secretly a vampire who feeds on the patrons of the inn during the night',
-'keeps a collection of stolen trinkets from previous guests',
-'dabbles in dark magic',
-'has a rare medical condition',
-'suffers from mental illness',
-'is actually a doppelganger',
-'is extremely racist/classist/sexist',
-'is being mind-controlled by a powerful entity',
-'is secretly the head of the local crime syndicate',
-'is actually an ancient dragon in disguise',
-'is secretly a powerful archfey'
+'is openly involved in criminal activities',//0
+'is secretly involved in local organized crime',//1
+'is a cannibal who preys on the lonely travelers passing through the inn',//2
+'used to perform in the circus and doesn\'t like talking about what happened there',//3
+'secretly runs an underground fight club in the basement of the tavern',//4
+'is in hiding here due to being wanted for murder in a neighboring community',//5
+'is secretly cursed with lycanthropy',//6
+'secretly worships an evil deity',//7
+'suffers from an old injury',//8
+'has a fear of spiders',//9
+'is secretly a vampire who feeds on the patrons of the inn during the night',//10
+'keeps a collection of stolen trinkets from previous guests',//11
+'dabbles in dark magic',//12
+'has a rare medical condition',//13
+'suffers from mental illness',//14
+'is actually a doppelganger',//15
+'is extremely racist/classist/sexist',//16
+'is being mind-controlled by a powerful entity',//17
+'is secretly the head of the local crime syndicate',//18
+'is actually an ancient dragon in disguise',//19
+'is secretly a powerful archfey'//20
+]
+var thingsThatGoBumpSingle = [
+'they may overhear a "business" deal occuring in the main room of the tavern through the thin walls of their room.',
+'guests come and go throughout the night—each one speaking directly to the owner in private for several minutes.',
+'the cannibalistic owner attempts to lure one of the party away from the rest of them and into the cooking pot.',
+'strange dreams trouble them in the night. When they wake the next morning, the sound of carnival music echoes in their heads.',
+'sounds of cheering, shouting, and struggling echo from the basement of the tavern.',
+'the party might be visited by the ghost of the person killed by the murderous owner.',
+'roars/howls and the rattle of chains can be heard faintly coming from below the tavern.',
+'strange whispers and soft chanting disturbs their sleep throughout the night.',
+'the owner has an accident in the kitchen when their old injury flairs up again.',
+'the tavern is invaded by giant spiders.',
+'the vampiric owner attempts to charm one of the party members to be their thrall.',
+'the owner sneaks into the party\'s rooms to try to steal a small item from each of them.',
+'the owner accidentally summons a more powerful demon/devil than they intended and all hell breaks loose. Literally.',
+'the owner\'s constant moaning and complaining keeps the party from getting a good night\'s rest.',
+'the owner takes a shine to one of the party members, and keeps them up into the late hours of the night talking to them.',
+'the owner attempts to murder and take the place of one of the party members.',
+'a member of the party is attacked/kidnapped by an angry mob gathered by the bigoted owner.',
+'the mind-controlled owner tells the party of a vast treasure hidden in a nearby cave/dungeon. There is no treasure however; the owner is sending them to a trap—the lair of a powerful mind-controlling entity.',
+'several people come into the tavern throughout the night—dressed in black and speaking in code.',
+'the city is attacked, but an enormous dragon shows up out of nowhere and saves the town.',
+'the party enjoys the best night\'s rest they\'ve had in a long time, feeling like they slept enough for days.'
+]
+var thingsThatGoBumpOneOf = [
+'they may overhear a "business" deal occuring in the main room of the tavern through the thin walls of their room.',
+'guests come and go throughout the night—each one speaking directly to one of the owners in private for several minutes.',
+'the cannibalistic owner attempts to lure one of the party away from the rest of them and into the cooking pot.',
+'strange dreams trouble them in the night. When they wake the next morning, the sound of carnival music echoes in their heads.',
+'sounds of cheering, shouting, and struggling echo from the basement of the tavern.',
+'the party might be visited by the ghost of the person killed by one of the owners.',
+'roars/howls and the rattle of chains can be heard faintly coming from below the tavern.',
+'strange whispers and soft chanting disturbs their sleep throughout the night.',
+'the owner who suffers from an old injury has an accident in the kitchen when it flairs up again.',
+'the tavern is invaded by giant spiders.',
+'the vampiric owner attempts to charm one of the party members to be their thrall.',
+'one of the owners sneaks into the party\'s rooms to try to steal a small item from each of them.',
+'the owner who dabbles in dark magic accidentally summons a more powerful demon/devil than they intended and all hell breaks loose. Literally.',
+'the ill owner\'s constant moaning and complaining keeps the party from getting a good night\'s rest.',
+'one of the owners takes a shine to one of the party members, and keeps them up into the late hours of the night talking to them.',
+'the owner who is actually a doppelganger attempts to murder and take the place of one of the party members.',
+'a member of the party is attacked/kidnapped by an angry mob gathered by the bigoted owner.',
+'the mind-controlled owner tells the party of a vast treasure hidden in a nearby cave/dungeon. There is no treasure however; the owner is sending them to a trap—the lair of a powerful mind-controlling entity.',
+'several people come into the tavern throughout the night—dressed in black and speaking in code.',
+'the city is attacked, but an enormous dragon shows up out of nowhere and saves the town.',
+'the party enjoys the best night\'s rest they\'ve had in a long time, feeling like they slept enough for days.'
+]
+var thingsThatGoBumpDouble = [
+'they may overhear a "business" deal occuring in the main room of the tavern through the thin walls of their room.',
+'guests come and go throughout the night—each one speaking directly to one of the owners in private for several minutes.',
+'the cannibalistic owners attempt to lure one of the party away from the rest of them and into the cooking pot.',
+'strange dreams trouble them in the night. When they wake the next morning, the sound of carnival music echoes in their heads.',
+'sounds of cheering, shouting, and struggling echo from the basement of the tavern.',
+'the party might be visited by the ghost of the person killed by the owners.',
+'roars/howls and the rattle of chains can be heard faintly coming from below the tavern.',
+'strange whispers and soft chanting disturbs their sleep throughout the night.',
+'the owners have an accident in the kitchen when their old injuries flair up again.',
+'the tavern is invaded by giant spiders.',
+'the vampiric owners attempt to charm one of the party members to be their thrall.',
+'the owners sneak into the party\'s rooms to try to steal a small item from each of them.',
+'the owners accidentally summon a more powerful demon/devil than they intended and all hell breaks loose. Literally.',
+'constant moaning and complaining by the owners keeps the party from getting a good night\'s rest.',
+'the owners take a shine to one of the party members, and keep them up into the late hours of the night talking to them.',
+'the doppelganger-owners attempt to murder and take the place of two of the party members.',
+'a member of the party is attacked/kidnapped by an angry mob gathered by the bigoted owners.',
+'the mind-controlled owners tell the party of a vast treasure hidden in a nearby cave/dungeon. There is no treasure however; the owners are sending them to a trap—the lair of a powerful mind-controlling entity.',
+'several people come into the tavern throughout the night—dressed in black and speaking in code.',
+'the city is attacked, but two enormous dragons shows up out of nowhere and save the town.',
+'the party enjoys the best night\'s rest they\'ve had in a long time, feeling like they slept enough for days.'
 ]
 var ownerJointSecret = [
 'are openly involved in criminal activities',
@@ -212,12 +281,13 @@ var cookingMethods = ['Stewed','Baked','Deep-fried','Roasted','Blackened','Rotis
 var meatStyles = [' bits of ',' chunks of ',' cubes of ',' strips of ',' ',' ',' ',' ']
 var meatOptions = ['mystery meat','rabbit','chicken','fish','pork','lamb','turkey','beef','frog','steak','duck','veal','squab','pheasant','quail']
 var meatOptionsCapped = ['Mystery Meat','Rabbit','Chicken','Fish','Pork','Lamb','Turkey','Beef','Frog','Steak','Duck','Veal','Squab','Pheasant','Quail']
+var meatIssues = ['The meat in this dish has gone off and could sicken the eater.','The meat in this dish is undercooked to the point of being dangerous to consume.','The meat in this dish is overcooked to the point of being nearly inedible.','The meat in this dish is starting to go bad, but <strong>should</strong> be safe for consumption.']
 var sauces = [' in a thick gravy',' in a cream sauce',' in white sauce',' in red sauce',' with a ginger marinade',' in garlic sauce',' in a vodka sauce']
 var presentationStyles = [' served over ',' on a bed of ',' served with ',' alongside ']
 var piledEtc = [' slathered',' piled',' crammed',' thrown',' sitting',' ']
 var starches = ['bread','mashed potatoes','rice','noodles','pasta','quinoa']
 var nextStyles = [' with a serving of ',' and a helping of ',' with a side of ',' and ']
-var veggies = ['brussel sprouts','greens','beans','spinach','broccoli','green beans','carrots','artichoke','asparagus','cauliflower']
+var veggies = ['brussel sprouts','collard greens','stewed onions','cooked greens','green peppers','black beans','beets','red beans','spinach','broccoli','beet greens','green beans','caramelized onions','carrots','artichoke','red peppers','asparagus','cauliflower']
 
 var lifestyleIsSet = false;
 var chosenLifestyle = 0;
@@ -267,7 +337,7 @@ var theyNeverListen = 0;
 var allRan = 0;
 
 function boast(){
-	document.getElementById('boastBox').innerHTML = 'With ' + numberWithCommas((prefixes.length * prefixes.length * suffixes.length) + (prefixes.length * suffixes.length)) + ' possible tavern names, over ' + numberToRounded(maritalStatuses.length * ownerOneType.length * heSheThey.length * ownerTwoNeutral.length * inspirations.length * gimmicks.length * (ownerSecrets.length+1) * (singleBackgrounds.length+1) * raceTypes.length * lifestyles.length) + ' story combinations, over ' + numberToRounded(tenderGenders.length * tenderRaces.length * tenderDispositions.length * tenderLooks.length * tenderDegrees.length * tenderSkinColors.length * tenderHairColors.length * tenderHairStyles.length) + ' possible bartenders, over ' + numberToRounded(clienteles.length * shadyQuests.length * shadyLocations.length * shadyDescriptions.length * patronActivities.length * patronActivities.length * patronActivities.length * tenderDegrees.length) + ' different clientele descriptions, and a whole lot of alcohol!';
+	document.getElementById('boastBox').innerHTML = 'With ' + numberWithCommas((prefixes.length * prefixes.length * suffixes.length) + (prefixes.length * suffixes.length)) + ' possible tavern names, over ' + numberToRounded(maritalStatuses.length * ownerOneType.length * heSheThey.length * ownerTwoNeutral.length * inspirations.length * gimmicks.length * (ownerSecrets.length+1) * (singleBackgrounds.length+1) * raceTypes.length * lifestyles.length) + ' story combinations, over ' + numberToRounded(tenderGenders.length * tenderRaces.length * tenderDispositions.length * tenderLooks.length * tenderDegrees.length * tenderSkinColors.length * tenderHairColors.length * tenderHairStyles.length) + ' possible bartenders, over ' + numberToRounded(clienteles.length * shadyQuests.length * shadyLocations.length * shadyDescriptions.length * patronActivities.length * patronActivities.length * patronActivities.length * tenderDegrees.length) + ' different clientele descriptions, a whole lot of alcohol, some food, and more on the way!';
 }
 
 var numberWithCommas = (x) => {
@@ -353,6 +423,7 @@ function setMenu(x){
 
 function newTavern(){
 	document.getElementById('descriptionText').style = 'height:65vh;overflow:auto;';
+	document.getElementById('descriptionText').scrollTo(0,0);
 	document.getElementById('tavernButton').innerHTML = buttonSayings[clickCount];
 	clickCount++;
 	if(clickCount >= buttonSayings.length){
@@ -366,6 +437,7 @@ function newTavern(){
 	newFoodAndDrink();
 	document.getElementById("saveOrPrintButton").disabled = false;
 	document.getElementById("instructions").style = 'display:inline;font-size:.8em';
+	document.getElementById("innerTavernBtn").innerHTML = '<br>Don\'t care for this tavern? Tap this text or use the button above the tavern\'s description to generate another, or hit any of the section subheadings to regenerate just that section.';
 }
 
 function newName(){
@@ -395,7 +467,7 @@ function newName(){
 function newStory() {
 	if(lifestyleIsSet){
 		if(chosenLifestyle<6){
-			lifestyleDecider = chosenLifestyle;
+			lifestyleDecider = Math.floor(Math.random() * 2) + chosenLifestyle;
 		} else {
 			lifestyleDecider = Math.floor(Math.random() * lifestyles.length);
 		}
@@ -425,8 +497,8 @@ function newStory() {
 	ownerOnehimherthem = himherthem[ownerOneGender];
 	ownerOneRaceRarityDecider = Math.floor(Math.random() * 10);
 	var ownerOneRaceRarity = 1;
-	var ownerOneHasSecret = Math.floor(Math.random() * 5);
-	var ownerOneSecretNumber = Math.floor(Math.random() * (1+ownerSecrets.length-lifestyles.length) + lifestyleDecider);
+	ownerOneHasSecret = Math.floor(Math.random() * 5);
+	ownerOneSecretNumber = Math.floor(Math.random() * (1+ownerSecrets.length-lifestyles.length) + lifestyleDecider);
 	var ownerOneHasOtherBackground = Math.floor(Math.random() * (lifestyleDecider+2));
 	var ownerOneBackgroundNumber = Math.floor(Math.random() * singleBackgrounds.length);
 	
@@ -448,8 +520,8 @@ function newStory() {
 	var ownerTwo = ownerTwoNeutral[ownerTwoNumber];
 	var ownerTwoRaceRarityDecider = Math.floor(Math.random() * 10);
 	var ownerTwoRaceRarity = 1;
-	var ownerTwoHasSecret = Math.floor(Math.random() * 4);
-	var ownerTwoSecretNumber = Math.floor(Math.random() * (1+ownerSecrets.length-lifestyles.length) + lifestyleDecider);
+	ownerTwoHasSecret = Math.floor(Math.random() * 4);
+	ownerTwoSecretNumber = Math.floor(Math.random() * (1+ownerSecrets.length-lifestyles.length) + lifestyleDecider);
 	var ownerTwoHasOtherBackground = Math.floor(Math.random() * 3);
 	var ownerTwoBackgroundNumber = Math.floor(Math.random() * singleBackgrounds.length);
 	
@@ -594,7 +666,13 @@ function newBartender(){
 	}
 	
 	if(bartenderIsSet && chosenBartender < 9){
-		tenderRace = tenderRaces[chosenBartender];
+		switch(chosenBartender){
+			case 0:
+				tenderRace = tenderRaces[Math.floor(Math.random()*4)];
+				break;
+			case 4:
+				tenderRace = tenderRaces[Math.floor(Math.random()*5)+chosenBartender];
+		}
 		ownerTendsBar = false;
 	} else {
 		switch (lifestyle){
@@ -696,21 +774,15 @@ function newClientele() {
 	if(atmosphereIsSet){
 		switch(chosenAtmosphere){
 			case 0:
-				clienteleDecider = Math.floor(Math.random() * 3) + 11;
+				clienteleDecider = Math.floor(Math.random() * 6) + 11;
 				break;
 			case 1:
-				clienteleDecider = Math.floor(Math.random() * 3) + 14;
+				clienteleDecider = Math.floor(Math.random() * 4) + 7;
 				break;
 			case 2:
-				clienteleDecider = Math.floor(Math.random() * 2) + 9;
-				break;
-			case 3:
-				clienteleDecider = Math.floor(Math.random() * 2) + 7;
-				break;
-			case 4:
 				clienteleDecider = Math.floor(Math.random() * 7);
 				break;
-			case 5:
+			case 3:
 				clienteleDecider = Math.floor(Math.random() * (clienteles.length-(lifestyles.length-1)) + (lifestyleDecider));
 		}
 	}
@@ -811,6 +883,7 @@ function newRooms(){
 	var roomHygeineNumber = Math.floor(Math.random() * (roomConditions.length-lifestyles.length))+lifestyleDecider;
 	var roomHygeine = roomConditions[roomHygeineNumber];
 	var numberOfRooms = Math.floor(Math.random() * lifestyleDecider) + Math.floor(Math.random() * 3) + 1;
+	var doesRentRooms = Math.round(Math.random() * Math.pow(1+lifestyleDecider*2,2));
 	var roomCostModifier = Math.floor((roomSizeNumber + roomHygeineNumber)/2);
 	isOrAre = 'are';
 	addedS = 's';
@@ -884,8 +957,30 @@ function newRooms(){
 		case 5:
 			roomCost = Math.round((30 + Math.floor(Math.random()*(40+roomCostModifier)))/10) + ' gp.';
 	}
+	
+	if(secondOwnerDecider == 0){
+		if (ownerOneHasSecret > 1){
+			secretText = thingsThatGoBumpSingle[ownerOneSecretNumber];
+		} else {
+			secretText = 'the night passes uneventfully and the party wakes up rested in the morning.';
+		}
+	} else {
+		if (ownerOneHasSecret > 1 && ownerTwoHasSecret > 1){
+			secretText = thingsThatGoBumpOneOf[ownerOneSecretNumber] + ' Additionally, ' + thingsThatGoBumpOneOf[ownerTwoSecretNumber];
+		} else if (ownerOneHasSecret > 1) {
+			secretText = thingsThatGoBumpOneOf[ownerOneSecretNumber];
+		} else if (ownerTwoHasSecret > 1){
+			secretText = thingsThatGoBumpOneOf[ownerTwoSecretNumber];
+		} else {
+			secretText = 'nothing happens during the night and the party wakes up after a night\'s rest.'
+		}
+	}
 	document.getElementById('roomsHeading').innerHTML = '<h2><button onclick="newRooms()" class = "innerBtn"> The Accommodations </button></h2>';
-	document.getElementById('roomsDisplay').innerHTML = 'The rooms for rent at <span id="nameDisplay4">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost;
+	if (doesRentRooms){
+		document.getElementById('roomsDisplay').innerHTML = 'The rooms for rent at <span id="nameDisplay4">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost + ' If the party spends the night in the tavern, ' + secretText;
+	} else {
+		document.getElementById('roomsDisplay').innerHTML = '<span id="nameDisplay4">' + tavernName + '</span> is just a bar and doesn\t have any rooms to rent.';
+	}
 }
 function newFoodAndDrink(){
 	document.getElementById('foodAndDrinkHeadingArea').innerHTML = '<h2><button onclick="newFoodAndDrink()" class="innerBtn"> The Food & Drink </button></h2>';
@@ -1165,8 +1260,7 @@ function newLiquors(){
 		shotPriceTotal = liquorPriceTotal/6;
 		if (shotPriceTotal >= 100){
 			shotPrice = Math.floor(shotPriceTotal/100) + 'gp/shot';
-		}
-		if (shotPriceTotal >= 10){
+		} else if (shotPriceTotal >= 10){
 			shotPrice = Math.floor(shotPriceTotal/10) + 'sp/shot';
 		} else {
 			shotPrice = Math.floor(shotPriceTotal) + 'cp/shot';
@@ -1226,10 +1320,10 @@ function newFoodMenu(){
 	}
 	
 	newStarters();
-	newSalads();
+	newSoupsAndSalads();
 	newEntrees();
 	
-	document.getElementById('disclaimer').innerHTML = '<p>Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may require a Constitution saving throw.</p>';
+	document.getElementById('disclaimer').innerHTML = '<br><br>Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may require a Constitution saving throw.';
 	
 	allRan = 1;
 }
@@ -1243,11 +1337,11 @@ function newStarters(){
 	}
 }
 
-function newSalads(){
-	document.getElementById('saladTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newSalads()" class="innerBtn"> Salads </button></h3>';
-	document.getElementById('saladsDisplay').innerHTML = 'No salads yet.';
+function newSoupsAndSalads(){
+	document.getElementById('saladTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newSoupsAndSalads()" class="innerBtn"> Soups & Salads </button></h3>';
+	document.getElementById('saladsDisplay').innerHTML = 'No soups or salads yet.';
 	if (theyNeverListen >0){
-		document.getElementById('saladsDisplay').innerHTML = 'Clicking isn\'t going to magically make there be salads.';
+		document.getElementById('saladsDisplay').innerHTML = 'Clicking isn\'t going to magically make there be soup or salads.';
 		theyNeverListen = 0;
 	}
 }
@@ -1269,6 +1363,8 @@ function newEntrees(){
 	var entreePrice = '';
 	var entreeDescription = '';
 	var entreeList = [];
+	var meatGoneOff = 1;
+	var meatIssue = '';
 	
 	switch(gimmick){
 		case 'an eating challenge—if you can eat it all, you don\'t have to pay':
@@ -1276,6 +1372,7 @@ function newEntrees(){
 			break;
 	}
 	for (var k=0;k<entreeOfferingCount;k++){
+		meatGoneOff = Math.floor(Math.random()*(2+2*lifestyleDecider));
 		cookingMethodNumber = Math.floor(Math.random() * (cookingMethods.length-5)) + Math.min(lifestyleDecider + foodQuality, 5);
 		cookingMethod = cookingMethods[cookingMethodNumber];
 		meatStyle = meatStyles[Math.floor(Math.random() * meatStyles.length)];
@@ -1284,6 +1381,7 @@ function newEntrees(){
 		meatOptionCapped = meatOptionsCapped[meatOptionNumber];
 		presentationStyle = presentationStyles[Math.floor(Math.random() * presentationStyles.length)];
 		starch = starches[Math.floor(Math.random() * starches.length)];
+		secondVeggie = '';
 		if(lifestyleDecider>1){
 			sauce = sauces[Math.floor(Math.random() * sauces.length)];
 			nextStyle = nextStyles[Math.floor(Math.random() * nextStyles.length)];
@@ -1291,11 +1389,7 @@ function newEntrees(){
 			veggie = veggies[veggieNumber];
 			var veggieTwoArray = veggies.slice();
 			veggieTwoArray.splice(veggieNumber,1);
-			switch (Math.floor(Math.random()*(6-lifestyleDecider))){
-				case 0:
-					secondVeggie = ' and ' + veggieTwoArray[Math.floor(Math.random() * veggieTwoArray.length)];
-			}
-			if(eatingChallenge){
+			if (Math.floor(Math.random()*(7-lifestyleDecider)) == 0 || eatingChallenge){
 				secondVeggie = ' and ' + veggieTwoArray[Math.floor(Math.random() * veggieTwoArray.length)];
 			}
 		}
@@ -1327,13 +1421,19 @@ function newEntrees(){
 		} else {
 			entreePrice = Math.floor(entreePriceTotal) + 'cp';
 		}
+		switch (meatGoneOff){
+			case 0:
+				meatIssue = '<br><div class="s">' + meatIssues[Math.floor(Math.random()*meatIssues.length)] + '</div>';
+				break;
+		}
 		if (eatingChallenge){
-			entreeDescription = '<p><strong><i> The ' + cookingMethod + ' ' + meatOptionCapped + ' Challenge</strong></i><br> A full pound of ' + meatOption + sauce + piledEtc[Math.floor(Math.random()*piledEtc.length)] + ' on top of another pound of ' + starch + nextStyle + veggie + secondVeggie + '.<br>' + entreePrice + '</p>';
+			entreeDescription = '<p><strong><i> The ' + cookingMethod + ' ' + meatOptionCapped + ' Challenge</strong></i><br> A full pound of ' + meatOption + sauce + piledEtc[Math.floor(Math.random()*piledEtc.length)] + ' on top of another pound of ' + starch + nextStyle + veggie + secondVeggie + '.<br>' + entreePrice + meatIssue + '</p>';
 			eatingChallenge = 0;
 		} else {
-			entreeDescription = '<p><strong><i>' + cookingMethod + ' ' + meatOptionCapped + '</strong></i><br>' + cookingMethod + meatStyle + meatOption + sauce + presentationStyle + starch + nextStyle + veggie + secondVeggie + '.<br>' + entreePrice +'</p>';
+			entreeDescription = '<p><strong><i>' + cookingMethod + ' ' + meatOptionCapped + '</strong></i><br>' + cookingMethod + meatStyle + meatOption + sauce + presentationStyle + starch + nextStyle + veggie + secondVeggie + '.<br>' + entreePrice + meatIssue + '</p>';
 		}
 		entreeList.splice(entreeList.length,1,entreeDescription);
+		meatIssue = '';
 	}
 	
 	var entreeListToString = entreeList.join(" ")

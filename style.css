@@ -84,6 +84,12 @@ h2 {
 	top:15px;
 	left:15px;
 }
+#disclaimer{
+	font-variant:small-caps;
+	font-weight:1000;
+	font-size:.7em;
+	width:100%;
+}
 #adventureBox{
 	width:90%;
 	display:inline-block;
@@ -108,7 +114,8 @@ h2 {
 	font-weight: 1000;
 	font-size: 1.1em;
 	padding: 6px;
-	margin: 10px;
+	margin: .1vw;
+	margin-top: 1vh;
 }
 .innerBtn{
 	font-family:serif;
