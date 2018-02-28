@@ -2,7 +2,7 @@ body{
 	background-color:#eeeeee;
 	font-size:75%;
 }
-#mainBody {
+.mainBody {
 	font-family:serif;
 	font-size:1.4em;
 	margin:auto;
@@ -11,7 +11,7 @@ body{
 	position: relative;
 }
 p{
-	width:85%;
+	width:90%;
 	margin:auto;
 	margin-top:1%;
 }
@@ -45,11 +45,12 @@ sup{
 	background-color:#ffffdd;
 	vertical-align:top;
 }
-h1 {
+h1 ,h2,h3 {
 	font-variant:small-caps;
+	margin:0;
 }
-h2 {
-	font-variant:small-caps;
+h1{
+	margin-top:0;
 }
 #header{
 	width:100%;
@@ -90,11 +91,18 @@ h2 {
 	font-size:.7em;
 	width:100%;
 }
-#adventureBox{
+.adventureBox{
 	width:90%;
 	display:inline-block;
-	margin-bottom:1%;
-	padding:5%;
+	vertical-align:top;
+}
+.verticalSpacer{
+	margin-top:1em;
+}
+.spacer{
+	margin-top:1em;
+	width:100%;
+	display:inline-block;
 }
 #boastBox{
 	font-family:sans-serif;
@@ -140,7 +148,8 @@ div.decisions{
 #oddDecision{
 	display:inline;
 }
-.innerBtn:hover {background:#eee;}
+button{cursor: pointer;}
+.innerBtn:hover {background:#eeeeee;}
 #wideBox{
 	height:500px;
 	display:inline-block;
@@ -158,9 +167,12 @@ div.decisions{
 	#oddDecision{
 		display:inline-block;
 	}
-	#mainBody{
+	.mainBody{
 		font-size:1.6em;
 		width:90%;
+	}
+	.spacer{
+		width: 10%;
 	}
 	#boastBox{
 		width:35%;
@@ -181,7 +193,7 @@ div.decisions{
 	#navButton{
 		width:200px;
 	}
-	#adventureBox{
+	.adventureBox{
 		width:35%;
 	}
 }

@@ -1,7 +1,7 @@
 var buttonSayings = ['Hit Another Bar','Check Out the Next Inn','Head to the Next Pub','Continue the Crawl','Time for Another Drink','One More!','And Another!','Maybe You\'ve Had Enough','I\'m Gonna Have to Cut You Off','Eh, One More Couldn\'t Hurt','You Feeling Okay?','Maybe Sleep It Off','Maybe Rent a Room','A New Day, a New Bar','Visit a Tavern']
 var clickCount = 0;
-var prefixes = ['Red','Orange','Yellow','Green','Blue','Purple','Violet','White','Black','Grey','Brown','Teal','Turquoise','Indigo','Marroon','Puce','Lavender','Fuchsia','Pink','Crimson','Mauve','Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Frightening','Gilded','Hammered','Horrific','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Violent','Wicked','Winged','Angry','Anxious','Brave','Cowardly','Depressed','Drunken','Ecstatic','Energetic','Excited','Fevered','Flirty','Happy','Hungry','Impatient','Joyful','Lonely','Lucky','Nervous','Rested','Restless','Rogue','Sad','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise','Babbling','Charging','Charming','Crying','Dancing','Dueling','Fighting','Flying','Gambling','Jumping','Laughing','Leaping','Raging','Screaming','Sleeping','Smiling','Stumbling','Stunning','Struggling','Flaming','Icy','Acidic','Psychic','Electric','Necrotic','Radiant','Forceful','Poisonous','Concussive','Piercing','Slashing','Bludgeoning','Blind','Charmed','Deaf','Frightened','Grappled','Incapacitated','Invisible','Paralyzed','Petrified','Exhausted','Poisoned','Prone','Restrained','Stunned','Unconscious','Bear and','Bell and','Blade and','Block and','Book and','Boot and','Bull and','Cat and','Dog and','Fish and','Goat and','Hawk and','Hook and','Horse and','Moose and','Mug and','Rose and','Staff and','Stick and','Tooth and','Wand and','Wolf and','Bronze','Carnelian','Chalk','Cloth','Copper','Crystal','Diamond','Electrum','Emerald','Glass','Gold','Golden','Jade','Metal','Platinum','Ruby','Sapphire','Silk','Silver','Steel','Velvet','Wooden','Abyssal','Arcane','Celestial','Demonic','Devilish','Draconic','Dragon\'s','Fiendish','Holy','Infernal','Monstrous','Pious','Unholy','Vampiric','Zombified','Meady','Hoppy','Bubbly','Sour','Sweet','Tangy','Bitter','Woodland','Hidden','Overgrown','Tangled','Twisted','Gnarled','Knotted','Hollow','Verdant','Little','Dire','Giant','Miniature','Smallest','Tiny']
-var suffixes = ['Apple','Artichoke','Carrot','Cherry','Grape','Lemon','Melon','Pear','Pomegranate','Alligator','Ape','Baboon','Badger','Bat','Bear','Boar','Bull','Camel','Cardinal','Cat','Cow','Crab','Crocodile','Crow','Deer','Dog','Donkey','Dove','Eagle','Elephant','Elk','Fish','Frog','Goat','Hawk','Horse','Hyena','Jackal','Jackdaw','Jay','Lion','Lizard','Magpie','Mammoth','Mare','Moose','Mule','Octopus','Owl','Panther','Pigeon','Pony','Ram','Rat','Raven','Rhinoceros','Robin','Scorpion','Serpent','Shark','Snake','Spider','Squirrel','Stallion','Tiger','Turtle','Vulture','Weasel','Whale','Wolf','Boot','Coat','Cloak','Gauntlet','Glove','Jacket','Robe','Rest','Beacon','Slumber','Respite','Reprieve','Circle','Cube','Hex','Polyhedral','Sphere','Square','Trapezoid','Triangle','Abacus','Anvil','Barrel','Basket','Bell','Blanket','Boat','Book','Bottle','Bucket','Candle','Cart','Chain','Chest','Coin','Crowbar','Crown','Crystal','Cup','Door','Edge','Flask','Glass','Hammer','Hoard','Hourglass','Jug','Ladder','Lamp','Lantern','Line','Lock','Map','Mug','Nail','Orb','Pen','Pitcher','Plate','Pot','Pouch','Ring','Rope','Sack','Scroll','Ship','Shovel','Sledge','Spellbook','Tackle','Tankard','Tent','Tome','Torch','Totem','Trap','Wagon','Whistle','Forest','Grove','Pit','Sanctuary','Sanctum','Sea','Barbarian','Bard','Cleric','Druid','Fighter','King','Mage','Monk','Mystic','Paladin','Ranger','Rogue','Queen','Sailor','Sorcerer','Warlock','Warrior','Wizard','Clover','Ivy','Oak','Rose','Tree','Birch','Maple','Beech','Arrow','Axe','Battleaxe','Blade','Blowgun','Bolt','Bow','Club','Crossbow','Dagger','Dart','Flail','Glaive','Halberd','Handaxe','Javelin','Lance','Mace','Maul','Morningstar','Net','Pick','Pike','Quiver','Rapier','Scabbard','Scimitar','Scythe','Sickle','Sling','Spear','Staff','Sword','Trident','Wand','Warhammer','Whip','Heart','Claw','Fist','Foot','Head','Maw','Mouth','Tail','Tooth','Eye','Drum','Dulcimer','Flute','Lute','Lyre','Horn','Shawm','Trombone','Trumpet','Aboleth','Angel','Ankheg','Archon','Balor','Banshee','Basilisk','Behir','Bugbear','Bulette','Centaur','Chimera','Cloaker','Cockatrice','Couatl','Cyclops','Demon','Devil','Doppelganger','Dragon','Drider','Dryad','Duergar','Drow','Dwarf','Elemental','Elf','Ettercap','Ettin','Fiend','Fungus','Gargoyle','Genie','Ghost','Ghoul','Giant','Gnoll','Gnome','Goblin','Goliath','Golem','Gorgon','Grick','Griffon','Hag','Halfling','Harpy','Hound','Hippogriff','Hobgoblin','Homunculus','Human','Hydra','Imp','Jelly','Kobold','Kraken','Lamia','Lich','Lizardfolk','Lycanthrope','Magmin','Manticore','Medusa','Mephit','Mermaid','Mimic','Minotaur','Mummy','Naga','Nightmare','Ogre','Ooze','Orc','Otyugh','Owlbear','Pegasus','Pseudodragon','Pixie','Pudding','Rakshasa','Remorhaz','Revenant','Roc','Rust Monster','Sahuagin','Salamander','Satyr','Shadow','Specter','Sphinx','Sprite','Stirge','Succubus','Incubus','Tarrasque','Tiefling','Treant','Troll','Unicorn','Vampire','Werewolf','Wight','Will-o\'-Wisp','Worm','Wraith','Wyvern','Wyrm','Zombie']
+var prefixes = ['Red','Orange','Yellow','Green','Blue','Purple','Violet','White','Black','Grey','Brown','Teal','Turquoise','Indigo','Marroon','Puce','Lavender','Fuchsia','Pink','Crimson','Mauve','Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Frightening','Gilded','Hammered','Horrific','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Violent','Wicked','Winged','Angry','Anxious','Brave','Cowardly','Depressed','Drunken','Ecstatic','Energetic','Excited','Fevered','Flirty','Happy','Hungry','Impatient','Joyful','Lonely','Lucky','Nervous','Rested','Restless','Rogue','Sad','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise','Babbling','Charging','Charming','Crying','Dancing','Dueling','Fighting','Flying','Gambling','Jumping','Laughing','Leaping','Raging','Screaming','Sleeping','Smiling','Stumbling','Stunning','Struggling','Flaming','Icy','Acidic','Psychic','Electric','Necrotic','Radiant','Forceful','Poisonous','Concussive','Piercing','Slashing','Bludgeoning','Blind','Charmed','Deaf','Frightened','Grappled','Incapacitated','Invisible','Paralyzed','Petrified','Exhausted','Poisoned','Prone','Restrained','Stunned','Unconscious','Bear and','Bell and','Blade and','Block and','Book and','Boot and','Bull and','Cat and','Dog and','Fish and','Goat and','Hawk and','Hook and','Horse and','Moose and','Mug and','Rose and','Staff and','Stick and','Tooth and','Wand and','Wolf and','Bronze','Carnelian','Chalk','Cloth','Copper','Crystal','Diamond','Electrum','Emerald','Glass','Gold','Golden','Iron','Jade','Metal','Platinum','Ruby','Sapphire','Silk','Silver','Steel','Velvet','Wooden','Abyssal','Arcane','Celestial','Demonic','Devilish','Draconic','Dragon\'s','Fiendish','Holy','Infernal','Monstrous','Pious','Unholy','Vampiric','Zombified','Meady','Hoppy','Bubbly','Sour','Sweet','Tangy','Bitter','Woodland','Hidden','Overgrown','Tangled','Twisted','Gnarled','Knotted','Hollow','Verdant','Little','Dire','Giant','Miniature','Smallest','Tiny']
+var suffixes = ['Apple','Artichoke','Carrot','Cherry','Grape','Lemon','Melon','Pear','Pomegranate','Alligator','Ape','Baboon','Badger','Bat','Bear','Boar','Bull','Camel','Cardinal','Cat','Cow','Crab','Crocodile','Crow','Deer','Dog','Donkey','Dove','Eagle','Elephant','Elk','Fish','Frog','Goat','Hawk','Horse','Hyena','Jackal','Jackdaw','Jay','Lion','Lizard','Magpie','Mammoth','Mare','Moose','Mule','Octopus','Owl','Panther','Pigeon','Pony','Ram','Rat','Raven','Rhinoceros','Robin','Scorpion','Serpent','Shark','Snake','Spider','Squirrel','Stallion','Tiger','Turtle','Vulture','Weasel','Whale','Wolf','Boot','Coat','Cloak','Gauntlet','Glove','Jacket','Robe','Rest','Beacon','Slumber','Respite','Reprieve','Circle','Cube','Hex','Polyhedral','Sphere','Square','Trapezoid','Triangle','Abacus','Anvil','Barrel','Basket','Bell','Blanket','Boat','Book','Bottle','Bucket','Candle','Cart','Chain','Chest','Coin','Crowbar','Crown','Crystal','Cup','Door','Edge','Flask','Glass','Hammer','Hoard','Hourglass','Jug','Ladder','Lamp','Lantern','Line','Lock','Map','Mug','Nail','Orb','Pen','Pitcher','Plate','Pot','Pouch','Quill','Ring','Rope','Sack','Scroll','Ship','Shovel','Sledge','Spellbook','Tackle','Tankard','Tent','Tome','Torch','Totem','Trap','Wagon','Whistle','Forest','Grove','Pit','Sanctuary','Sanctum','Sea','Barbarian','Bard','Cleric','Druid','Fighter','King','Mage','Monk','Mystic','Paladin','Ranger','Rogue','Queen','Sailor','Sorcerer','Warlock','Warrior','Wizard','Clover','Flower','Ivy','Oak','Rose','Tree','Birch','Maple','Beech','Arrow','Axe','Battleaxe','Blade','Blowgun','Bolt','Bow','Club','Crossbow','Dagger','Dart','Flail','Glaive','Halberd','Handaxe','Javelin','Lance','Mace','Maul','Morningstar','Net','Pick','Pike','Quiver','Rapier','Scabbard','Scimitar','Scythe','Sickle','Sling','Spear','Staff','Sword','Trident','Wand','Warhammer','Whip','Heart','Claw','Fist','Foot','Head','Maw','Mouth','Nose','Tail','Tooth','Eye','Drum','Dulcimer','Flute','Lute','Lyre','Horn','Shawm','Trombone','Trumpet','Aboleth','Angel','Ankheg','Archon','Balor','Banshee','Basilisk','Behir','Bugbear','Bulette','Centaur','Chimera','Cloaker','Cockatrice','Couatl','Cyclops','Demon','Devil','Doppelganger','Dragon','Drider','Dryad','Duergar','Drow','Dwarf','Elemental','Elf','Ettercap','Ettin','Fiend','Fungus','Gargoyle','Genie','Ghost','Ghoul','Giant','Gnoll','Gnome','Goblin','Goliath','Golem','Gorgon','Grick','Griffon','Hag','Halfling','Harpy','Hound','Hippogriff','Hobgoblin','Homunculus','Human','Hydra','Imp','Jelly','Kobold','Kraken','Lamia','Lich','Lizardfolk','Lycanthrope','Magmin','Manticore','Medusa','Mephit','Mermaid','Mimic','Minotaur','Mummy','Naga','Nightmare','Ogre','Ooze','Orc','Otyugh','Owlbear','Pegasus','Pseudodragon','Pixie','Pudding','Rakshasa','Remorhaz','Revenant','Roc','Rust Monster','Sahuagin','Salamander','Satyr','Shadow','Specter','Sphinx','Sprite','Stirge','Succubus','Incubus','Tarrasque','Tiefling','Treant','Troll','Unicorn','Vampire','Werewolf','Wight','Will-o\'-Wisp','Worm','Wraith','Wyvern','Wyrm','Zombie']
 var maritalStatuses = ['n unmarried',' widowed',' divorced',' married']
 var ownerOneType = ['man','woman','androgynous person','nonbinary person']
 var tenderAges = [' nearly adult',' young',' young adult','n adult',' weathered',' young-looking',' mature',' middle-aged','n older','n elderly']
@@ -36,21 +36,22 @@ var ownerSecrets = [
 'used to perform in the circus and doesn\'t like talking about what happened there',//3
 'secretly runs an underground fight club in the basement of the tavern',//4
 'is in hiding here due to being wanted for murder in a neighboring community',//5
-'is secretly cursed with lycanthropy',//6
-'secretly worships an evil deity',//7
-'suffers from an old injury',//8
-'has a fear of spiders',//9
-'is secretly a vampire who feeds on the patrons of the inn during the night',//10
-'keeps a collection of stolen trinkets from previous guests',//11
-'dabbles in dark magic',//12
-'has a rare medical condition',//13
-'suffers from mental illness',//14
-'is actually a doppelganger',//15
-'is extremely racist/classist/sexist',//16
-'is being mind-controlled by a powerful entity',//17
-'is secretly the head of the local crime syndicate',//18
-'is actually an ancient dragon in disguise',//19
-'is secretly a powerful archfey'//20
+'kidnaps lone travelers to perform twisted arcane experiments on them in the dead of night',//6
+'is secretly cursed with lycanthropy',//7
+'secretly worships an evil deity',//8
+'suffers from an old injury',//9
+'has a fear of spiders',//10
+'is secretly a vampire who feeds on the patrons of the inn during the night',//11
+'keeps a collection of stolen trinkets from previous guests',//12
+'dabbles in dark magic',//13
+'has a rare medical condition',//14
+'suffers from mental illness',//15
+'is actually a doppelganger',//16
+'is extremely racist/classist/sexist',//17
+'is being mind-controlled by a powerful entity',//18
+'is secretly the head of the local crime syndicate',//19
+'is actually an ancient dragon in disguise',//20
+'is secretly a powerful archfey'//21
 ]
 var thingsThatGoBumpSingle = [
 'they may overhear a "business" deal occuring in the main room of the tavern through the thin walls of their room.',
@@ -59,6 +60,7 @@ var thingsThatGoBumpSingle = [
 'strange dreams trouble them in the night. When they wake the next morning, the sound of carnival music echoes in their heads.',
 'sounds of cheering, shouting, and struggling echo from the basement of the tavern.',
 'the party might be visited by the ghost of the person killed by the murderous owner.',
+'shrieks of pain can be heard over the low hum of magic that permeates the vicinity throughout the night.',
 'roars/howls and the rattle of chains can be heard faintly coming from below the tavern.',
 'strange whispers and soft chanting disturbs their sleep throughout the night.',
 'the owner has an accident in the kitchen when their old injury flairs up again.',
@@ -82,6 +84,7 @@ var thingsThatGoBumpOneOf = [
 'strange dreams trouble them in the night. When they wake the next morning, the sound of carnival music echoes in their heads.',
 'sounds of cheering, shouting, and struggling echo from the basement of the tavern.',
 'the party might be visited by the ghost of the person killed by one of the owners.',
+'shrieks of pain can be heard over the low hum of magic that permeates the vicinity throughout the night.',
 'roars/howls and the rattle of chains can be heard faintly coming from below the tavern.',
 'strange whispers and soft chanting disturbs their sleep throughout the night.',
 'the owner who suffers from an old injury has an accident in the kitchen when it flairs up again.',
@@ -105,6 +108,7 @@ var thingsThatGoBumpDouble = [
 'strange dreams trouble them in the night. When they wake the next morning, the sound of carnival music echoes in their heads.',
 'sounds of cheering, shouting, and struggling echo from the basement of the tavern.',
 'the party might be visited by the ghost of the person killed by the owners.',
+'shrieks of pain can be heard over the low hum of magic that permeates the vicinity throughout the night.',
 'roars/howls and the rattle of chains can be heard faintly coming from below the tavern.',
 'strange whispers and soft chanting disturbs their sleep throughout the night.',
 'the owners have an accident in the kitchen when their old injuries flair up again.',
@@ -128,6 +132,7 @@ var ownerJointSecret = [
 'used to perform in the circus, and don\'t like talking about what happened there',
 'play a part in the operation of a secret underground fight club run out of the basement of the tavern',
 'are hiding out here due to being wanted for murder in a neighboring community',
+'kidnap lone travelers to perform twisted arcane experiments on them in the dead of night',
 'are secretly cursed with lycanthropy',
 'secretly worship an evil deity',
 'have problems that stem from old injuries',
@@ -252,7 +257,7 @@ var shadyQuests = [
 ]
 var shadyLocations = ['Seated alone near the bar,','At a table almost hidden in shadow,','Sitting at a secluded table,','Leaning against the far wall,','Nearly hidden in the corner,']
 var shadyDescriptions = [' jittery',' paranoid','n anxious',' nervous',' deceptively calm',' tough',' depressed',' upset','n imposing']
-var patronActivities = ['trying to start a fight','throwing things at another table','harrassing the waitstaff','arguing with the bartender','engaged in a heated debate','drinking heavily','participating in a drinking contest','arguing over how to split the bill','discussing religious or political matters','singing a drinking song','playing a game of dice','playing a card game','sharing tales of past adventures—successes and failures','playing a game of darts','consumed in a philosophical conversation','playing some kind of guessing game','entranced by a dancer on the stage','listening to a singer','laughing in response to a joke','playing chess','dancing/swaying to music','watching some performers','listening to the band']
+var patronActivities = ['trying to start a fight','throwing things at another table','harrassing the waitstaff','mocking the bartender','arguing with the bartender','engaged in a heated debate','drinking heavily','participating in a drinking contest','arguing over how to split the bill','discussing religious or political matters','singing a drinking song','playing a game of dice','playing a card game','sharing tales of past adventures—successes and failures','playing a game of darts','consumed in a philosophical conversation','playing some kind of guessing game','entranced by a dancer on the stage','listening to a singer','speaking in hushed tones','laughing in response to a joke','playing chess','dancing/swaying to music','watching some performers','listening to the band','having a private conversation','discussing business matters']
 var roomSizes = ['tiny','cramped','small','average sized','comfortably sized','spacious','large','huge']
 var roomConditions = ['disgusting','filthy','dirty','dingy','hygenic','taken care of','clean','spotless','well-cleaned','immaculate','pristine']
 var wineDescriptors = ['astringent','musty','vinegary','sour','cloying','corked','tart','dirty','raisiny','rough','bitter','flat','smokey','leathery','green','lean','dry','full','powerful','earthy','sweet','oaky','mellow','spicy','herbaceous','deep','toasty','vibrant','crisp','soft','buttery','aromatic','expressive','fruity','smooth','complex','rich']
@@ -262,7 +267,7 @@ var wineOrigins = [' bottom-shelf',' poorly made',' house-made',' locally produc
 var bouquetPhrases = ['with a bouquet that is ','with a taste that is ','that is described as ','with flavors that are ']
 var poisonStrength = ['mild','weak','potent','strong','virulent']
 var poisonEffect = ['blind','sicken','knock out','stun','kill']
-var poisonReason = ['It was intended for a different guest of the tavern.','It was a random act of evil.','An old enemy of the party is responsible.','There was a mix-up during the bottling process.']
+var poisonReason = ['It was intended for a different guest of the tavern.','It was poisoned as a random act of evil.','An old enemy of the party is responsible.','There was a mix-up during the bottling process.']
 var beerVarieties = ['lager','cider','fruit ale','ale','pilsner','malt','porter','stout']
 var beerVarietiesCapped = ['Lager','Hard Cider','Fruit Ale','Ale','Pilsner','Malt','Porter','Stout']
 var beerColors = ['light','pale','light amber','golden','amber','reddish','light brown','copper-colored','dark amber','medium brown','brown','chestnut brown','dark brown','blackish']
@@ -277,17 +282,37 @@ var liquorTypesCapped = ['Vodka','Gin','Whiskey','Rum','Brandy','Vermouth']
 var liquorSources = ['barley','corn','rye','wheat','potato','rice','sorghum','sugarbeet','molasses','sugarcane','honey']
 var brandyTypes = ['apple','cherry','peach','plum','apricot','elderberry','pear','mulberry','pomace','']
 var liquorOrigins = [' bottom-shelf',' poorly made',' house-made',' locally produced','n imported',' finely made']
-var cookingMethods = ['Stewed','Baked','Deep-fried','Roasted','Blackened','Rotisserie-cooked','Pan-fried','Herb-crusted','Braised','Pan-seared','Stir-fried']
-var meatStyles = [' bits of ',' chunks of ',' cubes of ',' strips of ',' ',' ',' ',' ']
-var meatOptions = ['mystery meat','rabbit','chicken','fish','pork','lamb','turkey','beef','frog','steak','duck','veal','squab','pheasant','quail']
-var meatOptionsCapped = ['Mystery Meat','Rabbit','Chicken','Fish','Pork','Lamb','Turkey','Beef','Frog','Steak','Duck','Veal','Squab','Pheasant','Quail']
+var cookingMethods = ['Stewed','Baked','Deep-fried','Roasted','Grilled','Blackened','Rotisserie-cooked','Pan-fried','Herb-crusted','Braised','Pan-seared','Stir-fried']
+var meatStyles = [' bits of ',' chunks of ',' cubes of ',' slices of ',' strips of ',' ',' ',' ',' ']
+var meatOptions = ['mystery meat','sausage','rabbit','chicken','fish','pork','lamb','turkey','beef','frog','venison','steak','duck','veal','squab','pheasant','quail']
+var meatOptionsCapped = ['Mystery Meat','Sausage','Rabbit','Chicken','Fish','Pork','Lamb','Turkey','Beef','Frog','Venison','Steak','Duck','Veal','Squab','Pheasant','Quail']
 var meatIssues = ['The meat in this dish has gone off and could sicken the eater.','The meat in this dish is undercooked to the point of being dangerous to consume.','The meat in this dish is overcooked to the point of being nearly inedible.','The meat in this dish is starting to go bad, but <strong>should</strong> be safe for consumption.']
 var sauces = [' in a thick gravy',' in a cream sauce',' in white sauce',' in red sauce',' with a ginger marinade',' in garlic sauce',' in a vodka sauce']
 var presentationStyles = [' served over ',' on a bed of ',' served with ',' alongside ']
 var piledEtc = [' slathered',' piled',' crammed',' thrown',' sitting',' ']
 var starches = ['bread','mashed potatoes','rice','noodles','pasta','quinoa']
 var nextStyles = [' with a serving of ',' and a helping of ',' with a side of ',' and ']
-var veggies = ['brussel sprouts','collard greens','stewed onions','cooked greens','green peppers','black beans','beets','red beans','spinach','broccoli','beet greens','green beans','caramelized onions','carrots','artichoke','red peppers','asparagus','cauliflower']
+var veggies = ['brussel sprouts','collard greens','stewed onions','cooked greens','green peppers','peas','turnips','leeks','celery','mushrooms','black beans','beets','kale','red beans','spinach','broccoli','beet greens','radishes','green beans','caramelized onions','carrots','artichoke','red peppers','asparagus','cauliflower']
+var soupMeats = ['meat','sausage','rabbit','chicken','fish','scallops','fish','pork','ham','lamb','turkey','beef','frog','venison','duck']
+var soupMeatsCapped = ['Meat','Sausage','Rabbit','Chicken','Fish','Scallop','Fish','Pork','Ham','Lamb','Turkey','Beef','Frog','Venison','Duck']
+var soupCuts = ['small chunks of ',' meatballs','bits of ','cubes of ','chunks of ','hearty chunks of ']
+var soupTypes = ['soup','stew','chowder','cream']
+var soupTypesCapped = ['Soup','Stew','Chowder','Cream']
+var creamSoups = ['broccoli','potato','mushroom','chicken','Beef']
+var creamSoupsCapped = ['Broccoli','Potato','Mushroom','Chicken','Beef']
+var brothTypes = ['watery','thin','smooth','tasty','savory','thick','rich','luxurious','delicious']
+var soupStarches = ['rice','noodles','dumplings','cubed potatoes','assorted grains','barley']
+var soupVeggies = ['onions','radishes','turnips','carrots','peas','celery','garlic','green beans','mushrooms','beans','peppers']
+var saladBases = ['iceberg','romaine','red lettuce','mixed greens','baby spinach leaves']
+var saladBasesCapped = ['Iceberg','Romaine','Red Lettuce','Mixed Greens','Baby Spinach']
+var saladVeggies = ['green peppers','carrots','onions','cucumbers','radishes','celery','red peppers','baby artichokes','tomatoes','olives','arugula','mustard greens','baby kale']
+var saladToppingsMeats = ['rabbit','chicken','ham','turkey','steak']
+var saladToppingsMeatsCapped = ['Rabbit and ','Chicken and ','Ham and ','Turkey and ','Steak and ']
+var saladToppingsOther = ['grated cheese','slivered almonds','cranberries','sliced orange']
+var saladToppingMethods = ['grilled ','roasted ','blackened ','braised ','marinated ']
+var saladToppingMethodsCapped = ['Grilled','Roasted','Blackened','Braised','Marinated']
+var dressingFirstIngredients = ['honey','garlic','ginger','black pepper','herb']
+var dressingSecondIngredients = ['lemon','balsamic','cider vinegar','orange']
 
 var lifestyleIsSet = false;
 var chosenLifestyle = 0;
@@ -331,13 +356,15 @@ var foodQuality = 0;
 var foodQuantity = 0;
 var foodPriceModifier = 1;
 var starterOfferingCount = 0;
+var soupOfferingCount = 0;
 var saladOfferingCount = 0;
+var soupAndSaladList = [];
 var entreeOfferingCount = 0;
 var theyNeverListen = 0;
 var allRan = 0;
 
 function boast(){
-	document.getElementById('boastBox').innerHTML = 'With ' + numberWithCommas((prefixes.length * prefixes.length * suffixes.length) + (prefixes.length * suffixes.length)) + ' possible tavern names, over ' + numberToRounded(maritalStatuses.length * ownerOneType.length * heSheThey.length * ownerTwoNeutral.length * inspirations.length * gimmicks.length * (ownerSecrets.length+1) * (singleBackgrounds.length+1) * raceTypes.length * lifestyles.length) + ' story combinations, over ' + numberToRounded(tenderGenders.length * tenderRaces.length * tenderDispositions.length * tenderLooks.length * tenderDegrees.length * tenderSkinColors.length * tenderHairColors.length * tenderHairStyles.length) + ' possible bartenders, over ' + numberToRounded(clienteles.length * shadyQuests.length * shadyLocations.length * shadyDescriptions.length * patronActivities.length * patronActivities.length * patronActivities.length * tenderDegrees.length) + ' different clientele descriptions, a whole lot of alcohol, some food, and more on the way!';
+	document.getElementById('boastBox').innerHTML = 'With ' + numberWithCommas((prefixes.length * prefixes.length * suffixes.length) + (prefixes.length * suffixes.length)) + ' possible tavern names, over ' + numberToRounded(maritalStatuses.length * ownerOneType.length * heSheThey.length * ownerTwoNeutral.length * inspirations.length * gimmicks.length * (ownerSecrets.length+1) * (singleBackgrounds.length+1) * raceTypes.length * lifestyles.length) + ' story combinations, over ' + numberToRounded(tenderGenders.length * tenderRaces.length * tenderDispositions.length * tenderLooks.length * tenderDegrees.length * tenderSkinColors.length * tenderHairColors.length * tenderHairStyles.length) + ' possible bartenders, over ' + numberToRounded(clienteles.length * shadyQuests.length * shadyLocations.length * shadyDescriptions.length * patronActivities.length * patronActivities.length * patronActivities.length * tenderDegrees.length) + ' different clientele descriptions, a whole lot of alcohol, a bunch of food, and more on the way!';
 }
 
 var numberWithCommas = (x) => {
@@ -356,10 +383,9 @@ function saveOrPrint(){
 	var printWindow = window.open('','PRINT','height=800,width=1000');
 	
 	printWindow.document.write('<html><head><title> Not Another Tavern Generator — ' + tavernName +'</title>');
-	printWindow.document.write('<link rel="stylesheet" type="text/css" media="print" href="print.css">');
 	printWindow.document.write('</head><body>');
-	printWindow.document.write('<h1>' + tavernName + '</h1>');
-	printWindow.document.write('<h2> The Tavern\'s Tale </h2>');
+	printWindow.document.write('<h1 style="font-variant:small-caps;margin:0;">' + tavernName + '</h1>');
+	printWindow.document.write('<div style="-webkit-column-count:2;-moz-column-count:2;column-count:2;"><h2 style="font-variant:small-caps;margin:0;"> The Tavern\'s Tale </h2>');
 	printWindow.document.write(document.getElementById('nameDisplay').innerHTML);
 	printWindow.document.write(document.getElementById('ownerDisplay').innerHTML);
 	printWindow.document.write(document.getElementById('raceDisplay').innerHTML);
@@ -368,32 +394,92 @@ function saveOrPrint(){
 	printWindow.document.write(document.getElementById('inspirationDisplay').innerHTML);
 	printWindow.document.write(document.getElementById('qualityDisplay').innerHTML);
 	printWindow.document.write(document.getElementById('gimmickDisplay').innerHTML);
-	printWindow.document.write('<h2> The Bartender </h2>');
+	printWindow.document.write('<br><br><h2 style="font-variant:small-caps;margin:0;"> The Bartender </h2>');
 	printWindow.document.write(document.getElementById('bartenderDisplay').innerHTML);
-	printWindow.document.write('<h2> The Clientele </h2>');
+	printWindow.document.write('<br><br><h2 style="font-variant:small-caps;margin:0;"> The Clientele </h2>');
 	printWindow.document.write(document.getElementById('clienteleDisplay').innerHTML);
-	printWindow.document.write('<h2> The Accommodations </h2>');
+	printWindow.document.write('<br><br><h2 style="font-variant:small-caps;margin:0;"> The Accommodations </h2>');
 	printWindow.document.write(document.getElementById('roomsDisplay').innerHTML);
-	printWindow.document.write('<h2> The Food & Drink </h2><h3> Beverages </h3><h3>Wines</h3>');
+	printWindow.document.write('<br><br><h2 style="font-variant:small-caps;margin:0;"> Beverages </h2><h3 style="font-variant:small-caps;margin:0;">Wines</h3>');
 	printWindow.document.write(document.getElementById('winesDisplay').innerHTML);
-	printWindow.document.write('<h3> Lagers & Ales </h3>');
+	printWindow.document.write('<h3 style="font-variant:small-caps;margin:0;"> Lagers & Ales </h3>');
 	printWindow.document.write(document.getElementById('beersDisplay').innerHTML);
-	printWindow.document.write('<h3> Liquors </h3>');
+	printWindow.document.write('<h3 style="font-variant:small-caps;margin:0;"> Liquors </h3>');
 	printWindow.document.write(document.getElementById('liquorsDisplay').innerHTML);
-	printWindow.document.write('<h2> Food Menu </h2> <h3> Starters </h3>');
+	printWindow.document.write('<br><br><h2 style="font-variant:small-caps;margin:0;"> Food Menu </h2> <h3 style="font-variant:small-caps;margin:0;"> Starters </h3>');
 	printWindow.document.write(document.getElementById('startersDisplay').innerHTML);
-	printWindow.document.write('<h3> Salads </h3>');
+	printWindow.document.write('<h3 style="font-variant:small-caps;margin:0;"> Salads </h3>');
 	printWindow.document.write(document.getElementById('saladsDisplay').innerHTML);
-	printWindow.document.write('<h3> Entrees </h3>');
+	printWindow.document.write('<h3 style="font-variant:small-caps;margin:0;"> Entrees </h3>');
 	printWindow.document.write(document.getElementById('entreesDisplay').innerHTML);
-	printWindow.document.write('<p> Created with Not Another Tavern Generator from The Copper Sanctum <br>©2018 Ian F Evans</p>');
+	printWindow.document.write('</div><p> Created with Not Another Tavern Generator from The Copper Sanctum <br>©2018 Ian F Evans</p>');
 	printWindow.document.write('</body></html>');
 	
 	printWindow.document.close();
 	printWindow.focus();
 	
 	printWindow.print();
-	printWindow.close();
+}
+
+function showMeTheTables(){
+	var tableWindow = window.open('','TABLES','height=900,width=1200');
+	tableWindow.document.write('<html><head><title> Not Another Tavern Generator - The Interesting Tables </title></head><body>');
+	tableWindow.document.write('<h1 style="font-variant:small-caps"> The More Interesting Tables for Not Another Tavern Generator</h1>');
+	tableWindow.document.write('<h2 style="font-variant:small-caps;margin:0;"> Name Descriptors </h2><div style="-webkit-column-count:6;-moz-column-count:6;column-count:6;"><table><tr><th>Number</th><th style="text-align:left">Descriptor</th></tr>');
+	for(a=0;a<prefixes.length;a++){
+		switch (a){
+			case 36:
+			case 72:
+			case 108:
+			case 144:
+			case 180:
+				tableWindow.document.write('</table><table><tr><th>Number</th><th>Descriptor</th></tr>');
+		}
+		tableWindow.document.write('<tr><td style="text-align:center">' + (a+1) + '</td><td>' + prefixes[a] + '</td></tr>');
+	}
+	tableWindow.document.write('</table></div><br>');
+	tableWindow.document.write('<h2 style="font-variant:small-caps;margin:0;"> Name Objects </h2><div style="-webkit-column-count:6;-moz-column-count:6;column-count:6;"><table><tr><th>Number</th><th style="text-align:left">Object</th></tr>');
+	for(b=0;b<suffixes.length;b++){
+		switch (b){
+			case 58:
+			case 116:
+			case 174:
+			case 232:
+			case 290:
+				tableWindow.document.write('</table><table><tr><th>Number</th><th>Descriptor</th></tr>');
+		}
+		tableWindow.document.write('<tr><td style="text-align:center">' + (b+1) + '</td><td>' + suffixes[b] + '</td></tr>');
+	}
+	tableWindow.document.write('</table></div><br>');
+	tableWindow.document.write('<h2 style="font-variant:small-caps;margin:0;"> Possible Personality Quirks, Secrets and Possible Midnight Encounters </h2><div><table><tr><th>Number</th><th style="text-align:left">Secret</th><th>If the party stays the night, ...</th></tr>');
+	for(c=0;c<ownerSecrets.length;c++){
+		tableWindow.document.write('<tr><td style="text-align:center">' + (c+1) + '</td><td> An owner ' + ownerSecrets[c] + '.</td><td>'+thingsThatGoBumpSingle[c] + '.</td></tr>');
+	}
+	tableWindow.document.write('</table></div><br><div style="-webkit-column-count:2;-moz-column-count:2;column-count:2;">');
+	tableWindow.document.write('<h2 style="font-variant:small-caps;margin:0;"> Possible Owner Backgrounds </h2><div><table><tr><th>Number</th><th style="text-align:left">Background</th></tr>');
+	for(d=0;d<singleBackgrounds.length;d++){
+		tableWindow.document.write('<tr><td style="text-align:center">' + (d+1) + '</td><td> An owner ' + singleBackgrounds[d] + '.</td></tr>');
+	}
+	tableWindow.document.write('</table></div><br>');
+	tableWindow.document.write('<h2 style="font-variant:small-caps;margin:0;"> Possible Tavern Draws/Gimmicks </h2><div><table><tr><th>Number</th><th style="text-align:left">The Draw is ...</th></tr>');
+	for(e=0;e<gimmicks.length;e++){
+		tableWindow.document.write('<tr><td style="text-align:center">' + (e+1) + '</td><td>' + gimmicks[e] + '.</td></tr>');
+	}
+	tableWindow.document.write('</table></div><br>');
+	tableWindow.document.write('<h2 style="font-variant:small-caps;margin:0;"> Patron Activities </h2><div><table><tr><th>Number</th><th style="text-align:left">Some patrons are ...</th></tr>');
+	for(g=0;g<patronActivities.length;g++){
+		tableWindow.document.write('<tr><td style="text-align:center">' + (g+1) + '</td><td> ' + patronActivities[g] + '.</td></tr>');
+	}
+	tableWindow.document.write('</table></div><br>');
+	tableWindow.document.write('<h2 style="font-variant:small-caps;margin:0;"> What\'s that Shady Figure up to? </h2><div><table><tr><th>Number</th><th style="text-align:left">What\'s their story?</th></tr>');
+	for(h=0;h<shadyQuests.length;h++){
+		tableWindow.document.write('<tr><td style="text-align:center">' + (h+1) + '</td><td>' + shadyQuests[h] + '.</td></tr>');
+	}
+	tableWindow.document.write('</table></div><br><br><br><br><br><br><br><br><br><br><br><br></div>');
+	tableWindow.document.write('</body></html>');
+	
+	tableWindow.document.close();
+	tableWindow.focus();
 }
 
 function setLifestyle(x){
@@ -628,7 +714,7 @@ function newStory() {
 	
 	document.getElementById('inspirationDisplay').innerHTML = 'The inspiration for the tavern\'s name was ' + inspiration + '. ';
 	document.getElementById('qualityDisplay').innerHTML = 'It is a tavern of ' + lifestyle + ' quality, ';	
-	document.getElementById('gimmickDisplay').innerHTML = 'and its main draw is ' + gimmick +'. ';
+	document.getElementById('gimmickDisplay').innerHTML = 'and its main draw is ' + gimmick +'.<br><br>';
 }
 
 function newBartender(){
@@ -765,7 +851,7 @@ function newBartender(){
 		tenderText = 'The bartender at <span id="nameDisplay2">' + tavernName + '</span> is a' + tenderAge + ' ' + tenderGenders[tenderGender] + ' ' + tenderRace + ' who is ' + degree1 + ' ' + tenderLooks[Math.floor(Math.random() * tenderLooks.length)] + '. ' + tenderHeSheThey + ' ' + isOrAre + ' often ' + degree2 + ' ' + tenderDispositions[tenderDispositionNumber] + ' in disposition. ' + tenderHisHerTheir + tenderSkinAndHair + ' Physically, ' + tenderheshethey + ' ' + isOrAre + ' ' + degree3 + ' ' + tenderPhysique + '.';
 	}
 	document.getElementById('bartenderHeading').innerHTML = '<h2><button onclick="newBartender()" class="innerBtn"> The Bartender </button></h2>';
-	document.getElementById('bartenderDisplay').innerHTML = tenderText;
+	document.getElementById('bartenderDisplay').innerHTML = tenderText + '<br><br>';
 }
 
 function newClientele() {
@@ -790,7 +876,7 @@ function newClientele() {
 	var isOrAre = 'are';
 	var howMany = 'some';
 	var peopleOrPerson = 'people';
-	var patronCount = (Math.floor(Math.random() * 30) + 1) ;
+	var patronCount = Math.floor(Math.random() * ((1+lifestyleDecider)*5)) + 1;
 	var thereIsAShadyFigure = Math.floor(Math.random() * 2);
 	var itIsLegit = Math.floor(Math.random() * 5);
 	var shadyText = '';
@@ -852,10 +938,10 @@ function newClientele() {
 		patronsAreDoing = 'A couple are ' + activityOne + ', while several are ' + activityTwo + '. There are also a few ' + activityThree;
 	} else if (patronCount < 32){
 		howMany = 'around thirty';
-		patronsAreDoing = 'One group of patrons is ' + activityOne + '. Another group is ' + activityTwo + ', while a nearby table is ' + activityThree + '. There are also several patrons ' + activityFour;
+		patronsAreDoing = 'One group of patrons is ' + activityOne + '. Another group is ' + activityTwo + ', while a nearby cluster is ' + activityThree + '. There are also several patrons ' + activityFour;
 	} else if (patronCount < 38){
 		howMany = 'around three dozen';
-		patronsAreDoing = 'A small group is ' + activityOne + ', while a few others are ' + activityTwo + '. The table nearest the door is ' + activityThree + ', while a group near the bar is ' + activityFour;
+		patronsAreDoing = 'A small group is ' + activityOne + ', while a few others are ' + activityTwo + '. The gathering nearest the door is ' + activityThree + ', while a group near the bar is ' + activityFour;
 	} else if (patronCount < 41){
 		howMany = 'around forty';
 		patronsAreDoing = 'Several patrons are ' + activityOne + ', others are ' + activityTwo + ', some are ' + activityThree + ', and there are also some ' + activityFour;
@@ -873,7 +959,7 @@ function newClientele() {
 	}
 	
 	document.getElementById('clienteleHeading').innerHTML = '<h2><button onclick="newClientele()" class="innerBtn"> The Clientele </button></h2>';
-	document.getElementById('clienteleDisplay').innerHTML = 'On a typical night, the clientele at <span id="nameDisplay3">' + tavernName + '</span> can be described as ' + clienteleDegree + ' ' + clientele + '. On this occasion, there ' + isOrAre + ' ' + howMany + ' other ' + peopleOrPerson + ' currently in the tavern. ' + patronsAreDoing + '. ' + shadyText;
+	document.getElementById('clienteleDisplay').innerHTML = 'On a typical night, the clientele at <span id="nameDisplay3">' + tavernName + '</span> can be described as ' + clienteleDegree + ' ' + clientele + '. On this occasion, there ' + isOrAre + ' ' + howMany + ' other ' + peopleOrPerson + ' currently in the tavern. ' + patronsAreDoing + '. ' + shadyText + '<br><br>';
 }
 function newRooms(){
 	var roomDegree1 = tenderDegrees[Math.floor(Math.random() * tenderDegrees.length)];
@@ -977,9 +1063,9 @@ function newRooms(){
 	}
 	document.getElementById('roomsHeading').innerHTML = '<h2><button onclick="newRooms()" class = "innerBtn"> The Accommodations </button></h2>';
 	if (doesRentRooms){
-		document.getElementById('roomsDisplay').innerHTML = 'The rooms for rent at <span id="nameDisplay4">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost + ' If the party spends the night in the tavern, ' + secretText;
+		document.getElementById('roomsDisplay').innerHTML = 'The rooms for rent at <span id="nameDisplay4">' + tavernName + '</span> are ' + roomDegree1 + ' ' + roomSize + ' and ' + roomDegree2 + ' ' + roomHygeine + '. There ' + isOrAre + ' currently ' + numberOfRooms + ' room' + addedS + ' available for rent. The cost for a night\'s stay is ' + roomCost + ' If the party spends the night in the tavern, ' + secretText + '<br><br>';
 	} else {
-		document.getElementById('roomsDisplay').innerHTML = '<span id="nameDisplay4">' + tavernName + '</span> is just a bar and doesn\t have any rooms to rent.';
+		document.getElementById('roomsDisplay').innerHTML = '<span id="nameDisplay4">' + tavernName + '</span> is just a bar and doesn\t have any rooms to rent.<br><br>';
 	}
 }
 function newFoodAndDrink(){
@@ -1126,7 +1212,7 @@ function newWines(){
 	}
 	var wineListToString = wineList.join(" ");
 	document.getElementById('wineTitle').innerHTML = '<h3><button onclick="newWines()" class="innerBtn"> Wine List </button></h3>';
-	document.getElementById('winesDisplay').innerHTML = wineListToString;
+	document.getElementById('winesDisplay').innerHTML = wineListToString + '<br>';
 }
 
 function newBeers(){
@@ -1199,7 +1285,7 @@ function newBeers(){
 	
 	var beerListToString = beerList.join(" ");
 	document.getElementById('beerTitle').innerHTML = '<h3><button onclick="newBeers()" class="innerBtn"> Lagers & Ales </button></h3>';
-	document.getElementById('beersDisplay').innerHTML = beerListToString;
+	document.getElementById('beersDisplay').innerHTML = beerListToString + '<br>';
 }
 
 function newLiquors(){
@@ -1289,11 +1375,13 @@ function newFoodMenu(){
 	foodQuality = 0;
 	foodQuantity = Math.floor(lifestyleDecider/2);
 	starterOfferingCount = Math.floor(Math.random() * (lifestyleDecider/2)) + 4;
-	saladOfferingCount = Math.round(Math.random() * (lifestyleDecider/2)) + 4;
+	soupOfferingCount = Math.round(Math.random() * (lifestyleDecider/2)) + 1;
+	saladOfferingCount = Math.round(Math.random() * (lifestyleDecider/2)) + 1;
 	entreeOfferingCount = Math.floor(lifestyleDecider/2) + 4;
 	if(menuIsSet && chosenMenu < 5){
 		starterOfferingCount = Math.max(starterOfferingCount + (chosenMenu-2)*2,1);
 		saladOfferingCount = Math.max(saladOfferingCount + (chosenMenu-2)*2,1);
+		soupOfferingCount = Math.max(soupOfferingCount + (chosenMenu-2)*2,1);
 		entreeOfferingCount = Math.max(entreeOfferingCount + (chosenMenu-2)*2,1);
 	}
 	
@@ -1330,20 +1418,236 @@ function newFoodMenu(){
 
 function newStarters(){
 	document.getElementById('starterTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newStarters()" class="innerBtn"> Starters </button></h3>';
-	document.getElementById('startersDisplay').innerHTML = 'Starters are still on their way.';
+	document.getElementById('startersDisplay').innerHTML = '<p>Starters are still on their way.</p><br>';
 	if (theyNeverListen >0){
-		document.getElementById('startersDisplay').innerHTML = 'Don\'t do that.';
+		document.getElementById('startersDisplay').innerHTML = '<p>Don\'t do that.</p><br>';
 		theyNeverListen = 0;
 	}
 }
 
 function newSoupsAndSalads(){
-	document.getElementById('saladTitle').innerHTML = '<h3><button onclick="theyNeverListen++;newSoupsAndSalads()" class="innerBtn"> Soups & Salads </button></h3>';
-	document.getElementById('saladsDisplay').innerHTML = 'No soups or salads yet.';
-	if (theyNeverListen >0){
-		document.getElementById('saladsDisplay').innerHTML = 'Clicking isn\'t going to magically make there be soup or salads.';
-		theyNeverListen = 0;
+	document.getElementById('saladTitle').innerHTML = '<h3><button onclick="newSoupsAndSalads()" class="innerBtn"> Soups & Salads </button></h3>';
+	soupAndSaladList =[];
+	newSoups();
+	newSalads();
+	var soupAndSaladListToString = soupAndSaladList.join(" ")
+	document.getElementById('saladsDisplay').innerHTML = soupAndSaladListToString;
+}
+
+function newSoups(){
+	var soupName = '';
+	var soupNameCapped = '';
+	var soupDescription = '';
+	var soupTypeNumber = 0;
+	var soupType = '';
+	var soupTypeCapped = '';
+	var soupMeatNumber = 0;
+	var soupMeat = '';
+	var soupMeatCapped = '';
+	var soupCut = '';
+	var creamSoupNumber = '';
+	var creamSoup = '';
+	var creamSoupCapped = '';
+	var brothTypeNumber = 0;
+	var brothType = '';
+	var soupStarchNumber = 0;
+	var soupStarch = '';
+	var soupVeggieOneNumber = 0;
+	var soupVeggieOne = '';
+	var soupVeggieTwoArray = [];
+	var soupVeggieTwoNumber = 0;
+	var soupVeggieTwo = '';
+	var soupVeggieThreeArray = [];
+	var soupVeggieThreeNumber = 0;
+	var soupVeggieThree = '';
+	var creamOrNotThing = '';
+	var soupPrice = '';
+	var soupPriceTotal = 0;
+	var soupCutAndMeat = '';
+	
+	for (var l=0;l<soupOfferingCount;l++){
+		soupTypeNumber = Math.floor(Math.random()*(soupTypes.length-(2-Math.ceil(lifestyleDecider/3))));
+		soupType = soupTypes[soupTypeNumber];
+		soupTypeCapped = soupTypesCapped[soupTypeNumber];
+		brothTypeNumber = Math.floor(Math.random()*(brothTypes.length-5))+lifestyleDecider;
+		brothType = brothTypes[brothTypeNumber];
+		soupMeat = '';
+		soupCut = '';
+		if(soupTypeNumber == 3){
+			creamSoupNumber = Math.floor(Math.random()*creamSoups.length);
+			creamSoup = creamSoups[creamSoupNumber];
+			creamSoupCapped = creamSoupsCapped[creamSoupNumber];
+			soupNameCapped = 'Cream of ' + creamSoupCapped;
+			soupName = 'cream of ' + creamSoup + ' soup';
+			creamOrNotThing = '';
+		} else {
+			soupMeatNumber = Math.floor(Math.random()*(soupMeats.length-5)+lifestyleDecider);
+			soupMeat = soupMeats[soupMeatNumber];
+			soupMeatCapped = soupMeatsCapped[soupMeatNumber];
+			soupNameCapped = soupMeatCapped + ' ' + soupTypeCapped;
+			soupName = soupType;
+			soupCut = soupCuts[Math.floor(Math.random()*soupCuts.length)];
+			if(soupMeat == 'scallops'){
+				soupCut = '';
+			}
+			creamOrNotThing = ' and ';
+		}
+		soupStarchNumber = Math.floor(Math.random()*soupStarches.length);
+		soupVeggieOne = '';
+		soupVeggieTwo = '';
+		soupVeggieThree = '';
+		if(lifestyleDecider>1){
+			if(soupTypeNumber<3){
+				creamOrNotThing = ', ';
+				soupVeggieOne = ', and ' + soupVeggies[soupVeggieOneNumber];
+			} else {
+				soupVeggieOne = ' and ' + soupVeggies[soupVeggieOneNumber];
+			}
+			soupVeggieOneNumber = Math.floor(Math.random() * soupVeggies.length);
+			soupVeggieTwoArray = soupVeggies.slice();
+			soupVeggieTwoArray.splice(soupVeggieOneNumber,1);
+			if (Math.floor(Math.random()*(7-lifestyleDecider)) == 0){
+				soupVeggieTwoNumber = Math.floor(Math.random() * soupVeggieTwoArray.length);
+				soupVeggieOne = ', ' + soupVeggies[soupVeggieOneNumber];
+				soupVeggieTwo = ', and ' + soupVeggieTwoArray[soupVeggieTwoNumber];
+				soupVeggieThreeArray = soupVeggieTwoArray.slice();
+				soupVeggieThreeArray.splice(soupVeggieTwoNumber,1);
+				if(Math.floor(Math.random()*(6-lifestyleDecider)) == 0){
+					soupVeggieThreeNumber = Math.floor(Math.random()*soupVeggieThreeArray.length);
+					soupVeggieTwo = ', ' + soupVeggieTwoArray[soupVeggieTwoNumber];
+					soupVeggieThree = ', and ' + soupVeggieThreeArray[soupVeggieThreeNumber];
+				}
+			}
+		}
+		soupPriceTotal = foodPriceModifier * (foodQuality * foodQuantity + Math.pow(soupMeatNumber/3+1,2) + Math.pow(brothTypeNumber/3+1,2) + Math.pow(lifestyleDecider/4+1,4));
+		if (soupPriceTotal >= 95){
+			soupPrice = Math.round(soupPriceTotal/100) + 'gp';
+		} else if (soupPriceTotal >= 9.5){
+			soupPrice = Math.round(soupPriceTotal/10) + 'sp';
+		} else {
+			soupPrice = Math.floor(soupPriceTotal) + 'cp';
+		}
+		soupStarch = creamOrNotThing + soupStarches[soupStarchNumber];
+		
+		if(soupCut == ' meatballs'){
+			if(soupMeat == 'meat'){
+				soupCutAndMeat = 'unidentifiable' + soupCut;
+			} else {
+				soupCutAndMeat = soupMeat + soupCut;
+			}			
+		} else {
+			soupCutAndMeat = soupCut + soupMeat;
+		}
+		
+		soupDescription = '<p><strong><i>' + soupNameCapped + '</strong></i><br>A ' + brothType + ' ' + soupName + ' with ' + soupCutAndMeat + soupStarch + soupVeggieOne + soupVeggieTwo + soupVeggieThree + '.<br>' + soupPrice + '</p>'
+		soupAndSaladList.splice(soupAndSaladList.length,1,soupDescription);
 	}
+}
+
+function newSalads(){
+	var saladBaseNumber = 0;
+	var saladBase = '';
+	var saladBaseCapped = '';
+	var saladVeggieOneNumber = 0;
+	var saladVeggieOne = '';
+	var saladVeggieTwoArray = [];
+	var saladVeggieTwoNumber = 0;
+	var saladVeggieTwo = '';
+	var saladVeggieThreeArray = [];
+	var saladVeggieThreeNumber = 0;
+	var saladVeggieThree = '';
+	var saladVeggieFourArray = [];
+	var saladVeggieFourNumber = 0;
+	var saladVeggieFour = '';
+	var saladToppingMethodNumber = 0;
+	var saladToppingMethod = '';
+	var saladToppingMethodCapped = '';
+	var saladToppingMeatNumber = 0;
+	var saladToppingMeat = '';
+	var saladToppingMeatCapped = '';
+	var saladToppingOther = '';
+	var dressingFirstIngredient = '';
+	var dressingSecondIngredient = '';
+	var saladName = '';
+	var saladDressing = '';
+	var saladDescription = '';
+	var saladPriceTotal = 0;
+	var saladPrice = '';
+	
+	for(var m=0;m<saladOfferingCount;m++){
+		saladBaseNumber = Math.floor(Math.random()*(Math.max(2,lifestyleDecider)));
+		saladBase = saladBases[saladBaseNumber];
+		saladBaseCapped = saladBasesCapped[saladBaseNumber];
+		if(Math.floor(Math.random()*(Math.max(2,lifestyleDecider))) > 0){
+			saladToppingMethodNumber = Math.floor(Math.random()*(Math.max(2,lifestyleDecider)));
+			saladToppingMeatNumber = Math.floor(Math.random()*(Math.max(2,lifestyleDecider)));
+			saladToppingMethod = '. Topped with ' + saladToppingMethods[saladToppingMethodNumber];
+			saladToppingMethodCapped = saladToppingMethodsCapped[saladToppingMethodNumber];
+			saladToppingMeat = saladToppingsMeats[saladToppingMeatNumber];
+			saladToppingMeatCapped = saladToppingsMeatsCapped[saladToppingMeatNumber];
+			if(Math.floor(Math.random()*(Math.max(3,lifestyleDecider))) > 1){
+				saladToppingOther = ' and ' + saladToppingsOther[Math.floor(Math.random()*saladToppingsOther.length)];
+			} else {
+				saladToppingOther = '';
+			}
+		} else {
+			saladToppingMethod = '';
+			saladToppingMethodCapped = '';
+			saladToppingMeat = '';
+			saladToppingMeatNumber = 0;
+			saladToppingMeatCapped = '';
+			if(Math.floor(Math.random()*(Math.max(3,lifestyleDecider))) > 1){
+				saladToppingOther = '. Topped with ' + saladToppingsOther[Math.floor(Math.random()*saladToppingsOther.length)];
+			} else {
+				saladToppingOther = '';
+			}
+		}
+		saladName = saladToppingMethodCapped + ' ' + saladToppingMeatCapped + ' ' + saladBaseCapped + ' Salad';
+		saladVeggieOne = '';
+		saladVeggieTwo = '';
+		saladVeggieThree = '';
+		saladVeggieFour = '';
+		saladVeggieOneNumber = Math.floor(Math.random() * saladVeggies.length);
+		saladVeggieOne = saladVeggies[saladVeggieOneNumber];
+		if(Math.floor(Math.random()*(7-lifestyleDecider)) == 0)		{
+			saladDressing = ' coated in a ' + dressingFirstIngredients[Math.floor(Math.random()*dressingFirstIngredients.length)];
+			if(Math.floor(Math.random()*(6-lifestyleDecider)) == 0){
+				saladDressing = saladDressing + ' and ' + dressingSecondIngredients[Math.floor(Math.random()*dressingSecondIngredients.length)];
+			}
+			saladDressing = saladDressing + ' dressing and '
+		}
+		if (5-lifestyleDecider == 0 || Math.floor(Math.random()*(7-lifestyleDecider)) == 0){
+			saladVeggieTwoArray = saladVeggies.slice();
+			saladVeggieTwoArray.splice(saladVeggieOneNumber,1);
+			saladVeggieTwoNumber = Math.floor(Math.random() * saladVeggieTwoArray.length);
+			saladVeggieTwo = ' and ' + saladVeggieTwoArray[saladVeggieTwoNumber];
+			if(Math.floor(Math.random()*(6-lifestyleDecider)) == 0){
+				saladVeggieThreeArray = saladVeggieTwoArray.slice();
+				saladVeggieThreeArray.splice(saladVeggieTwoNumber,1);
+				saladVeggieThreeNumber = Math.floor(Math.random()*saladVeggieThreeArray.length);
+				saladVeggieTwo = ', ' + saladVeggieTwoArray[saladVeggieTwoNumber];
+				saladVeggieThree = ', and ' + saladVeggieThreeArray[saladVeggieThreeNumber];
+				if(Math.floor(Math.random()*(7-lifestyleDecider)) == 0){
+					saladVeggieFourArray = saladVeggieThreeArray.slice();
+					saladVeggieFourArray.splice(saladVeggieThreeNumber,1);
+					saladVeggieFourNumber = Math.floor(Math.random()*saladVeggieFourArray.length);
+					saladVeggieThree = ', ' + saladVeggieThreeArray[saladVeggieThreeNumber];
+					saladVeggieFour = ', and ' + saladVeggieFourArray[saladVeggieFourNumber];
+				}
+			}
+		}
+		saladPriceTotal = foodPriceModifier * (foodQuality * foodQuantity + Math.pow(saladToppingMeatNumber/3+2,2) + Math.pow(saladBaseNumber/4+2,2) + Math.pow(lifestyleDecider/4+1,3));
+		if (saladPriceTotal >= 95){
+			saladPrice = Math.round(saladPriceTotal/100) + 'gp';
+		} else if (saladPriceTotal >= 9.5){
+			saladPrice = Math.round(saladPriceTotal/10) + 'sp';
+		} else {
+			saladPrice = Math.floor(saladPriceTotal) + 'cp';
+		}
+		saladDescription = '<p><strong><i>' + saladName + '</strong></i><br>Leaves of ' + saladBase + saladDressing + ' tossed with ' + saladVeggieOne + saladVeggieTwo + saladVeggieThree + saladVeggieFour + saladToppingMethod + saladToppingMeat + saladToppingOther + '.<br>' + saladPrice + '</p>'
+		soupAndSaladList.splice(soupAndSaladList.length,1,saladDescription);
+	}
+	
 }
 
 function newEntrees(){
@@ -1358,6 +1662,7 @@ function newEntrees(){
 	var starch = '';
 	var nextStyle = '';
 	var veggie = '';
+	var veggieTwoArray = [];
 	var secondVeggie = '';
 	var entreePriceTotal = 0;
 	var entreePrice = '';
@@ -1376,7 +1681,7 @@ function newEntrees(){
 		cookingMethodNumber = Math.floor(Math.random() * (cookingMethods.length-5)) + Math.min(lifestyleDecider + foodQuality, 5);
 		cookingMethod = cookingMethods[cookingMethodNumber];
 		meatStyle = meatStyles[Math.floor(Math.random() * meatStyles.length)];
-		meatOptionNumber = Math.floor(Math.random() * (7+lifestyleDecider)) + Math.min(Math.floor(lifestyleDecider/2) + foodQuality, 2);
+		meatOptionNumber = Math.floor(Math.random() * (lifestyleDecider+meatOptions.length-8)) + Math.min(Math.floor(lifestyleDecider/2) + foodQuality, 2);
 		meatOption = meatOptions[meatOptionNumber];
 		meatOptionCapped = meatOptionsCapped[meatOptionNumber];
 		presentationStyle = presentationStyles[Math.floor(Math.random() * presentationStyles.length)];
@@ -1387,7 +1692,7 @@ function newEntrees(){
 			nextStyle = nextStyles[Math.floor(Math.random() * nextStyles.length)];
 			veggieNumber = Math.floor(Math.random() * veggies.length);
 			veggie = veggies[veggieNumber];
-			var veggieTwoArray = veggies.slice();
+			veggieTwoArray = veggies.slice();
 			veggieTwoArray.splice(veggieNumber,1);
 			if (Math.floor(Math.random()*(7-lifestyleDecider)) == 0 || eatingChallenge){
 				secondVeggie = ' and ' + veggieTwoArray[Math.floor(Math.random() * veggieTwoArray.length)];
