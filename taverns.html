@@ -14,7 +14,7 @@
 
 <div id="header">
 
-<div id="versionMarker">v0.3 Alpha</div>
+<div id="versionMarker">v0.4 Beta</div>
 
 <a href="index.html"><img src='TCS_Logo2Small.png' id="headImage"></a>
 
@@ -29,7 +29,7 @@
 <h1>Not Another Tavern Generator</h1>
 <p>Inns and taverns are an integral part of most D&D games, but why should you put the work into fleshing out a place your players might only spend a few minutes in? Not Another Tavern Generator is here to help. Just push the button and visit a procedurally generated random tavern with interesting prompts to help you create an engaging story on the fly.</p>
 
-<div id="boastBox"></div><br>
+<div id="boastBox">If this text doesn't get replaced by text proclaiming the numbers of possibilities, it means JavaScript is disabled on your device. Enable JavaScript or switch to a device that supports it and try again. Sorry for the inconvenience.</div><br>
 
 <button onclick="newTavern()" id="tavernButton" class="outerBtn"> Visit a Tavern </button>
 <p id="instructions" style="display:none"><br>Hit the Tavern's name to rename it, and hit any of the subheadings to regenerate just that section</p>
@@ -41,7 +41,7 @@
 <dl>
 <dt>Neighborhood:
 <dd><input type="radio" name="lifestyle" value="0" onclick="setLifestyle(0)"> Lower Class
-<dd><input type="radio" name="lifestyle" value="2" onclick="setLifestyle(2)"> Middle&nbsp;Class
+<dd><input type="radio" name="lifestyle" value="2" onclick="setLifestyle(2)"> Middle Class
 <dd><input type="radio" name="lifestyle" value="4" onclick="setLifestyle(4)"> Upper Class
 <dd><input type="radio" name="lifestyle" value="6" onclick="setLifestyle(6)" checked="true"> Random
 </dl>
@@ -85,8 +85,8 @@
 </div>
 <br>
 <p>If you want to see a few of the more interesting tables in their entirety without having to parse through my code,<button onclick="showMeTheTables()" class="innerBtn"id="showTables">Click Here</button>to open a new window with a few of them presented (and excuse the formatting if they show up wonky, it was a kinda quick and dirty thing for now.).</p>
-<p>*Saving/Printing <i>works</i>, but it claims to go unresponsive if you wait too long to click print/save on the new window, I'll figure it out eventually</p>
-<p>Still to come: more food, additional plot hooks, and more!</p>
+<p>*Saving/Printing <i>works</i>, but it claims to go unresponsive if you wait too long to click print/save on the new window (in Chrome at least), it might be just a weird issue with Chrome, but I don't know for sure yet.</p>
+<p>Still to come: More random little things as I think of them. Toying around with a few ideas, we'll see if any of them make it into the final version.</p>
 <p> If you spot any bugs, please let me know via <a href="https://www.facebook.com/TheCopperSanctum/">Facebook</a>, <a href="https://twitter.com/Derixyleth">Twitter</a>, or <a href="https://www.reddit.com/r/DnDBehindTheScreen/comments/7zck68/not_another_tavern_generator_fully_fleshedout/?ref=share&ref_source=link">Reddit</a>. Thanks!</p>
 </div><br>
 
