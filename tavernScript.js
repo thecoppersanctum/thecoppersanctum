@@ -105,7 +105,7 @@ var ownerSecrets = [
 'is secretly a powerful archfey'//21
 ]
 var thingsThatGoBumpSingle = [
-'they may overhear a "business" deal occuring in the main room of the tavern through the thin walls of their room.',
+'they may overhear a "business" deal occurring in the main room of the tavern through the thin walls of their room.',
 'guests come and go throughout the night—each one speaking directly to the owner in private for several minutes.',
 'the cannibalistic owner attempts to lure one of the party away from the rest of them and into the cooking pot.',
 'strange dreams trouble them in the night. When they wake the next morning, the sound of carnival music echoes in their heads.',
@@ -129,7 +129,7 @@ var thingsThatGoBumpSingle = [
 'the party enjoys the best night\'s rest they\'ve had in a long time, feeling like they slept enough for days.'
 ]
 var thingsThatGoBumpOneOf = [
-'they may overhear a "business" deal occuring in the main room of the tavern through the thin walls of their room.',
+'they may overhear a "business" deal occurring in the main room of the tavern through the thin walls of their room.',
 'guests come and go throughout the night—each one speaking directly to one of the owners in private for several minutes.',
 'the cannibalistic owner attempts to lure one of the party away from the rest of them and into the cooking pot.',
 'strange dreams trouble them in the night. When they wake the next morning, the sound of carnival music echoes in their heads.',
@@ -153,7 +153,7 @@ var thingsThatGoBumpOneOf = [
 'the party enjoys the best night\'s rest they\'ve had in a long time, feeling like they slept enough for days.'
 ]
 var thingsThatGoBumpDouble = [
-'they may overhear a "business" deal occuring in the main room of the tavern through the thin walls of their room.',
+'they may overhear a "business" deal occurring in the main room of the tavern through the thin walls of their room.',
 'guests come and go throughout the night—each one speaking directly to one of the owners in private for several minutes.',
 'the cannibalistic owners attempt to lure one of the party away from the rest of them and into the cooking pot.',
 'strange dreams trouble them in the night. When they wake the next morning, the sound of carnival music echoes in their heads.',
@@ -304,7 +304,7 @@ var clienteles = [
 'welcoming',//10 average end warm end
 'secretive',//11 clandestine start subdued start
 'subdued',//12
-'clandestine',//13 cladnestine end
+'clandestine',//13 clandestine end
 'peaceful',//14
 'elitist',//15
 'snobbish'//16 subdued end
@@ -330,7 +330,7 @@ var shadyQuests = [
 ]
 var shadyLocations = ['Seated alone near the bar,','At a table almost hidden in shadow,','Sitting at a secluded table,','Leaning against the far wall,','Nearly hidden in the corner,']
 var shadyDescriptions = [' jittery',' paranoid','n anxious',' nervous',' deceptively calm',' tough',' depressed',' upset','n imposing']
-var patronActivities = ['trying to start a fight','throwing things at another table','harrassing the waitstaff','mocking the bartender','arguing with the bartender','engaged in a heated debate','drinking heavily','participating in a drinking contest','arguing over how to split the bill','discussing religious or political matters','singing a drinking song','playing a game of dice','playing a card game','sharing tales of past adventures—successes and failures','playing a game of darts','consumed in a philosophical conversation','playing some kind of guessing game','entranced by a dancer on the stage','listening to a singer','speaking in hushed tones','laughing in response to a joke','playing chess','dancing/swaying to music','watching some performers','listening to the band','having a private conversation','discussing business matters']
+var patronActivities = ['trying to start a fight','throwing things at another table','harassing the waitstaff','mocking the bartender','arguing with the bartender','engaged in a heated debate','drinking heavily','participating in a drinking contest','arguing over how to split the bill','discussing religious or political matters','singing a drinking song','playing a game of dice','playing a card game','sharing tales of past adventures—successes and failures','playing a game of darts','consumed in a philosophical conversation','playing some kind of guessing game','entranced by a dancer on the stage','listening to a singer','speaking in hushed tones','laughing in response to a joke','playing chess','dancing/swaying to music','watching some performers','listening to the band','having a private conversation','discussing business matters']
 var roomSizes = ['tiny','cramped','small','average sized','comfortably sized','spacious','large','huge']
 var roomConditions = ['disgusting','filthy','dirty','dingy','hygenic','taken care of','clean','spotless','well-cleaned','immaculate','pristine']
 var wineDescriptors = ['astringent','musty','vinegary','sour','cloying','corked','tart','dirty','raisiny','rough','bitter','flat','smokey','leathery','green','lean','dry','full','powerful','earthy','sweet','oaky','mellow','spicy','herbaceous','deep','toasty','vibrant','crisp','soft','buttery','aromatic','expressive','fruity','smooth','complex','rich']
@@ -390,9 +390,9 @@ var ownerOneHisHerTheir = hisHerTheir[ownerOneGender];
 var ownerOnehishertheir = hishertheir[ownerOneGender];
 var ownerOnehimherthem = himherthem[ownerOneGender];
 var secondOwnerDecider = 0;
-var gimmickDecider = 0;
 
 var inspiration = '';
+var gimmickDecider = 0;
 var gimmick = '';
 var lifestyle = '';
 var lifestyleDecider = 0;
@@ -555,7 +555,7 @@ function showMeTheTables(){
 		tableWindow.document.write('<tr><td style="text-align:center">' + (h+1) + '</td><td>' + shadyQuests[h] + '.</td></tr>');
 	}
 	tableWindow.document.write('<tr><td style="text-align:center">' + (shadyQuests.length+1) + '</td><td>He is an adventuring cleric by the name of Thor Lightningroot. He needs the party\'s assistance for something TBD by @TooFadedGaming, winner of my secret contest.</td></tr>');
-	tableWindow.document.write('<tr><td style="text-align:center">' + (shadyQuests.length+2) + '</td><td>It is actually just a manequin/scarecrow/broom dressed up to look like the stereotypical "shady figure in a bar" so frequently talked about in tales of taverns. The bartender has a running tally on a nearby chalkboard to record how many people are tricked by it on a daily basis.</td></tr>');
+	tableWindow.document.write('<tr><td style="text-align:center">' + (shadyQuests.length+2) + '</td><td>It is actually just a mannequin/scarecrow/broom dressed up to look like the stereotypical "shady figure in a bar" so frequently talked about in tales of taverns. The bartender has a running tally on a nearby chalkboard to record how many people are tricked by it on a daily basis.</td></tr>');
 	tableWindow.document.write('</table></div></div><p>Not Another Tavern Generator from The Copper Sanctum<br>©2018 Ian F Evans</p>');
 	tableWindow.document.write('</body></html>');
 	
@@ -590,7 +590,7 @@ function setMenu(x){
 
 function newTavern(){
 	document.getElementById('descriptionText').style = 'height:65vh;overflow:auto;';
-	document.getElementById('descriptionText').scrollTo(0,0);
+	document.getElementById('descriptionText').scroll(0,0);
 	document.getElementById('tavernButton').innerHTML = buttonSayings[clickCount];
 	clickCount++;
 	if(clickCount >= buttonSayings.length){
@@ -610,98 +610,109 @@ function newTavern(){
 function newName(){
 	doublePrefix = randFl(20,0);
 	var alliterative = randFl(10,0);
-	randomPrefix1 = prefixes[randFl(prefixes.length,0)];
-	randomPrefix2 = prefixes[randFl(prefixes.length,0)];
-	randomSuffix = suffixes[randFl(suffixes.length,0)];
+	var prefix2Array = [];
+	var prefix1Number = randFl(prefixes.length,0);
+	randomPrefix1 = prefixes[prefix1Number];
+	var prefixFinal = '';
+	var suffixNumber = randFl(suffixes.length,0)
 	
 	if (doublePrefix <= 17) {
-		if(alliterative >= 6){
+		if(alliterative >= 5){
 			switch(randomPrefix1.charAt(0)){
 				case 'A':
-					randomSuffix = suffixes[randFl(12,0)];
+					suffixNumber = randFl(12,0);
 					break;
 				case 'B':
-					randomSuffix = suffixes[randFl(31,12)];
+					suffixNumber = randFl(31,12);
 					break;
 				case 'C':
-					randomSuffix = suffixes[randFl(33,43)];
+					suffixNumber = randFl(33,43);
 					break;
 				case 'D':
-					randomSuffix = suffixes[randFl(19,76)];
+					suffixNumber = randFl(19,76);
 					break;
 				case 'E':
-					randomSuffix = suffixes[randFl(9,95)];
+					suffixNumber = randFl(9,95);
 					break;
 				case 'F':
-					randomSuffix = suffixes[randFl(12,104)];
+					suffixNumber = randFl(12,104);
 					break;
 				case 'G':
-					randomSuffix = suffixes[randFl(20,116)];
+					suffixNumber = randFl(20,116);
 					break;
 				case 'H':
-					randomSuffix = suffixes[randFl(21,136)];
+					suffixNumber = randFl(21,136);
 					break;
 				case 'I':
-					randomSuffix = suffixes[randFl(4,157)];
+					suffixNumber = randFl(4,157);
 					break;
 				case 'J':
-					randomSuffix = suffixes[randFl(7,161)];
+					suffixNumber = randFl(7,161);
 					break;
 				case 'K':
-					randomSuffix = suffixes[randFl(3,168)];
+					suffixNumber = randFl(3,168);
 					break;
 				case 'L':
-					randomSuffix = suffixes[randFl(15,171)];
+					suffixNumber = randFl(15,171);
 					break;
 				case 'M':
-					randomSuffix = suffixes[randFl(25,186)];
+					suffixNumber = randFl(25,186);
 					break;
 				case 'N':
-					randomSuffix = suffixes[randFl(6,211)];
+					suffixNumber = randFl(6,211);
 					break;
 				case 'O':
-					randomSuffix = suffixes[randFl(9,217)];
+					suffixNumber = randFl(9,217);
 					break;
 				case 'P':
-					randomSuffix = suffixes[randFl(19,226)];
+					suffixNumber = randFl(19,226);
 					break;
 				case 'Q':
-					randomSuffix = suffixes[randFl(3,245)];
+					suffixNumber = randFl(3,245);
 					break;
 				case 'R':
-					randomSuffix = suffixes[randFl(20,248)];
+					suffixNumber = randFl(20,248);
 					break;
 				case 'S':
-					randomSuffix = suffixes[randFl(40,268)];
+					suffixNumber = randFl(40,268);
 					break;
 				case 'T':
-					randomSuffix = suffixes[randFl(22,308)];
+					suffixNumber = randFl(22,308);
 					break;
-				case 'U':
-					randomSuffix = suffixes[randFl(1,330)];
+				/*case 'U':
+					suffixNumber = randFl(1,330);
 					break;
 				case 'V':
-					randomSuffix = suffixes[randFl(2,331)];
-					break;
+					suffixNumber = randFl(2,331);
+					break;*/
 				case 'W':
-					randomSuffix = suffixes[randFl(18,333)];
+					suffixNumber = randFl(18,333);
 					break;
-				case 'Y':
-					randomSuffix = suffixes[randFl(2,351)];
+				/*case 'Y':
+					suffixNumber = randFl(2,351);
 					break;
 				case 'Z':
-					randomSuffix = suffixes[randFl(1,355)];
-					break;
+					suffixNumber = randFl(1,355);
+					break;*/
 			}
 		}
-		tavernName = 'The ' + randomPrefix1 + ' ' + randomSuffix;
+		prefixFinal = randomPrefix1
 	} else {
-		while (randomPrefix1 == randomPrefix2){
-			randomPrefix2 = prefixes[randFl(prefixes.length,0)];
-		}
-		tavernName = 'The ' + randomPrefix1 + ' ' + randomPrefix2 + ' ' + randomSuffix;
+		prefix2Array = prefixes.slice();
+		prefix2Array.splice(prefix1Number,1);
+		randomPrefix2 = prefix2Array[randFl(prefix2Array.length,0)];
+		prefixFinal = randomPrefix1 + ' ' + randomPrefix2;
 	}
-	
+	if (prefixFinal == 'Meady' && randFl(5,0) == 0){
+		randomSuffix = 'Ogre';//sorry, not sorry.
+	} else if (prefixFinal == 'Moose and' && randFl(5,0) == 0){
+		randomSuffix = 'Squirrel';//totally not sorry for that one at all.
+	} else if (prefixFinal == 'Sultry' && randFl(5,0) == 0){
+		randomSuffix = 'Sahuagin';//nor that one, had to include it as it's my goto tavern name.
+	} else {
+		randomSuffix = suffixes[suffixNumber];
+	}
+	tavernName = 'The ' + prefixFinal + ' ' + randomSuffix;
 	document.getElementById('nameDisplay').innerHTML = tavernName;
 	if (allRan == 1){
 		document.getElementById('nameDisplay2').innerHTML = tavernName;
@@ -724,13 +735,13 @@ function newStory() {
 	
 	lifestyle = lifestyles[lifestyleDecider];
 	var maritalStatus = maritalStatuses[randFl(maritalStatuses.length,0)];
-	var ownerOneGenderDecider = randFl(100,0);
+	var ownerOneGenderDecider = randFl(20,0);
 	
-	if (ownerOneGenderDecider > 59) {
+	if (ownerOneGenderDecider > 10) {
 		ownerOneGender = 0;
-	} else if (ownerOneGenderDecider > 19) {
+	} else if (ownerOneGenderDecider > 1) {
 		ownerOneGender = 1;
-	} else if (ownerOneGenderDecider > 9) {
+	} else if (ownerOneGenderDecider > 0) {
 		ownerOneGender = 2;
 	} else {
 		ownerOneGender = 3;
@@ -750,14 +761,14 @@ function newStory() {
 	var ownerOneBackgroundNumber = randFl(singleBackgrounds.length+1-lifestyles.length,lifestyleDecider);
 	
 	secondOwnerDecider = randFl(lifestyleDecider/2,2);
-	var ownerTwoGenderDecider = randFl(100,0);
+	var ownerTwoGenderDecider = randFl(20,0);
 	var ownerTwoGender = 0;
 	
-	if (ownerTwoGenderDecider > 59) {
+	if (ownerTwoGenderDecider > 10) {
 		ownerTwoGender = 0;
-	} else if (ownerTwoGenderDecider > 19) {
+	} else if (ownerTwoGenderDecider > 1) {
 		ownerTwoGender = 1;
-	} else if (ownerTwoGenderDecider > 9) {
+	} else if (ownerTwoGenderDecider > 0) {
 		ownerTwoGender = 2;
 	} else {
 		ownerTwoGender = 3;
@@ -796,7 +807,7 @@ function newStory() {
 		document.getElementById('ownerDisplay').innerHTML = ' is owned by a' + maritalStatus + ' ' + ownerOne;
 		document.getElementById('raceDisplay').innerHTML = ' whose race is ' + raceTypes[ownerOneRaceRarity] + ' in the area. ';
 		if (ownerOneHasSecret < 2) {
-			document.getElementById('secretDisplay').innerHTML = 'The owner is an upstanding citizen with no hidden secrets or unsusual quirks. ';
+			document.getElementById('secretDisplay').innerHTML = 'The owner is an upstanding citizen with no hidden secrets or unusual quirks. ';
 		} else {
 			document.getElementById('secretDisplay').innerHTML = 'The owner ' + ownerSecrets[ownerOneSecretNumber] + '. ';
 		}
@@ -890,7 +901,7 @@ function newBartender(){
 	var isOrAre = 'is';
 	var hasorhave = 'has';
 	var tenderAge = tenderAges[randFl(tenderAges.length,0)];
-	var tenderGenderDecider = randFl(10,0);
+	var tenderGenderDecider = randFl(20,0);
 	var tenderGender = 0;
 	var tenderHeSheThey = heSheThey[tenderGender];
 	var tenderheshethey = heshethey[tenderGender];
@@ -972,11 +983,11 @@ function newBartender(){
 			tenderText = 'One of the owners of <span id="nameDisplay2">' + tavernName + '</span> tends the bar ' + reasonForOwnerTendingBar + ownerOneHisHerTheir + ' disposition is generally described as ' + degree1 + ' ' + tenderDispositions[tenderDispositionNumber] + '. ' + ownerOneHeSheThey + ' ' + isOrAre + ' ' + degree2 + ' ' + tenderLooks[randFl(tenderLooks.length,0)] + ' with ' + tenderColor + ' skin and ' + tenderHairColor + ' hair in a ' + tenderHairStyle + ' style. Physically, ' + ownerOneheshethey + ' ' + isOrAre + ' ' + degree3 + ' ' + tenderPhysique + '.';
 		}
 	} else {
-		if (tenderGenderDecider > 5) {
+		if (tenderGenderDecider > 10) {
 			tenderGender = 0;
-		} else if (tenderGenderDecider > 2) {
-			tenderGender = 1;
 		} else if (tenderGenderDecider > 1) {
+			tenderGender = 1;
+		} else if (tenderGenderDecider > 0) {
 			tenderGender = 2;
 		} else {
 			tenderGender = 3;
@@ -1129,7 +1140,7 @@ function newClientele() {
 				shadyText = shadyLocation + ' there is a' + shadyDescription + ' looking figure. ' + shadyQuest;
 			}
 		} else {
-			shadyText = shadyLocation + ' there is a manequin/scarecrow/broom that is dressed up to look like the stereotypical "shady figure in a bar" so frequently talked about in tales of taverns. The bartender has a running tally on a nearby chalkboard to record how many people are tricked by it on a daily basis.';
+			shadyText = shadyLocation + ' there is a mannequin/scarecrow/broom that is dressed up to look like the stereotypical "shady figure in a bar" so frequently talked about in tales of taverns. The bartender has a running tally on a nearby chalkboard to record how many people are tricked by it on a daily basis.';
 		}
 	}
 	
