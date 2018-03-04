@@ -1,16 +1,67 @@
 var buttonSayings = ['Hit Another Bar','Check Out the Next Inn','Head to the Next Pub','Continue the Crawl','Time for Another Drink','One More!','And Another!','Maybe You\'ve Had Enough','I\'m Gonna Have to Cut You Off','Eh, One More Couldn\'t Hurt','You Feeling Okay?','Maybe Sleep It Off','Maybe Rent a Room','A New Day, a New Bar','Visit a Tavern']
 var clickCount = 0;
-var prefixes = ['Red','Orange','Yellow','Green','Blue','Purple','Violet','White','Black','Grey','Brown','Teal','Turquoise','Indigo','Marroon','Puce','Lavender','Fuchsia','Pink','Crimson','Mauve','Blackened','Bloodstained','Bloody','Bony','Broken','Burnt','Dark','Dirty','Dull','Forged','Frightening','Gilded','Hammered','Horrific','Jagged','Keen','Lovely','Moldy','Mossy','Musty','Old','Overweight','Polished','Priceless','Rusty','Sculpted','Shining','Sickly','Skinny','Soiled','Spotless','Spotted','Stuffy','Toasted','Unsoiled','Violent','Wicked','Winged','Angry','Anxious','Brave','Cowardly','Depressed','Drunken','Ecstatic','Energetic','Excited','Fevered','Flirty','Happy','Hungry','Impatient','Joyful','Lonely','Loveless','Lucky','Nervous','Rested','Restless','Rogue','Sad','Sultry','Surly','Thirsty','Tranquil','Unlucky','Wise','Babbling','Charging','Charming','Crying','Dancing','Dueling','Fighting','Flying','Gambling','Jumping','Laughing','Leaping','Raging','Screaming','Sleeping','Smiling','Stumbling','Stunning','Struggling','Flaming','Icy','Acidic','Psychic','Electric','Necrotic','Radiant','Forceful','Poisonous','Concussive','Piercing','Slashing','Bludgeoning','Blind','Charmed','Deaf','Frightened','Grappled','Incapacitated','Invisible','Paralyzed','Petrified','Exhausted','Poisoned','Prone','Restrained','Stunned','Unconscious','Bear and','Bell and','Blade and','Block and','Book and','Boot and','Bull and','Cat and','Dog and','Fish and','Goat and','Hawk and','Hook and','Horse and','Moose and','Mug and','Rose and','Staff and','Stick and','Tooth and','Wand and','Wolf and','Brass','Bronze','Carnelian','Chalk','Cloth','Copper','Crystal','Diamond','Electrum','Emerald','Glass','Gold','Golden','Iron','Jade','Metal','Platinum','Ruby','Sapphire','Silk','Silver','Steel','Velvet','Wooden','Abyssal','Arcane','Celestial','Demonic','Devilish','Draconic','Dragon\'s','Fiendish','Holy','Infernal','Monstrous','Pious','Unholy','Vampiric','Zombified','Meady','Hoppy','Bubbly','Sour','Sweet','Tangy','Bitter','Woodland','Hidden','Overgrown','Tangled','Twisted','Gnarled','Knotted','Hollow','Verdant','Little','Dire','Giant','Miniature','Smallest','Tiny','Maimed','One-Eyed','Toothless','Disfigured','Misshapen','Mutated','Forgotten','Lost','Wounded','Bloodied']
-var suffixes = ['Apple','Artichoke','Carrot','Cherry','Grape','Lemon','Melon','Pear','Pomegranate','Alligator','Ape','Baboon','Badger','Bat','Bear','Boar','Bull','Camel','Cardinal','Cat','Cow','Crab','Crocodile','Crow','Deer','Dog','Donkey','Dove','Eagle','Elephant','Elk','Fish','Frog','Goat','Hawk','Horse','Hyena','Jackal','Jackdaw','Jay','Lion','Lizard','Magpie','Mammoth','Mare','Moose','Mule','Octopus','Owl','Panther','Pigeon','Pony','Ram','Rat','Raven','Rhinoceros','Robin','Scorpion','Serpent','Shark','Snake','Spider','Squirrel','Stallion','Tiger','Turtle','Vulture','Weasel','Whale','Wolf','Boot','Coat','Cloak','Gauntlet','Glove','Jacket','Robe','Rest','Beacon','Slumber','Respite','Reprieve','Circle','Cube','Hex','Polyhedral','Sphere','Square','Trapezoid','Triangle','Abacus','Anvil','Barrel','Basket','Bell','Blanket','Boat','Book','Bottle','Bucket','Candle','Cart','Chain','Chest','Coin','Crowbar','Crown','Crystal','Cup','Door','Edge','Flask','Glass','Hammer','Hoard','Hourglass','Jug','Ladder','Lamp','Lantern','Line','Lock','Map','Mug','Nail','Orb','Pen','Pitcher','Plate','Pot','Pouch','Quill','Ring','Rope','Sack','Scroll','Ship','Shovel','Sledge','Spellbook','Tackle','Tankard','Tent','Tome','Torch','Totem','Trap','Wagon','Whistle','Forest','Grove','Pit','Sanctuary','Sanctum','Sea','Barbarian','Bard','Cleric','Druid','Fighter','King','Mage','Monk','Mystic','Paladin','Ranger','Rogue','Queen','Sailor','Sorcerer','Warlock','Warrior','Wizard','Clover','Flower','Ivy','Oak','Rose','Tree','Birch','Maple','Beech','Arrow','Axe','Battleaxe','Blade','Blowgun','Bolt','Bow','Club','Crossbow','Dagger','Dart','Flail','Glaive','Halberd','Handaxe','Javelin','Lance','Mace','Maul','Morningstar','Net','Pick','Pike','Quiver','Rapier','Scabbard','Scimitar','Scythe','Sickle','Sling','Spear','Staff','Sword','Trident','Wand','Warhammer','Whip','Heart','Claw','Fist','Foot','Head','Maw','Mouth','Nose','Tail','Tooth','Eye','Drum','Dulcimer','Flute','Lute','Lyre','Horn','Shawm','Trombone','Trumpet','Aboleth','Angel','Ankheg','Archon','Balor','Banshee','Basilisk','Behir','Bugbear','Bulette','Centaur','Chimera','Cloaker','Cockatrice','Couatl','Cyclops','Demon','Devil','Doppelganger','Dragon','Drider','Dryad','Duergar','Drow','Dwarf','Elemental','Elf','Ettercap','Ettin','Fiend','Fungus','Gargoyle','Genie','Ghost','Ghoul','Giant','Gnoll','Gnome','Goblin','Goliath','Golem','Gorgon','Grick','Griffon','Hag','Halfling','Harpy','Hound','Hippogriff','Hobgoblin','Homunculus','Human','Hydra','Imp','Jelly','Kobold','Kraken','Lamia','Lich','Lizardfolk','Lycanthrope','Magmin','Manticore','Medusa','Mephit','Mermaid','Mimic','Minotaur','Mummy','Naga','Nightmare','Ogre','Ooze','Orc','Otyugh','Owlbear','Pegasus','Pseudodragon','Pixie','Pudding','Rakshasa','Remorhaz','Revenant','Roc','Rust Monster','Sahuagin','Salamander','Satyr','Shadow','Specter','Sphinx','Sprite','Stirge','Succubus','Incubus','Tarrasque','Tiefling','Treant','Troll','Unicorn','Vampire','Werewolf','Wight','Will-o\'-Wisp','Worm','Wraith','Wyvern','Wyrm','Zombie']
+var prefixes = [
+'Abyssal','Acidic','Angry','Anxious','Arcane',
+'Babbling','Bear and','Bell and','Bitter','Black','Blackened','Blade and','Blind','Block and','Bloodied','Bloodstained','Bloody','Bludgeoning','Blue','Blushing','Bony','Book and','Boot and','Brass','Brave','Broken','Bronze','Brown','Bubbly','Bull and','Burnt',
+'Carnelian','Carved','Cat and','Celestial','Chalk','Chaotic','Charging','Charmed','Charming','Cloth','Concussive','Copper','Cowardly','Crimson','Crying','Crystal',
+'Dancing','Dark','Deadly','Deaf','Demonic','Depressed','Devilish','Diamond','Dire','Dirty','Disfigured','Dog and','Draconic','Dragon\'s','Drunken','Dueling','Dull',
+'Ecstatic','Electric','Electrum','Emerald','Energetic','Excited','Exhausted',
+'Fevered','Fiendish','Fighting','Filthy','Fish and','Flaming','Flirty','Flying','Forceful','Forged','Forgotten','Fractured','Frightened','Frightening','Fuchsia',
+'Gambling','Giant','Gilded','Glass','Gnarled','Goat and','Gold','Golden','Grappled','Green','Grey',
+'Hammered','Happy','Hawk and','Hidden','Hollow','Holy','Hook and','Hoppy','Horrific','Horse and','Hungry',
+'Icy','Impatient','Incapacitated','Indigo','Infernal','Invisible','Iron',
+'Jade','Jagged','Joyful','Jumping',
+'Keen','Knotted',
+'Laughing','Lavender','Lawful','Lawless','Leaping','Little','Lonely','Lost','Loveless','Lovely','Lucky',
+'Maimed','Marroon','Mauve','Meady','Metal','Miniature','Misshapen','Moldy','Monstrous','Moose and','Mossy','Mug and','Musty','Mutated',
+'Necrotic','Nervous',
+'Old','One-Eyed','Orange','Orderly','Overgrown','Overweight',
+'Paralyzed','Petrified','Piercing','Pink','Pious','Platinum','Poisoned','Poisonous','Polished','Priceless','Prone','Psychic','Puce','Purple',
+'Radiant','Raging','Rancid','Red','Rested','Restless','Restrained','Rogue','Rose and','Ruby','Rusty',
+'Sad','Sapphire','Screaming','Sculpted','Shattered','Shining','Sickly','Silk','Silver','Skinny','Slashing','Sleeping','Smallest','Smiling','Soiled','Sour','Spotless','Spotted','Staff and','Steel','Stick and','Struggling','Stuffy','Stumbling','Stunned','Stunning','Sultry','Surly','Sweet',
+'Tangled','Tangy','Teal','Thirsty','Tiny','Toasted','Tooth and','Toothless','Tranquil','Turquoise','Twisted',
+'Unconscious','Unholy','Unlucky','Unsoiled',
+'Vampiric','Velvet','Verdant','Violent','Violet',
+'Wand and','White','Wicked','Winged','Wise','Wolf and','Wooden','Woodland','Wounded',
+'Yawning','Yellow',
+'Zombified'
+]
+var suffixes = [
+'Abacus','Aboleth','Alligator','Angel','Ankheg','Anvil','Ape','Apple','Archon','Arrow','Artichoke','Axe',
+'Baboon','Badger','Balor','Banshee','Barbarian','Bard','Barrel','Basilisk','Basket','Bat','Battleaxe','Beacon','Bear','Beech','Behir','Bell','Birch','Blade','Blanket','Blowgun','Boar','Boat','Bolt','Book','Boot','Bottle','Bow','Bucket','Bugbear','Bulette','Bull',
+'Camel','Candle','Cardinal','Carrot','Cart','Cat','Centaur','Chain','Cherry','Chest','Chimera','Circle','Claw','Cleric','Cloak','Cloaker','Clover','Club','Coat','Cockatrice','Coin','Couatl','Cow','Crab','Crocodile','Crossbow','Crow','Crowbar','Crown','Crystal','Cube','Cup','Cyclops',
+'Dagger','Dart','Deer','Demon','Devil','Dog','Donkey','Door','Doppelganger','Dove','Dragon','Drider','Drow','Druid','Drum','Dryad','Duergar','Dulcimer','Dwarf',
+'Eagle','Edge','Elemental','Elephant','Elf','Elk','Ettercap','Ettin','Eye',
+'Fiend','Fighter','Fish','Fist','Flail','Flask','Flower','Flute','Foot','Forest','Frog','Fungus',
+'Gargoyle','Gauntlet','Genie','Ghost','Ghoul','Giant','Glaive','Glass','Glove','Gnoll','Gnome','Goat','Goblin','Golem','Goliath','Gorgon','Grape','Grick','Griffon','Grove',
+'Hag','Halberd','Halfling','Hammer','Handaxe','Harpy','Hawk','Head','Heart','Hex','Hippogriff','Hoard','Hobgoblin','Homunculus','Horn','Horse','Hound','Hourglass','Human','Hydra','Hyena',
+'Imp','Incubus','Island','Ivy',
+'Jackal','Jackdaw','Jacket','Javelin','Jay','Jelly','Jug',
+'King','Kobold','Kraken',
+'Ladder','Lamia','Lamp','Lance','Lantern','Lemon','Lich','Line','Lion','Lizard','Lizardfolk','Lock','Lute','Lycanthrope','Lyre',
+'Mace','Mage','Magmin','Magpie','Mammoth','Manticore','Map','Maple','Mare','Maul','Maw','Medusa','Melon','Mephit','Mermaid','Mimic','Minotaur','Monk','Moose','Morningstar','Mouth','Mug','Mule','Mummy','Mystic',
+'Naga','Nail','Net','Nightmare','Nose','Noose',
+'Oak','Octopus','Ogre','Ooze','Orb','Orc','Otyugh','Owl','Owlbear',
+'Paladin','Panther','Pear','Pegasus','Pen','Pick','Pigeon','Pike','Pit','Pitcher','Pixie','Plate','Polyhedral','Pomegranate','Pony','Pot','Pouch','Pseudodragon','Pudding',
+'Queen','Quill','Quiver',
+'Rakshasa','Ram','Ranger','Rapier','Rat','Raven','Remorhaz','Reprieve','Respite','Rest','Revenant','Rhinoceros','Ring','Robe','Robin','Roc','Rogue','Rope','Rose','Rust Monster',
+'Sack','Sahuagin','Sailor','Salamander','Sanctuary','Sanctum','Satyr','Scabbard','Scimitar','Scorpion','Scroll','Scythe','Sea','Serpent','Shadow','Shark','Shawm','Ship','Shovel','Sickle','Sledge','Sling','Slumber','Snake','Sorcerer','Spear','Specter','Spellbook','Sphere','Sphinx','Spider','Sprite','Square','Squirrel','Staff','Stallion','Stirge','Stone','Succubus','Sword',
+'Tackle','Tail','Tankard','Tarrasque','Tent','Thicket','Tiefling','Tiger','Tome','Tooth','Torch','Totem','Trap','Trapezoid','Treant','Tree','Triangle','Trident','Troll','Trombone','Trumpet','Turtle',
+'Unicorn',
+'Vampire','Vulture',
+'Wagon','Wand','Warhammer','Warlock','Warrior','Weasel','Werewolf','Whale','Whip','Whistle','Wight','Will-o\'-Wisp','Wizard','Wolf','Worm','Wraith','Wyrm','Wyvern',
+'Yak','Yeti',
+'Zombie'
+]
 var maritalStatuses = ['n unmarried',' widowed',' divorced',' married']
 var ownerOneType = ['man','woman','androgynous person','nonbinary person']
 var tenderAges = [' nearly adult',' young',' young adult','n adult',' weathered',' young-looking',' mature',' middle-aged','n older','n elderly']
 var tenderGenders = ['male','female','androgynous','nonbinary']
 var tenderRaces = ['dwarf','elf','halfling','human','dragonborn','gnome','half-elf','half-orc','tiefling']
-var tenderDispositions = ['humorous','flamboyant','approachable','flirtatious','jovial','friendly','loud','light-hearted','energetic','ostentatious','surly','affable','approachable','friendly','curmudgeonly','stubborn','soft-spoken','obnoxious','boastful','lazy','reserved','devious','humorless','quiet']
+var tenderDispositions = ['humorous','flamboyant','approachable','flirtatious','jovial','friendly','light-hearted','energetic','ostentatious','affable','approachable','friendly','loud','surly','curmudgeonly','stubborn','obnoxious','devious','rude','abrasive','boastful','lazy','humorless','reserved','soft-spoken','quiet']
 var tenderLooks = ['ugly','attractive','average looking']
 var tenderPhysiques = ['overweight','skinny','underweight','obese','stocky','muscular','scrawny','average','athletic','fit','curvy','blocky','svelte','willowy','meaty','chubby','chunky','in shape','big-boned','tall','short']
-var tenderDegrees = ['unmistably','somewhat','absolutely','acutely','almost','astonishingly','awfully','certainly','considerably','conspicuously','decidedly','disturbingly','eminently','excessively','extremely','impressively','incredibly','kind of','not quite','notably','noticeably','particularly','positively','powerfully','pretty','profoundly','quite','rather','remarkably','sort of','surprisingly','terribly','truly','uncommonly','unsettlingly','unusually','very','wonderfully','','','','','','','','','','','','','','','','','']
+var tenderDegrees = ['unmistakably','somewhat','absolutely','acutely','almost','astonishingly','awfully','certainly','considerably','conspicuously','decidedly','disturbingly','eminently','excessively','extremely','impressively','incredibly','kind of','not quite','notably','noticeably','particularly','positively','powerfully','pretty','profoundly','quite','rather','remarkably','sort of','surprisingly','terribly','truly','uncommonly','unsettlingly','unusually','very','wonderfully','','','','','','','','','','','','','','','','','']
 var tenderSkinColors = ['pale','tan','bronzed','mid-toned','dark','brown','coppery','light','sun-kissed','freckled']
 var dragonBornColors = ['black','blue','brass','bronze','copper','gold','green','red','silver','white']
 var tieflingColors = ['red','cobalt blue','light blue','crimson','lavender','light red','pinkish','dark red','purplish','dark blue','vibrant red']
@@ -203,43 +254,61 @@ var jointBackgrounds = [
 ]
 var inspirations = ['an attempt at humor or irony','a local legend','a story from the owner\'s past','an inside joke','free association. It was the first thing the owner thought of when asked for a name','the owner\'s nickname','a misinterpretation of another famous tavern\'s name']
 var gimmicks = [
-'nothing. This isn\'t a very popular tavern',
-'its comfortable seating',
-'the cheap booze',
-'a nautical theme regardless of the tavern\'s proximity to any body of water',
-'the extensive adventuring paraphernalia adorning the walls',
-'the fact that it\'s one of the only bars in town',
-'the surprisingly good quality of the food',
-'its rough-and-tumble anything goes atmosphere',
-'the cheap food',
-'the generous portions of food',
-'the quality of the drinks',
-'its warm and welcoming atmosphere',
-'its surprisingly clandestine atmosphere',
-'the band that plays every other night',
-'its spacious seating area',
-'the hilarious bartender',
-'the attractive waitstaff',
-'their convenient location',
-'an eating challenge—if you can eat it all, you don\'t have to pay',
-'a local legend that says the tavern was built on holy/unholy/magical ground',
-'its connection to the criminal underworld',
-'its famously rude and abrasive waitstaff',
-'the statue of its namesake out front',
-'their selection of wines imported from several far away places',
-'a petting zoo out back for the kids',
-'its extensive drink menu',
-'the bartender who remembers every regular\'s drink order',
-'its amateur open-stage night',
-'the varied cuisine prepared by a talented chef',
-'the fact that it\'s always a comfortable temperature inside no matter what the weather is like outside',
-'a fountain that flows freely with alcohol',
-'the dedicated hookah area',
-'an enchanted bandstand that plays music at all times',
-'the owner\'s exotic pet'
+'nothing. This isn\'t a very popular tavern',//0
+'its comfortable seating',//1
+'the cheap booze',//2
+'a nautical theme regardless of the tavern\'s proximity to any body of water',//3
+'the extensive adventuring paraphernalia adorning the walls',//4
+'the fact that it\'s one of the only bars in town',//5
+'the surprisingly good quality of the food',//6
+'its rough-and-tumble anything goes atmosphere',//7
+'the cheap food',//8
+'the generous portions of food',//9
+'the quality of the drinks',//10
+'its warm and welcoming atmosphere',//11
+'its surprisingly clandestine atmosphere',//12
+'the band that plays every other night',//13
+'its spacious seating area',//14
+'the hilarious bartender',//15
+'the attractive waitstaff',//16
+'their convenient location',//17
+'an eating challenge—if you can eat it all, you don\'t have to pay',//18
+'a local legend that says the tavern was built on holy/unholy/magical ground',//19
+'its connection to the criminal underworld',//20
+'its famously rude and abrasive waitstaff',//21
+'the statue of its namesake out front',//22
+'their selection of wines imported from several far away places',//23
+'a petting zoo out back for the kids',//24
+'its extensive drink menu',//25
+'the bartender who remembers every regular\'s drink order',//26
+'its amateur open-stage night',//27
+'the varied cuisine prepared by a talented chef',//28
+'the fact that it\'s always a comfortable temperature inside no matter what the weather is like outside',//29
+'a fountain that flows freely with alcohol',//30
+'the dedicated hookah area',//31
+'an enchanted bandstand that plays music at all times',//32
+'the owner\'s exotic pet'//33
 ]
 var lifestyles = ['squalid','poor','modest','comfortable','wealthy','aristocratic']
-var clienteles = ['violent','raucous','boisterous','loud','rambunctious','obnoxious','rude','unfriendly','friendly','amicable','welcoming','secretive','subdued','clandestine','peaceful','elitist','snobbish']
+var clienteles = [
+'violent',//0, raucous start rough-and-tumble start
+'raucous',//1
+'boisterous',//2
+'loud',//3
+'rambunctious',//4 rough-and-tumble end
+'obnoxious',//5
+'rude',//6 raucous end
+'unfriendly',//7 average start
+'friendly',//8 warm start
+'amicable',//9
+'welcoming',//10 average end warm end
+'secretive',//11 clandestine start subdued start
+'subdued',//12
+'clandestine',//13 cladnestine end
+'peaceful',//14
+'elitist',//15
+'snobbish'//16 subdued end
+]
 var shadyQuests = [
 'They are running a scam to trick adventurers out of their hard-earned treasure.',
 'They are looking for a group to help recover an artifact.',
@@ -265,7 +334,7 @@ var patronActivities = ['trying to start a fight','throwing things at another ta
 var roomSizes = ['tiny','cramped','small','average sized','comfortably sized','spacious','large','huge']
 var roomConditions = ['disgusting','filthy','dirty','dingy','hygenic','taken care of','clean','spotless','well-cleaned','immaculate','pristine']
 var wineDescriptors = ['astringent','musty','vinegary','sour','cloying','corked','tart','dirty','raisiny','rough','bitter','flat','smokey','leathery','green','lean','dry','full','powerful','earthy','sweet','oaky','mellow','spicy','herbaceous','deep','toasty','vibrant','crisp','soft','buttery','aromatic','expressive','fruity','smooth','complex','rich']
-var whiteVarieties = ['Reisling','Gewürztraminer','Chardonnay','Sauvignon Blanc']
+var whiteVarieties = ['Riesling','Gewürztraminer','Chardonnay','Sauvignon Blanc']
 var redVarieties = ['Shiraz','Merlot','Cabernet Sauvignon','Pinot Noir']
 var wineOrigins = [' bottom-shelf',' poorly made',' house-made',' locally produced','n imported',' finely made',' famous vintage of']
 var bouquetPhrases = ['with a bouquet that is ','with a taste that is ','that is described as ','with flavors that are ']
@@ -321,6 +390,7 @@ var ownerOneHisHerTheir = hisHerTheir[ownerOneGender];
 var ownerOnehishertheir = hishertheir[ownerOneGender];
 var ownerOnehimherthem = himherthem[ownerOneGender];
 var secondOwnerDecider = 0;
+var gimmickDecider = 0;
 
 var inspiration = '';
 var gimmick = '';
@@ -437,11 +507,11 @@ function showMeTheTables(){
 	tableWindow.document.write('<h2> Name Descriptors </h2><div style="-webkit-column-count:6;-moz-column-count:6;column-count:6;"><table><tr><th>Number</th><th style="text-align:left">Descriptor</th></tr>');
 	for(var a=0;a<prefixes.length;a++){
 		switch (a){
-			case 38:
-			case 76:
-			case 114:
-			case 152:
-			case 190:
+			case 40:
+			case 80:
+			case 120:
+			case 160:
+			case 200:
 				tableWindow.document.write('</table><table><tr><th>Number</th><th>Descriptor</th></tr>');
 		}
 		tableWindow.document.write('<tr><td style="text-align:center">' + (a+1) + '</td><td>' + prefixes[a] + '</td></tr>');
@@ -450,11 +520,11 @@ function showMeTheTables(){
 	tableWindow.document.write('<h2"> Name Objects </h2><div style="-webkit-column-count:6;-moz-column-count:6;column-count:6;"><table><tr><th>Number</th><th style="text-align:left">Object</th></tr>');
 	for(var b=0;b<suffixes.length;b++){
 		switch (b){
-			case 58:
-			case 116:
-			case 174:
-			case 232:
-			case 290:
+			case 59:
+			case 118:
+			case 177:
+			case 236:
+			case 295:
 				tableWindow.document.write('</table><table><tr><th>Number</th><th>Descriptor</th></tr>');
 		}
 			tableWindow.document.write('<tr><td style="text-align:center">' + (b+1) + '</td><td>' + suffixes[b] + '</td></tr>');
@@ -474,7 +544,7 @@ function showMeTheTables(){
 	for(var e=0;e<gimmicks.length;e++){
 		tableWindow.document.write('<tr><td style="text-align:center">' + (e+1) + '</td><td>' + gimmicks[e] + '.</td></tr>');
 	}
-	tableWindow.document.write('</table></div><br>');
+	tableWindow.document.write('</table></div><br><br><br><br>');
 	tableWindow.document.write('<h2> Patron Activities </h2><div><table><tr><th>Number</th><th style="text-align:left">Some patrons are ...</th></tr>');
 	for(var g=0;g<patronActivities.length;g++){
 		tableWindow.document.write('<tr><td style="text-align:center">' + (g+1) + '</td><td> ' + patronActivities[g] + '.</td></tr>');
@@ -484,7 +554,9 @@ function showMeTheTables(){
 	for(var h=0;h<shadyQuests.length;h++){
 		tableWindow.document.write('<tr><td style="text-align:center">' + (h+1) + '</td><td>' + shadyQuests[h] + '.</td></tr>');
 	}
-	tableWindow.document.write('</table></div><br><br><br><br></div><p>Not Another Tavern Generator from The Copper Sanctum<br>©2018 Ian F Evans</p>');
+	tableWindow.document.write('<tr><td style="text-align:center">' + (shadyQuests.length+1) + '</td><td>He is an adventuring cleric by the name of Thor Lightningroot. He needs the party\'s assistance for something TBD by @TooFadedGaming, winner of my secret contest.</td></tr>');
+	tableWindow.document.write('<tr><td style="text-align:center">' + (shadyQuests.length+2) + '</td><td>It is actually just a manequin/scarecrow/broom dressed up to look like the stereotypical "shady figure in a bar" so frequently talked about in tales of taverns. The bartender has a running tally on a nearby chalkboard to record how many people are tricked by it on a daily basis.</td></tr>');
+	tableWindow.document.write('</table></div></div><p>Not Another Tavern Generator from The Copper Sanctum<br>©2018 Ian F Evans</p>');
 	tableWindow.document.write('</body></html>');
 	
 	tableWindow.document.close();
@@ -537,11 +609,91 @@ function newTavern(){
 
 function newName(){
 	doublePrefix = randFl(20,0);
+	var alliterative = randFl(10,0);
 	randomPrefix1 = prefixes[randFl(prefixes.length,0)];
 	randomPrefix2 = prefixes[randFl(prefixes.length,0)];
-	randomSuffix = suffixes[randFl(prefixes.length,0)];
+	randomSuffix = suffixes[randFl(suffixes.length,0)];
 	
 	if (doublePrefix <= 17) {
+		if(alliterative >= 6){
+			switch(randomPrefix1.charAt(0)){
+				case 'A':
+					randomSuffix = suffixes[randFl(12,0)];
+					break;
+				case 'B':
+					randomSuffix = suffixes[randFl(31,12)];
+					break;
+				case 'C':
+					randomSuffix = suffixes[randFl(33,43)];
+					break;
+				case 'D':
+					randomSuffix = suffixes[randFl(19,76)];
+					break;
+				case 'E':
+					randomSuffix = suffixes[randFl(9,95)];
+					break;
+				case 'F':
+					randomSuffix = suffixes[randFl(12,104)];
+					break;
+				case 'G':
+					randomSuffix = suffixes[randFl(20,116)];
+					break;
+				case 'H':
+					randomSuffix = suffixes[randFl(21,136)];
+					break;
+				case 'I':
+					randomSuffix = suffixes[randFl(4,157)];
+					break;
+				case 'J':
+					randomSuffix = suffixes[randFl(7,161)];
+					break;
+				case 'K':
+					randomSuffix = suffixes[randFl(3,168)];
+					break;
+				case 'L':
+					randomSuffix = suffixes[randFl(15,171)];
+					break;
+				case 'M':
+					randomSuffix = suffixes[randFl(25,186)];
+					break;
+				case 'N':
+					randomSuffix = suffixes[randFl(6,211)];
+					break;
+				case 'O':
+					randomSuffix = suffixes[randFl(9,217)];
+					break;
+				case 'P':
+					randomSuffix = suffixes[randFl(19,226)];
+					break;
+				case 'Q':
+					randomSuffix = suffixes[randFl(3,245)];
+					break;
+				case 'R':
+					randomSuffix = suffixes[randFl(20,248)];
+					break;
+				case 'S':
+					randomSuffix = suffixes[randFl(40,268)];
+					break;
+				case 'T':
+					randomSuffix = suffixes[randFl(22,308)];
+					break;
+				case 'U':
+					randomSuffix = suffixes[randFl(1,330)];
+					break;
+				case 'V':
+					randomSuffix = suffixes[randFl(2,331)];
+					break;
+				case 'W':
+					randomSuffix = suffixes[randFl(18,333)];
+					break;
+				case 'Y':
+					randomSuffix = suffixes[randFl(2,351)];
+					break;
+				case 'Z':
+					randomSuffix = suffixes[randFl(1,355)];
+					break;
+			}
+		}
 		tavernName = 'The ' + randomPrefix1 + ' ' + randomSuffix;
 	} else {
 		while (randomPrefix1 == randomPrefix2){
@@ -621,7 +773,11 @@ function newStory() {
 	var ownerTwoBackgroundNumber = randFl(singleBackgrounds.length+1-lifestyles.length,lifestyleDecider);
 	
 	inspiration = inspirations[randFl(inspirations.length,0)];
-	gimmick = gimmicks[randFl(gimmicks.length-10,lifestyleDecider*2)];
+	gimmickDecider = randFl(gimmicks.length-10,lifestyleDecider*2)
+	while((gimmickDecider == 7 && (chosenAtmosphere == 0 || chosenAtmosphere == 1)) || ((gimmickDecider == 11 || gimmickDecider == 12) && chosenAtmosphere == 2)){
+		gimmickDecider = randFl(gimmicks.length-10,lifestyleDecider*2)
+	}
+	gimmick = gimmicks[gimmickDecider];
 	
 	if (ownerOneRaceRarityDecider < 1) {
 		ownerOneRaceRarity = 2;
@@ -756,8 +912,10 @@ function newBartender(){
 	var degree3 = tenderDegrees[randFl(tenderDegrees.length,0)];
 	var tenderPhysique = tenderPhysiques[randFl(tenderPhysiques.length,0)];
 	var tenderText = 'Ain\'t nobody at the bar!';
-	if(gimmick == 'the hilarious bartender'){
-		tenderDispositionNumber = randFl(11,0);
+	if(gimmickDecider == 15 || gimmickDecider == 11){ //hilarious bartender or warm and welcoming atmosphere
+		tenderDispositionNumber = randFl(13,0);
+	} else if (gimmickDecider == 21){ //famously rude waitstaff
+		tenderDispositionNumber = randFl(8,12);
 	}
 	
 	if(bartenderIsSet && chosenBartender < 9){
@@ -866,6 +1024,13 @@ function newBartender(){
 function newClientele() {
 	var clienteleDegree = tenderDegrees[randFl(tenderDegrees.length,0)];
 	var clienteleDecider = randFl(clienteles.length+1-lifestyles.length,lifestyleDecider);
+	if (gimmickDecider == 7){
+		clienteleDecider = randFl(5,0);
+	} else if (gimmickDecider == 11){
+		clienteleDecider = randFl(3,8);
+	} else if (gimmickDecider == 12){
+		clienteleDecider = randFl(3,11);
+	}	
 	if(atmosphereIsSet){
 		switch(chosenAtmosphere){
 			case 0:
@@ -876,9 +1041,6 @@ function newClientele() {
 				break;
 			case 2:
 				clienteleDecider = randFl(7,0);
-				break;
-			case 3:
-				clienteleDecider = randFl(clienteles.length+1-lifestyles.length,lifestyleDecider);
 		}
 	}
 	var clientele = clienteles[clienteleDecider];
@@ -961,7 +1123,11 @@ function newClientele() {
 	
 	if (thereIsAShadyFigure){
 		if(itIsLegit){
-			shadyText = shadyLocation + ' there is a' + shadyDescription + ' looking figure. ' + shadyQuest;
+			if(randFl(10,0) == 0){
+				shadyText = shadyLocation + ' there is a human man. He introduces himself as Thor Lightningroot. He is an adventuring cleric who needs help with something (more details to come when @TooFadedGaming gets back to me about winning my secret contest).';
+			} else {
+				shadyText = shadyLocation + ' there is a' + shadyDescription + ' looking figure. ' + shadyQuest;
+			}
 		} else {
 			shadyText = shadyLocation + ' there is a manequin/scarecrow/broom that is dressed up to look like the stereotypical "shady figure in a bar" so frequently talked about in tales of taverns. The bartender has a running tally on a nearby chalkboard to record how many people are tricked by it on a daily basis.';
 		}
@@ -1073,13 +1239,25 @@ function newDrinkList(){
 		liquorOfferingCount = Math.max(liquorOfferingCount + (chosenMenu-2)*2,1);
 	}
 	
-	switch(gimmick){
-		case 'the quality of the drinks':
+	switch(gimmickDecider){
+		case 2: //cheap booze
+			drinkQuality = drinkQuality * .5;
+			drinkVariety = drinkVariety * .5;
+			liquorOfferingVariety = Math.floor(liquorOfferingVariety/1.5);
+			drinkPriceModifier = .3;
+			wineOriginModifier = .5;
+			break;
+		case 10: //quality drinks
 			drinkQuality = drinkQuality + 1;
 			drinkVariety = drinkVariety + 3;
 			drinkPriceModifier = 1.75;
 			break;
-		case 'its extensive drink menu':
+		case 23: //imported wines
+			drinkVariety = drinkVariety - 4;
+			drinkPriceModifier = 1.5;
+			wineOfferingCount = wineOfferingCount + randFl(4,0);
+			break;
+		case 25: // extensive drink menu
 			drinkVariety = drinkVariety - 3;
 			drinkPriceModifier = 1.6;
 			liquorOfferingVariety = Math.min(liquorOfferingVariety+1,6);
@@ -1087,25 +1265,12 @@ function newDrinkList(){
 			beerOfferingCount = beerOfferingCount + randFl(3,2);
 			liquorOfferingCount = liquorOfferingCount + randFl(3,2);
 			break;
-		case 'their selection of wines imported from several far away places':
-			drinkVariety = drinkVariety - 4;
-			drinkPriceModifier = 1.5;
-			wineOfferingCount = wineOfferingCount + randFl(4,0);
-			wineOriginModifier = 1;
-			break;
-		case 'a fountain that flows freely with alcohol':
+		case 30: //alcohol fountain
 			drinkQuality = drinkQuality * .75;
 			drinkVariety = drinkVariety + 5;
 			drinkPriceModifier = 1.25;
 			wineOfferingCount = wineOfferingCount - randFl(2,0);
-			liquorOfferingCount = liquorOfferingCount + randFl(3,0);
-			break;
-		case 'the cheap booze':
-			drinkQuality = drinkQuality * .5;
-			drinkVariety = drinkVariety * .5;
-			liquorOfferingVariety = Math.floor(liquorOfferingVariety/1.5);
-			drinkPriceModifier = .3;
-			wineOriginModifier = .8;
+			liquorOfferingCount = liquorOfferingCount + randFl(3,0);		
 	}
 	
 	newWines();
@@ -1148,17 +1313,15 @@ function newWines(){
 				wineType = whiteVarieties[wineTypeNumber];
 				redOrWhite = 'white';
 		}
-		wineOriginNumber=randRo(wineOrigins.length-lifestyles.length/2,Math.round(lifestyleDecider/2));
-		if (wineOriginModifier >= 1){
-			wineOriginNumber = Math.min(wineOrigins.length-1,wineOriginNumber+wineOriginModifier);
-		} else if (wineOriginModifier > 0){
+		wineOriginNumber = randRo(wineOrigins.length-lifestyles.length/2,Math.round(lifestyleDecider/2));
+		if (wineOriginModifier > 0){
 			wineOriginNumber = Math.floor(wineOriginNumber * wineOriginModifier);
-		} else {
-			wineOriginNumber = Math.min(wineOrigins.length-1,wineOriginNumber);
 		}
-		if (gimmick == 'their selection of wines imported from several far away places' && randFl(3,0) > 0){
+		
+		if (gimmickDecider == 23 && randFl(7,0) > 0){
 			wineOriginNumber = 4;
 		}
+		
 		if (wineOriginNumber == 2){
 			wineName = 'House';
 		} else {
@@ -1344,25 +1507,25 @@ function newFoodMenu(){
 		entreeOfferingCount = Math.max(entreeOfferingCount + (chosenMenu-2)*2,1);
 	}
 	
-	switch(gimmick){
-		case 'an eating challenge—if you can eat it all, you don\'t have to pay':
+	switch(gimmickDecider){
+		case 6:
+			foodQuality++;
+			break;
+		case 8:
+			foodPriceModifier = .2;
+			break;
+		case 9:
+			foodPriceModifier = .8;
+			foodQuantity++;
+			break;
+		case 18:
 			foodQuantity++;
 			foodQuantity++;
 			eatingChallenge = 1;
 			break;
-		case 'the surprisingly good quality of the food':
-			foodQuality++;
-			break;
-		case 'the varied cuisine prepared by a talented chef':
+		case 28:
 			foodQuality++;
 			foodPriceModifier = 2;
-			break;
-		case 'the generous portions of food':
-			foodPriceModifier = .8;
-			foodQuantity++;
-			break;
-		case 'the cheap food':
-			foodPriceModifier = .2;
 	}
 	
 	newStarters();
@@ -1726,8 +1889,8 @@ function newEntrees(){
 	var meatGoneOff = 1;
 	var meatIssue = '';
 	
-	switch(gimmick){
-		case 'an eating challenge—if you can eat it all, you don\'t have to pay':
+	switch(gimmickDecider){
+		case 18:
 			eatingChallenge = 1;
 			break;
 	}
@@ -1754,13 +1917,13 @@ function newEntrees(){
 			}
 		}
 		entreePriceTotal = foodPriceModifier * (Math.pow(lifestyleDecider+1,3) + Math.pow(cookingMethodNumber/10+1,2) + Math.pow(meatOptionNumber/10+1,2) + 10 * foodQuality * foodQuantity);
-		if (eatingChallenge){entreePriceTotal = entreePriceTotal * 2};
 		switch (meatGoneOff){
 			case 0:
 				meatIssue = '<br><div class="s">' + meatIssues[randFl(meatIssues.length,0)] + '</div>';
 				break;
 		}
 		if (eatingChallenge){
+			entreePriceTotal = entreePriceTotal * 2
 			entreeDescription = '<p><strong><i> The ' + cookingMethod + ' ' + meatOptionCapped + ' Challenge</strong></i><br> A full pound of ' + meatOption + sauce + piledEtc[randFl(piledEtc.length,0)] + ' on top of another pound of ' + starch + nextStyle + veggie + secondVeggie + '.<br>' + convertedPrice(entreePriceTotal) + meatIssue + '</p>';
 			eatingChallenge = 0;
 		} else {
