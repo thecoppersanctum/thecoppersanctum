@@ -590,7 +590,6 @@ function setMenu(x){
 
 function newTavern(){
 	document.getElementById('descriptionText').style = 'height:65vh;overflow:auto;';
-	document.getElementById('descriptionText').scroll(0,0);
 	document.getElementById('tavernButton').innerHTML = buttonSayings[clickCount];
 	clickCount++;
 	if(clickCount >= buttonSayings.length){
@@ -605,6 +604,7 @@ function newTavern(){
 	document.getElementById("saveOrPrintButton").disabled = false;
 	document.getElementById("instructions").style = 'display:inline;font-size:.8em';
 	document.getElementById("innerTavernBtn").innerHTML = '<br>Don\'t care for this tavern? Tap this text or use the button above the tavern\'s description to generate another, or hit any of the section subheadings to regenerate just that section.';
+	document.getElementById('descriptionText').scroll(0,0);
 }
 
 function newName(){
