@@ -90,19 +90,20 @@ var ownerSecrets = [
 'kidnaps lone travelers to perform twisted arcane experiments on them in the dead of night',//6
 'is secretly cursed with lycanthropy',//7
 'secretly worships an evil deity',//8
-'suffers from an old injury',//9
-'has a fear of spiders',//10
-'is secretly a vampire who feeds on the patrons of the inn during the night',//11
-'keeps a collection of stolen trinkets from previous guests',//12
-'dabbles in dark magic',//13
-'has a rare medical condition',//14
-'suffers from mental illness',//15
-'is actually a doppelganger',//16
-'is extremely racist/classist/sexist',//17
-'is being mind-controlled by a powerful entity',//18
-'is secretly the head of the local crime syndicate',//19
-'is actually an ancient dragon in disguise',//20
-'is secretly a powerful archfey'//21
+'is the head of an underground resistance movement against the ruling body of the area',//9
+'suffers from an old injury',//10
+'has a fear of spiders',//11
+'is secretly a vampire who feeds on the patrons of the inn during the night',//12
+'keeps a collection of stolen trinkets from previous guests',//13
+'dabbles in dark magic',//14
+'has a rare medical condition',//15
+'suffers from mental illness',//16
+'is actually a doppelganger',//17
+'is extremely racist/classist/sexist',//18
+'is being mind-controlled by a powerful entity',//19
+'is secretly the head of the local crime syndicate',//20
+'is actually an ancient dragon in disguise',//21
+'is secretly a powerful archfey'//22
 ]
 var thingsThatGoBumpSingle = [
 'they may overhear a "business" deal occurring in the main room of the tavern through the thin walls of their room.',
@@ -114,6 +115,7 @@ var thingsThatGoBumpSingle = [
 'shrieks of pain can be heard over the low hum of magic that permeates the vicinity throughout the night.',
 'roars/howls and the rattle of chains can be heard faintly coming from below the tavern.',
 'strange whispers and soft chanting disturbs their sleep throughout the night.',
+'the party might be allowed to attend a secret meeting of the resistance.',
 'the owner has an accident in the kitchen when their old injury flairs up again.',
 'the tavern is invaded by giant spiders.',
 'the vampiric owner attempts to charm one of the party members to be their thrall.',
@@ -138,6 +140,7 @@ var thingsThatGoBumpOneOf = [
 'shrieks of pain can be heard over the low hum of magic that permeates the vicinity throughout the night.',
 'roars/howls and the rattle of chains can be heard faintly coming from below the tavern.',
 'strange whispers and soft chanting disturbs their sleep throughout the night.',
+'the party might be allowed to attend a secret meeting of the resistance.',
 'the owner who suffers from an old injury has an accident in the kitchen when it flairs up again.',
 'the tavern is invaded by giant spiders.',
 'the vampiric owner attempts to charm one of the party members to be their thrall.',
@@ -162,6 +165,7 @@ var thingsThatGoBumpDouble = [
 'shrieks of pain can be heard over the low hum of magic that permeates the vicinity throughout the night.',
 'roars/howls and the rattle of chains can be heard faintly coming from below the tavern.',
 'strange whispers and soft chanting disturbs their sleep throughout the night.',
+'the party might be allowed to attend a secret meeting of the resistance.',
 'the owners have an accident in the kitchen when their old injuries flair up again.',
 'the tavern is invaded by giant spiders.',
 'the vampiric owners attempt to charm one of the party members to be their thrall.',
@@ -186,6 +190,7 @@ var ownerJointSecret = [
 'kidnap lone travelers to perform twisted arcane experiments on them in the dead of night',
 'are secretly cursed with lycanthropy',
 'secretly worship an evil deity',
+'are the leaders of an underground resistance movement against the ruling body of the area',
 'have problems that stem from old injuries',
 'are deathly afraid of spiders',
 'are secretly vampires who feed on the patrons of the inn during the night',
@@ -355,6 +360,22 @@ var liquorTypesCapped = ['Vodka','Gin','Whiskey','Rum','Brandy','Vermouth']
 var liquorSources = ['barley','corn','rye','wheat','potato','rice','sorghum','sugarbeet','molasses','sugarcane','honey']
 var brandyTypes = ['apple','cherry','peach','plum','apricot','elderberry','pear','mulberry','pomace','']
 var liquorOrigins = [' bottom-shelf',' poorly made',' house-made',' locally produced','n imported',' finely made']
+var coldThings = ['Cheese Platter','Bread Bowl','Jerky Strips']
+var stuffedThings = ['potato skins','green peppers','red peppers','baby artichokes','lettuce bowls']
+var stuffedThingsCapped = ['Potato Skins','Green Peppers','Red Peppers','Baby Artichokes','Lettuce Bowls']
+var stuffWords = ['filled','stuffed','crammed','packed','loaded','jam-packed','overloaded','bursting','overflowing']
+var stuffWordsCapped = ['Filled','Stuffed','Crammed','Packed','Loaded','Jam-Packed','Overloaded','Bursting','Overflowing']
+var blendWords = ['mash','mix','blend','concoction','mixture','fusion','medley','mingling','mélange']
+var stuffings = ['cheese','potato','meat','herbs','spices','cream cheese','sour cream','onion','bacon','garlic']
+var breadFreshnesses = ['stale','day-old','fresh','freshly-baked','fresh-from-the-oven']
+var breadTypes = ['white','whole wheat','seven-grain','artisinal','specialty','herb and cheese']
+var oilTypes = [' melted butter','olive oil','pesto sauce','herb-infused oil','garlic in olive oil']
+var jerkyMeats = ['rabbit','chicken','turkey','beef','venison']
+var cheeses = ['cheddar','mozzerella','muenster','gruyère','brie','gorgonzola','blue']
+var friedThingsCapped = ['Potato Wedges','Sweet Potato Wedges','Onion Rings','Chicken Strips','Slices of Red Beet','Beef Strips']
+var friedThings = ['Potato wedges','Sweet potato wedges','Onion rings','Chicken strips','Slices of red beets','Beef strips']
+var friedThingOils = ['cottonseed oil','sunflower oil','lard','butter','vegetable oil','peanut oil','olive oil']
+var friedThingsSauces =['tomato-based sauce','spicy red sauce','honey-based sauce','mustard sauce','creamy sauce']
 var soupMeats = ['meat','sausage','rabbit','chicken','fish','scallops','fish','pork','ham','lamb','turkey','beef','frog','venison','duck']
 var soupMeatsCapped = ['Meat','Sausage','Rabbit','Chicken','Fish','Scallop','Fish','Pork','Ham','Lamb','Turkey','Beef','Frog','Venison','Duck']
 var soupCuts = ['small chunks of ',' meatballs','bits of ','cubes of ','chunks of ','hearty chunks of ']
@@ -365,6 +386,27 @@ var creamSoupsCapped = ['Broccoli','Potato','Mushroom','Chicken','Beef']
 var brothTypes = ['watery','thin','smooth','tasty','savory','thick','rich','luxurious','delicious']
 var soupStarches = ['rice','noodles','dumplings','cubed potatoes','assorted grains','barley']
 var soupVeggies = ['onions','radishes','turnips','carrots','peas','celery','garlic','green beans','mushrooms','beans','peppers']
+var saladBases = ['iceberg','romaine','red lettuce','mixed greens','baby spinach leaves']
+var saladBasesCapped = ['Iceberg','Romaine','Red Lettuce','Mixed Greens','Baby Spinach']
+var saladVeggies = ['green peppers','carrots','onions','cucumbers','radishes','celery','red peppers','baby artichokes','tomatoes','olives','arugula','mustard greens','baby kale']
+var saladToppingsMeats = ['rabbit','chicken','ham','turkey','steak']
+var saladToppingsMeatsCapped = ['Rabbit and ','Chicken and ','Ham and ','Turkey and ','Steak and ']
+var saladToppingsOther = ['grated cheese','slivered almonds','cranberries','sliced orange']
+var saladToppingMethods = ['grilled ','roasted ','blackened ','braised ','marinated ']
+var saladToppingMethodsCapped = ['Grilled','Roasted','Blackened','Braised','Marinated']
+var dressingFirstIngredients = [' lemon',' balsamic',' cider vinegar','n orange']
+var dressingSecondIngredients = [' honey',' garlic',' ginger',' and black pepper',' herb']
+var cookingMethods = ['Stewed','Baked','Deep-fried','Roasted','Grilled','Blackened','Rotisserie-cooked','Pan-fried','Herb-crusted','Braised','Pan-seared','Stir-fried']
+var meatStyles = [' bits of ',' chunks of ',' cubes of ',' slices of ',' strips of ',' ',' ',' ',' ']
+var meatOptions = ['mystery meat','sausage','rabbit','chicken','fish','pork','lamb','turkey','beef','frog','venison','steak','duck','veal','squab','pheasant','quail']
+var meatOptionsCapped = ['Mystery Meat','Sausage','Rabbit','Chicken','Fish','Pork','Lamb','Turkey','Beef','Frog','Venison','Steak','Duck','Veal','Squab','Pheasant','Quail']
+var meatIssues = ['The meat in this dish has gone off and could sicken the eater.','The meat in this dish is undercooked to the point of being dangerous to consume.','The meat in this dish is overcooked to the point of being nearly inedible.','The meat in this dish is starting to go bad, but <strong>should</strong> be safe for consumption.']
+var sauces = [' in a thick gravy',' in a cream sauce',' in white sauce',' in red sauce',' with a ginger marinade',' in garlic sauce',' in a vodka sauce']
+var presentationStyles = [' served over ',' on a bed of ',' served with ',' alongside ']
+var piledEtc = [' slathered',' piled',' crammed',' thrown',' sitting',' ']
+var starches = ['bread','mashed potatoes','rice','noodles','pasta','quinoa']
+var nextStyles = [' with a serving of ',' and a helping of ',' with a side of ',' and ']
+var veggies = ['brussel sprouts','collard greens','cabbage','stewed onions','cooked greens','green peppers','peas','turnips','leeks','celery','mushrooms','black beans','beets','kale','red beans','spinach','broccoli','beet greens','radishes','green beans','caramelized onions','carrots','chard','artichoke','red peppers','asparagus','cauliflower']
 
 var lifestyleIsSet = false;
 var chosenLifestyle = 0;
@@ -723,6 +765,21 @@ function newName(){
 }
 
 function newStory() {
+	ownerOne = ownerOneType[ownerOneGender];
+	ownerOneHeSheThey = heSheThey[ownerOneGender];
+	ownerOneheshethey = heshethey[ownerOneGender];
+	ownerOneHisHerTheir = hisHerTheir[ownerOneGender];
+	ownerOnehishertheir = hishertheir[ownerOneGender];
+	ownerOnehimherthem = himherthem[ownerOneGender];
+	ownerOneRaceRarityDecider = randFl(10,0);
+	var ownerOneRaceRarity = 1;
+	ownerOneHasSecret = randFl(5,0);
+	var ownerTwoNumber = randFl(ownerTwoNeutral.length,0);
+	var ownerTwo = ownerTwoNeutral[ownerTwoNumber];
+	var ownerTwoRaceRarityDecider = randFl(10,0);
+	var ownerTwoRaceRarity = 1;
+	ownerTwoHasSecret = randFl(4,0);
+	
 	if(lifestyleIsSet){
 		if(chosenLifestyle<6){
 			lifestyleDecider = randFl(2,chosenLifestyle);
@@ -747,18 +804,32 @@ function newStory() {
 		ownerOneGender = 3;
 	}
 	
-	ownerOne = ownerOneType[ownerOneGender];
-	ownerOneHeSheThey = heSheThey[ownerOneGender];
-	ownerOneheshethey = heshethey[ownerOneGender];
-	ownerOneHisHerTheir = hisHerTheir[ownerOneGender];
-	ownerOnehishertheir = hishertheir[ownerOneGender];
-	ownerOnehimherthem = himherthem[ownerOneGender];
-	ownerOneRaceRarityDecider = randFl(10,0);
-	var ownerOneRaceRarity = 1;
-	ownerOneHasSecret = randFl(5,0);
-	ownerOneSecretNumber = randFl(ownerSecrets.length+1-lifestyles.length,lifestyleDecider);
+	if (ownerOneRaceRarityDecider < 1) {
+		ownerOneRaceRarity = 2;
+	} else if (ownerOneRaceRarityDecider < 7) {
+		ownerOneRaceRarity = 0;
+	} else if (ownerOneRaceRarityDecider < 9) {
+		ownerOneRaceRarity = 1;
+	} else {
+		ownerOneRaceRarity = 3;
+	}
+	if (ownerTwoRaceRarityDecider < 1) {
+		ownerTwoRaceRarity = 0;
+	} else if (ownerTwoRaceRarityDecider < 7) {
+		ownerTwoRaceRarity = 1;
+	} else if (ownerTwoRaceRarityDecider < 9) {
+		ownerTwoRaceRarity = 2;
+	} else {
+		ownerTwoRaceRarity = 3;
+	}
+	if(ownerIsSet && chosenOwner < 4){
+		ownerOneRaceRarity = chosenOwner;
+		ownerTwoRaceRarity = chosenOwner;
+	}
+	
+	ownerOneSecretNumber = randFl(ownerSecrets.length+1-lifestyles.length,Math.max(lifestyleDecider-ownerOneRaceRarity,0));
 	var ownerOneHasOtherBackground = randFl(lifestyleDecider+2,0);
-	var ownerOneBackgroundNumber = randFl(singleBackgrounds.length+1-lifestyles.length,lifestyleDecider);
+	var ownerOneBackgroundNumber = randFl(singleBackgrounds.length+1-lifestyles.length,Math.max(lifestyleDecider-ownerOneRaceRarity,0));
 	
 	secondOwnerDecider = randFl(lifestyleDecider/2,2);
 	var ownerTwoGenderDecider = randFl(20,0);
@@ -774,14 +845,9 @@ function newStory() {
 		ownerTwoGender = 3;
 	}
 	
-	var ownerTwoNumber = randFl(ownerTwoNeutral.length,0);
-	var ownerTwo = ownerTwoNeutral[ownerTwoNumber];
-	var ownerTwoRaceRarityDecider = randFl(10,0);
-	var ownerTwoRaceRarity = 1;
-	ownerTwoHasSecret = randFl(4,0);
-	ownerTwoSecretNumber = randFl(ownerSecrets.length+1-lifestyles.length,lifestyleDecider);
+	ownerTwoSecretNumber = randFl(ownerSecrets.length+1-lifestyles.length,Math.max(lifestyleDecider-ownerTwoRaceRarity,0));
 	var ownerTwoHasOtherBackground = randFl(3,0);
-	var ownerTwoBackgroundNumber = randFl(singleBackgrounds.length+1-lifestyles.length,lifestyleDecider);
+	var ownerTwoBackgroundNumber = randFl(singleBackgrounds.length+1-lifestyles.length,Math.max(lifestyleDecider-ownerTwoRaceRarity,0));
 	
 	inspiration = inspirations[randFl(inspirations.length,0)];
 	gimmickDecider = randFl(gimmicks.length-10,lifestyleDecider*2)
@@ -789,19 +855,6 @@ function newStory() {
 		gimmickDecider = randFl(gimmicks.length-10,lifestyleDecider*2)
 	}
 	gimmick = gimmicks[gimmickDecider];
-	
-	if (ownerOneRaceRarityDecider < 1) {
-		ownerOneRaceRarity = 2;
-	} else if (ownerOneRaceRarityDecider < 7) {
-		ownerOneRaceRarity = 0;
-	} else if (ownerOneRaceRarityDecider < 9) {
-		ownerOneRaceRarity = 1;
-	} else {
-		ownerOneRaceRarity = 3;
-	}
-	if(ownerIsSet && chosenOwner < 4){
-		ownerOneRaceRarity = chosenOwner;
-	}
 	
 	if (secondOwnerDecider < 1) {
 		document.getElementById('ownerDisplay').innerHTML = ' is owned by a' + maritalStatus + ' ' + ownerOne;
@@ -846,16 +899,6 @@ function newStory() {
 			}
 		}
 		document.getElementById('ownerDisplay').innerHTML = ' is owned by a' + maritalStatus + ' ' + ownerOne + ' and ' + ownerOnehishertheir + ' ' + ownerTwo;
-
-		if (ownerTwoRaceRarityDecider < 1) {
-			ownerTwoRaceRarity = 0;
-		} else if (ownerTwoRaceRarityDecider < 7) {
-			ownerTwoRaceRarity = 1;
-		} else if (ownerTwoRaceRarityDecider < 9) {
-			ownerTwoRaceRarity = 2;
-		} else {
-			ownerTwoRaceRarity = 3;
-		}
 		
 		if (ownerOneRaceRarity == ownerTwoRaceRarity || ownerTwoNumber < 3){
 			document.getElementById('raceDisplay').innerHTML = ', both of whom are members of a race that is ' + raceTypes[ownerOneRaceRarity] + ' in the area. ';
@@ -1058,9 +1101,9 @@ function newClientele() {
 	var isOrAre = 'are';
 	var howMany = 'some';
 	var peopleOrPerson = 'people';
-	var patronCount = randFl((1+lifestyleDecider)*5,1);
+	var patronCount = randFl((1+lifestyleDecider)*4,1+(2*lifestyleDecider));
 	var thereIsAShadyFigure = randFl(2,0);
-	var itIsLegit = randFl(5,0);
+	var itIsLegit = randFl(10,0);
 	var shadyText = '';
 	var shadyQuest = shadyQuests[randFl(shadyQuests.length,0)];
 	var shadyDescription = shadyDescriptions[randFl(shadyDescriptions.length,0)];
@@ -1086,9 +1129,7 @@ function newClientele() {
 	var activityFour = activityFourArray[activityFourNumber];
 		
 	var patronsAreDoing = 'They are drinking alone to drown away their troubles';
-	
-	patronCount = patronCount + (3 * lifestyleDecider);
-	
+		
 	if (patronCount == 1){
 		isOrAre = 'is';
 		peopleOrPerson = 'person';
@@ -1134,8 +1175,10 @@ function newClientele() {
 	
 	if (thereIsAShadyFigure){
 		if(itIsLegit){
-			if(randFl(10,0) == 0){
+			if(randFl(20,0) == 0){
 				shadyText = shadyLocation + ' there is a human man. He introduces himself as Thor Lightningroot. He is an adventuring cleric who needs help with something (more details to come when @TooFadedGaming gets back to me about winning my secret contest).';
+			} else if(randFl(20,0) == 0) {
+				shadyText = shadyLocation + ' there is a human woman with curly hair. Her name is Alyssa and her fellow adventurers disappeared from their camp one day\'s ride from town. They left behind <strong>all</strong> of their belongings, leading her to believe it was some sort of extraplanar abduction.';
 			} else {
 				shadyText = shadyLocation + ' there is a' + shadyDescription + ' looking figure. ' + shadyQuest;
 			}
@@ -1550,22 +1593,6 @@ function newFoodMenu(){
 
 function newStarters(){
 	document.getElementById('starterTitle').innerHTML = '<h3><button onclick="newStarters()" class="innerBtn"> Starters </button></h3>';
-	var coldThings = ['Cheese Platter','Bread Bowl','Jerky Strips']
-	var stuffedThings = ['potato skins','green peppers','red peppers','baby artichokes','lettuce bowls']
-	var stuffedThingsCapped = ['Potato Skins','Green Peppers','Red Peppers','Baby Artichokes','Lettuce Bowls']
-	var stuffWords = ['filled','stuffed','crammed','packed','loaded','jam-packed','overloaded','bursting','overflowing']
-	var stuffWordsCapped = ['Filled','Stuffed','Crammed','Packed','Loaded','Jam-Packed','Overloaded','Bursting','Overflowing']
-	var blendWords = ['mash','mix','blend','concoction','mixture','fusion','medley','mingling','mélange']
-	var stuffings = ['cheese','potato','meat','herbs','spices','cream cheese','sour cream','onion','bacon','garlic']
-	var breadFreshnesses = ['stale','day-old','fresh','freshly-baked','fresh-from-the-oven']
-	var breadTypes = ['white','whole wheat','seven-grain','artisinal','specialty','herb and cheese']
-	var oilTypes = [' melted butter','olive oil','pesto sauce','herb-infused oil','garlic in olive oil']
-	var jerkyMeats = ['rabbit','chicken','turkey','beef','venison']
-	var cheeses = ['cheddar','mozzerella','muenster','gruyère','brie','gorgonzola','blue']
-	var friedThingsCapped = ['Potato Wedges','Sweet Potato Wedges','Onion Rings','Chicken Strips','Slices of Red Beet','Beef Strips']
-	var friedThings = ['Potato wedges','Sweet potato wedges','Onion rings','Chicken strips','Slices of red beets','Beef strips']
-	var friedThingOils = ['cottonseed oil','sunflower oil','lard','butter','vegetable oil','peanut oil','olive oil']
-	var friedThingsSauces =['tomato-based sauce','spicy red sauce','honey-based sauce','mustard sauce','creamy sauce']
 	var starterTypeNumber = 0;
 	var starterType = '';
 	var starterColdNumber = 0;
@@ -1760,16 +1787,6 @@ function newSoups(){
 }
 
 function newSalads(){
-	var saladBases = ['iceberg','romaine','red lettuce','mixed greens','baby spinach leaves']
-	var saladBasesCapped = ['Iceberg','Romaine','Red Lettuce','Mixed Greens','Baby Spinach']
-	var saladVeggies = ['green peppers','carrots','onions','cucumbers','radishes','celery','red peppers','baby artichokes','tomatoes','olives','arugula','mustard greens','baby kale']
-	var saladToppingsMeats = ['rabbit','chicken','ham','turkey','steak']
-	var saladToppingsMeatsCapped = ['Rabbit and ','Chicken and ','Ham and ','Turkey and ','Steak and ']
-	var saladToppingsOther = ['grated cheese','slivered almonds','cranberries','sliced orange']
-	var saladToppingMethods = ['grilled ','roasted ','blackened ','braised ','marinated ']
-	var saladToppingMethodsCapped = ['Grilled','Roasted','Blackened','Braised','Marinated']
-	var dressingFirstIngredients = [' lemon',' balsamic',' cider vinegar','n orange']
-	var dressingSecondIngredients = [' honey',' garlic',' ginger',' and black pepper',' herb']
 	var saladBaseNumber = 0;
 	var saladBase = '';
 	var saladBaseCapped = '';
@@ -1869,17 +1886,6 @@ function newSalads(){
 }
 
 function newEntrees(){
-	var cookingMethods = ['Stewed','Baked','Deep-fried','Roasted','Grilled','Blackened','Rotisserie-cooked','Pan-fried','Herb-crusted','Braised','Pan-seared','Stir-fried']
-	var meatStyles = [' bits of ',' chunks of ',' cubes of ',' slices of ',' strips of ',' ',' ',' ',' ']
-	var meatOptions = ['mystery meat','sausage','rabbit','chicken','fish','pork','lamb','turkey','beef','frog','venison','steak','duck','veal','squab','pheasant','quail']
-	var meatOptionsCapped = ['Mystery Meat','Sausage','Rabbit','Chicken','Fish','Pork','Lamb','Turkey','Beef','Frog','Venison','Steak','Duck','Veal','Squab','Pheasant','Quail']
-	var meatIssues = ['The meat in this dish has gone off and could sicken the eater.','The meat in this dish is undercooked to the point of being dangerous to consume.','The meat in this dish is overcooked to the point of being nearly inedible.','The meat in this dish is starting to go bad, but <strong>should</strong> be safe for consumption.']
-	var sauces = [' in a thick gravy',' in a cream sauce',' in white sauce',' in red sauce',' with a ginger marinade',' in garlic sauce',' in a vodka sauce']
-	var presentationStyles = [' served over ',' on a bed of ',' served with ',' alongside ']
-	var piledEtc = [' slathered',' piled',' crammed',' thrown',' sitting',' ']
-	var starches = ['bread','mashed potatoes','rice','noodles','pasta','quinoa']
-	var nextStyles = [' with a serving of ',' and a helping of ',' with a side of ',' and ']
-	var veggies = ['brussel sprouts','collard greens','cabbage','stewed onions','cooked greens','green peppers','peas','turnips','leeks','celery','mushrooms','black beans','beets','kale','red beans','spinach','broccoli','beet greens','radishes','green beans','caramelized onions','carrots','chard','artichoke','red peppers','asparagus','cauliflower']
 	var cookingMethodNumber = 0;
 	var cookingMethod = '';
 	var meatStyle = '';
