@@ -1673,6 +1673,26 @@ function newStarters(){
 	}
 	var starterListToString = starterList.join(" ");
 	document.getElementById('startersDisplay').innerHTML = starterListToString + '<br>';
+	resetStarterArrays();
+}
+
+function resetStarterArrays(){
+	coldThings = ['Cheese Platter','Bread Bowl','Jerky Strips']
+	stuffedThings = ['potato skins','green peppers','red peppers','baby artichokes','lettuce bowls']
+	stuffedThingsCapped = ['Potato Skins','Green Peppers','Red Peppers','Baby Artichokes','Lettuce Bowls']
+	stuffWords = ['filled','stuffed','crammed','packed','loaded','jam-packed','overloaded','bursting','overflowing']
+	stuffWordsCapped = ['Filled','Stuffed','Crammed','Packed','Loaded','Jam-Packed','Overloaded','Bursting','Overflowing']
+	blendWords = ['mash','mix','blend','concoction','mixture','fusion','medley','mingling','mélange']
+	stuffings = ['cheese','potato','meat','herbs','spices','cream cheese','sour cream','onion','bacon','garlic']
+	breadFreshnesses = ['stale','day-old','fresh','freshly-baked','fresh-from-the-oven']
+	breadTypes = ['white','whole wheat','seven-grain','artisinal','specialty','herb and cheese']
+	oilTypes = [' melted butter','olive oil','pesto sauce','herb-infused oil','garlic in olive oil']
+	jerkyMeats = ['rabbit','chicken','turkey','beef','venison']
+	cheeses = ['cheddar','mozzerella','muenster','gruyère','brie','gorgonzola','blue']
+	friedThingsCapped = ['Potato Wedges','Sweet Potato Wedges','Onion Rings','Chicken Strips','Slices of Red Beet','Beef Strips']
+	friedThings = ['Potato wedges','Sweet potato wedges','Onion rings','Chicken strips','Slices of red beets','Beef strips']
+	friedThingOils = ['cottonseed oil','sunflower oil','lard','butter','vegetable oil','peanut oil','olive oil']
+	friedThingsSauces =['tomato-based sauce','spicy red sauce','honey-based sauce','mustard sauce','creamy sauce']
 }
 
 function newSoupsAndSalads(){
