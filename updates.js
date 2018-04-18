@@ -1,4 +1,5 @@
 var updates = [
+'<p>4.18.2108 - A <a href="http://bit.ly/TCSx2FullSheet">full-sized version of TCSx2</a> is now available on the DM\'s Guild. Check it out!</p>',
 '<p>4.11.2018 - <a href="http://bit.ly/TCSx2Sheet">TCSx2</a> has undergone several revisions with the help of many wonderfully helpful members of the Twitter D&D community to help ensure the color-coded version is distinguishable for everyone. Coming soon will be a standard-sized version of the sheet for those who prefer the traditional size character sheet, but still want something unique. That version will also be pay-what-you-want. Go check out the pocket-sized and let me know what you think!</p>',
 '<p>4.03.2018 - <a href="http://bit.ly/TCSx2Sheet">TCSx2</a> is out on the DM\'s Guild. It will still be receiving some updates and edits, but it\'s there if you want to check it out!</p>',
 '<p>4.02.2018 - Coming VERY soon, like in a few hours soon, I\'ll be releasing a Textless 3x5 Character Sheet on the DM\'s Guild. Also fixed a few bugs in the Taverns script, and fixed a few minor HTML errors that weren\'t causing any problems, but weren\'t right.</p>',
