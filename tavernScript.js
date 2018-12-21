@@ -1175,12 +1175,12 @@ function newClientele() {
 	
 	if (thereIsAShadyFigure){
 		if(itIsLegit){
-			if(randFl(20,0) == 0){
-				shadyText = shadyLocation + ' there is a human man. He introduces himself as Thor Lightningroot. He is an adventuring cleric who needs help with something (more details to come when @TooFadedGaming gets back to me about winning my secret contest).';
+			if(randFl(20,0) == 0) {
+				shadyText = shadyLocation + ' there is an agile looking dwarf with a large crossbow slung over his back. He introduces himself as Dern Ironhelm and speaks with a thick accent. He\'s been tracking a group of kobolds who have been smuggling animals illegally and could use some help taking them out.';
 			} else if(randFl(20,0) == 0) {
 				shadyText = shadyLocation + ' there is a human woman with curly hair. Her name is Alyssa and her fellow adventurers disappeared from their camp one day\'s ride from town. They left behind <strong>all</strong> of their belongings, leading her to believe it was some sort of extraplanar abduction.';
-			} else if(randFl(20,0) == 0) {
-				shadyText = shadyLocation + ' there is an agile looking dwarf with a large crossbow slung over his back. He introduces himself as Dern Ironhelm and speaks with a thick accent. He\'s been tracking a group of kobolds who have been smuggling animals illegally and could use some help taking them out.';
+			} else if(randFl(20,0) == 0){
+				shadyText = shadyLocation + ' there is a human man. He introduces himself as Thor Lightningroot. He is an adventuring cleric who needs help with something (more details to come when @TooFadedGaming gets back to me about winning my secret contest).';
 			} else {
 				shadyText = shadyLocation + ' there is a' + shadyDescription + ' looking figure. ' + shadyQuest;
 			}
