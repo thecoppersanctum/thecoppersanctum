@@ -58,6 +58,7 @@ h1{
 	text-align:center;
 	top:0;
 	left:0;
+	padding-top:1%;
 }
 #fbt{
 	width:75px;
@@ -155,7 +156,7 @@ button{cursor: pointer;}
 	display:inline-block;
 }
 #navButton{
-	width:23%;
+	width:30%;
 	border:0;
 	margin-left:1%;
 	margin-right:1%;
